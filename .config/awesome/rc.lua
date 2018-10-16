@@ -677,7 +677,10 @@ awful.rules.rules = {
       properties = { screen = 1, tag = awful.util.tagnames[3] } },
 
     { rule = { class = "Vmware" },
-      properties = { screen = 1, tag = awful.util.tagnames[3] } },      
+      properties = { screen = 1, tag = awful.util.tagnames[3] } }, 
+
+    { rule = { class = "Gimp", role = "gimp-image-window" },
+          properties = { maximized = true } },      
 
     -- MUS
     { rule = { class = "Lollypop" },
@@ -688,8 +691,8 @@ awful.rules.rules = {
     { rule = { class = "Telegram" },
       properties = { screen = 1, tag = awful.util.tagnames[5] } },
 
-    { rule = { class = "Gimp", role = "gimp-image-window" },
-          properties = { maximized = true } },
+    { rule = { class = "discord" },
+      properties = { screen = 1, tag = awful.util.tagnames[5] } },
 }
 -- }}}
 
