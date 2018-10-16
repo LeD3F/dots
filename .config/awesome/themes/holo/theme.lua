@@ -5,7 +5,6 @@
 
 --]]
 
-local spotify_widget = require("spotify")
 local volume_widget =require("volume")
 local gears = require("gears")
 local lain  = require("lain")
@@ -258,10 +257,6 @@ function theme.at_screen_connect(s)
     mykbd = wibox.container.background(s.mykbd, theme.bg_focus, gears.shape.rectangle)
     s.mykbd = wibox.container.margin(mykbd, 0, 0, 5, 5)
 
-    --spotify widget
-    spotify_widget = wibox.container.background(spotify_widget, theme.bg_focus, gears.shape.rectangle)
-    spotify_widget = wibox.container.margin(spotify_widget, 0, 0, 5, 5)
-
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s, height = 32 })
     -- Add widgets to the wibox
@@ -284,7 +279,6 @@ function theme.at_screen_connect(s)
             s.systray,  
             --theme.mail.widget,
             --bat.widget,
-            spotify_widget,
             netdown_icon,
             networkwidget,
             netup_icon,
