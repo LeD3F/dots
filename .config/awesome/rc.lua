@@ -113,7 +113,7 @@ local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHAT", }
+awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHT", }
 awful.layout.layouts = {
     awful.layout.suit.fair,
     awful.layout.suit.tile,
@@ -230,6 +230,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
         { "Open terminal", terminal, "/usr/share/icons/Papirus-Dark/24x24/apps/lxterminal.svg" },
         { "Nitrogen", nitrogen, "/usr/share/icons/Papirus-Dark/24x24/apps/nitrogen.svg" },
         { "Nemo", "nemo", "/usr/share/icons/Papirus-Dark/24x24/apps/nemo.svg" },
+        { "Telegram", "telegram-desktop", "/usr/share/icons/Papirus-Dark/24x24/apps/telegram.svg" },        
         { "Vmware Workstation", "vmware", "/usr/share/icons/Papirus-Dark/24x24/apps/vmware-workstation.svg" },
         { "Pamac", "pamac-manager", "/usr/share/icons/Papirus-Dark/24x24/apps/system-software-install.svg" },
         -- other triads can be put here
