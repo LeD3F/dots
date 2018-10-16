@@ -257,6 +257,11 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons, { bg_focus = theme.bg_focus, shape = gears.shape.rectangle, shape_border_width = 5, shape_border_color = theme.tasklist_bg_normal, align = "center" })
 
 
+    -- widget creation
+    s.mykbd = awful.widget.keyboardlayout()
+    mykbd = wibox.container.background(s.mykbd, theme.bg_focus, gears.shape.rectangle)
+    s.mykbd = wibox.container.margin(mykbd, 0, 0, 5, 5)
+
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s, height = 32 })
     -- Add widgets to the wibox
@@ -276,8 +281,7 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            spotify_widget,
-            s.systray,
+            s.systray,  
             --theme.mail.widget,
             --bat.widget,
             netdown_icon,
@@ -288,8 +292,10 @@ function theme.at_screen_connect(s)
             cpu_icon,
             cpuwidget,
             bar,
+            s.mykbd,
+            bar, 
             volume_widget,
-            bar,
+            bar,           
             calendar_icon,
             calendarwidget,
             bar,
