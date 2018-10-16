@@ -1,0 +1,4 @@
+#!/bin/bash
+
+timestamp="$(date +%Y%m%d%H%M%S)"
+scrot /home/led3f/Pictures/Screenshots/$timestamp.png
