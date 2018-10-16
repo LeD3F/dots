@@ -277,6 +277,11 @@ globalkeys = my_table.join(
               {description = "view  previous nonempty", group = "tag"}),
 
 
+
+    -- Keyboard layout keybinding
+    awful.key({ altkey }, "Shift_L", -- Alt + left Shift
+          function() mykbd.next_layout() end,
+          { description = "Switch to next keyboard layout", group = "hotkeys" }),
     -- Default client focus
     awful.key({ altkey,           }, "j",
         function ()
@@ -648,9 +653,11 @@ awful.rules.rules = {
     { rule = { class = "obs" },
       properties = { screen = 2, tag = awful.util.tagnames[3] } }, 
 
-    { rule = { class = "steam" },
-      properties = { screen = 2, tag = awful.util.tagnames[3] } }, 
+    { rule = { class = "Deluge" },
+      properties = { screen = 1, tag = awful.util.tagnames[3] } },
 
+    { rule = { class = "Vmware" },
+      properties = { screen = 1, tag = awful.util.tagnames[3] } },      
 
     -- MUS
     { rule = { class = "Lollypop" },
@@ -723,18 +730,4 @@ client.connect_signal("request::titlebars", function(c)
     }
 end)
 
--- No border for maximized clients
-function border_adjust(c)
-    if c.maximized then -- no borders if only 1 client visible
-        c.border_width = 0
-    elseif #awful.screen.focused().clients > 1 then
-        c.border_width = beautiful.border_width
-        c.border_color = beautiful.border_focus
-    end
-end
-
-client.connect_signal("property::maximized", border_adjust)
-client.connect_signal("focus", border_adjust)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
--- }}}
 
