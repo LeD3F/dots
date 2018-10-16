@@ -252,10 +252,13 @@ function theme.at_screen_connect(s)
 
 
     -- widget creation
+
+    -- keyboard layout
     s.mykbd = awful.widget.keyboardlayout()
     mykbd = wibox.container.background(s.mykbd, theme.bg_focus, gears.shape.rectangle)
     s.mykbd = wibox.container.margin(mykbd, 0, 0, 5, 5)
 
+    --spotify widget
     spotify_widget = wibox.container.background(spotify_widget, theme.bg_focus, gears.shape.rectangle)
     spotify_widget = wibox.container.margin(spotify_widget, 0, 0, 5, 5)
 
