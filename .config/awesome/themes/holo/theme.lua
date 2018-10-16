@@ -282,7 +282,6 @@ function theme.at_screen_connect(s)
             --theme.mail.widget,
             --bat.widget,
             spotify_widget,
-            bar,
             netdown_icon,
             networkwidget,
             netup_icon,
