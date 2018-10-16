@@ -5,7 +5,6 @@
 
 --]]
 
-local volumearc_widget = require("volumearc")
 local volume_widget =require("volume")
 local gears = require("gears")
 local lain  = require("lain")
