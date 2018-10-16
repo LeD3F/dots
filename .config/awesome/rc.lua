@@ -296,12 +296,6 @@ globalkeys = my_table.join(
     awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
               {description = "view  previous nonempty", group = "tag"}),
 
-
-
-    -- Keyboard layout keybinding
-    awful.key({ altkey }, "Shift_L", -- Alt + left Shift
-          function() mykbd.next_layout() end,
-          { description = "Switch to next keyboard layout", group = "hotkeys" }),
     -- Default client focus
     awful.key({ altkey,           }, "j",
         function ()
