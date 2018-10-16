@@ -198,9 +198,10 @@ beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv
 -- {{{ Menu
 local myawesomemenu = {
     { "Restart", awesome.restart, "/usr/share/icons/Papirus-Dark/24x24/actions/gtk-refresh.svg" },
+    { "Log out", function() awesome.quit() end, "/usr/share/icons/Papirus-Dark/24x24/apps/system-log-out.svg" },
     { "Reboot", "systemctl reboot", "/usr/share/icons/Papirus-Dark/24x24/actions/gtk-refresh.svg"},
-	{ "Log out", function() awesome.quit() end, "/usr/share/icons/Papirus-Dark/24x24/apps/system-log-out.svg" },
-}
+    { "Shutdown", "poweroff", "/usr/share/icons/Papirus-Dark/24x24/panel/system-shutdown-panel.svg" }
+}	
 
 
 
@@ -212,6 +213,10 @@ awful.util.mymainmenu = freedesktop.menu.build({
     },
     after = {
         { "Open terminal", terminal, "/usr/share/icons/Papirus-Dark/24x24/apps/lxterminal.svg" },
+        { "Nitrogen", nitrogen, "/usr/share/icons/Papirus-Dark/24x24/apps/nitrogen.svg" },
+        { "Nemo", "nemo", "/usr/share/icons/Papirus-Dark/24x24/apps/nemo.svg" },
+        { "Vmware Workstation", "vmware", "/usr/share/icons/Papirus-Dark/24x24/apps/vmware-workstation.svg" },
+        { "Pamac", "pamac-manager", "/usr/share/icons/Papirus-Dark/24x24/apps/system-software-install.svg" },
         -- other triads can be put here
     }
 })
@@ -743,4 +748,3 @@ client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("focus", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
