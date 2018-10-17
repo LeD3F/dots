@@ -106,8 +106,8 @@ local chosen_theme = themes[4]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "sakura"
-local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = "gvim"
+local editor       = os.getenv("EDITOR") or "nano"
+local gui_editor   = "subl3"
 local browser      = "firefox"
 local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
@@ -116,16 +116,13 @@ awful.util.terminal = terminal
 awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHT", }
 awful.layout.layouts = {
     awful.layout.suit.fair,
-    awful.layout.suit.tile,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.max,    
+    awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.left,   
+    awful.layout.suit.tile,   
     awful.layout.suit.floating,
-    --awful.layout.suit.tile.left,
-    --awful.layout.suit.tile.bottom,
-    --awful.layout.suit.tile.top,
-    --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
+    --awful.layout.suit.tile.top,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
@@ -233,6 +230,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
         { "Telegram", "telegram-desktop", "/usr/share/icons/Papirus-Dark/24x24/apps/telegram.svg" },        
         { "Vmware Workstation", "vmware", "/usr/share/icons/Papirus-Dark/24x24/apps/vmware-workstation.svg" },
         { "Pamac", "pamac-manager", "/usr/share/icons/Papirus-Dark/24x24/apps/system-software-install.svg" },
+        { "Steam", "steam-runtime", "/usr/share/icons/Papirus-Dark/24x24/apps/steam.svg" },
         -- other triads can be put here
     }
 })
