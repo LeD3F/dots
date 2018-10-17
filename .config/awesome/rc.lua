@@ -16,6 +16,7 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
+local switcher = require("awesome-switcher")
 --local menubar       = require("menubar")
 local freedesktop   = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
@@ -361,6 +362,16 @@ globalkeys = my_table.join(
             end
         end,
         {description = "go back", group = "client"}),
+    -- Alt + Tab
+     awful.key({ "Mod1",           }, "Tab",
+      function ()
+          switcher.switch( 1, "Mod1", "Alt_L", "Shift", "Tab")
+      end),
+    
+    awful.key({ "Mod1", "Shift"   }, "Tab",
+      function ()
+          switcher.switch(-1, "Mod1", "Alt_L", "Shift", "Tab")
+      end),
 
     -- Show/Hide Wibox
     awful.key({ modkey }, "b", function ()
