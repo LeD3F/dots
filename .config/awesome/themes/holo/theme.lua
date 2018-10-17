@@ -164,7 +164,7 @@ theme.volume = lain.widget.alsabar({
     width = 60, height = 10, border_width = 0, timeout = 0,
     colors = {
         background = "#383838",
-        unmute     = "#ED8D84",
+        unmute     = "#ED7771",
           -- blue theme
         --unmute     = "#80CCE6",
         mute       = "#525252",
