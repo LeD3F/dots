@@ -24,7 +24,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 -- }}}
 
--- Changing spotify notifications.
+-- Icon size in spotify notifications.
 naughty.config.presets.spotify = { 
     -- if you want to disable Spotify notifications completely, return false
     callback = function(args)
@@ -32,12 +32,26 @@ naughty.config.presets.spotify = {
     end,
 
     -- Adjust the size of the notification
+    height = 70,
+    width  = 350,
+    -- Guessing the value, find a way to fit it to the proper size later
+    icon_size = 60
+}
+table.insert(naughty.dbus.config.mapping, {{appname = "Spotify"}, naughty.config.presets.spotify})
+
+-- Icon size in vivaldi notification
+naughty.config.presets.vivaldi = { 
+    callback = function(args)
+        return true
+    end,
+
+    -- Adjust the size of the notification
     height = 100,
-    width  = 400,
+    width  = 350,
     -- Guessing the value, find a way to fit it to the proper size later
     icon_size = 90
 }
-table.insert(naughty.dbus.config.mapping, {{appname = "Spotify"}, naughty.config.presets.spotify})
+table.insert(naughty.dbus.config.mapping, {{appname = "Vivaldi"}, naughty.config.presets.vivaldi})
 
 -- {{{ Error handlingrun_once
 -- Check if awesome encountered an error during startup and fell back to
