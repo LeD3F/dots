@@ -146,31 +146,15 @@ theme.mail = lain.widget.imap({
 --]]
 
 
--- / fs
---[[ commented because it needs Gio/Glib >= 2.54
+-- fs
+-- commented because it needs Gio/Glib >= 2.54
 theme.fs = lain.widget.fs({
-    notification_preset = { bg = theme.bg_normal, font = "Monospace 9" },
+    notification_preset = { bg = theme.bg_normal, font = "Hack 9" },
 })
---]]
 
+
+-- Volume Widget
 volume_widget = wibox.container.margin(volume_widget, 0, 0, 2, 2)
-
--- ALSA volume bar
-theme.volume = lain.widget.alsabar({
-    notification_preset = { font = "Hack 9"},
-    --togglechannel = "IEC958,3",
-    width = 40, height = 10, border_width = 0,
-    colors = {
-        background = "#383838",
-        unmute     = "#80CCE6",
-        mute       = "#FF9F9F"
-    },
-})
-theme.volume.bar.paddings = 0
-theme.volume.bar.margins = 5
-local volumewidget = wibox.container.background(theme.volume.bar, theme.bg_focus, gears.shape.rectangle)
-volumewidget = wibox.container.margin(volumewidget, 0, 0, 5, 5)
-
 
 -- CPU
 local cpu_icon = wibox.widget.imagebox(theme.cpu)
