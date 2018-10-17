@@ -4,7 +4,6 @@
      github.com/lcpz
 
 --]]
-
 local volume_widget =require("volume")
 local gears = require("gears")
 local lain  = require("lain")
@@ -22,17 +21,23 @@ theme.icon_theme                                = "Papirus-Dark"
 theme.font                                      = "Roboto Bold 10"
 theme.taglist_font                              = "Roboto Condensed Regular 8"
 theme.fg_normal                                 = "#FFFFFF"
-theme.fg_focus                                  = "#0099CC"
+theme.fg_focus                                  = "#F0544C"
+--blue theme
+--theme.fg_focus                                  = "#0099CC"
 theme.bg_focus                                  = "#303030"
 theme.bg_normal                                 = "#242424"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_urgent                                 = "#006B8E"
 theme.border_width                              = 3
 theme.border_normal                             = "#252525"
-theme.border_focus                              = "#0099CC"
+theme.border_focus                              = "#F0544C"
+--blue theme
+--theme.border_focus                              = "#0099CC"
 theme.taglist_fg_focus                          = "#FFFFFF"
 theme.tasklist_bg_normal                        = "#222222"
-theme.tasklist_fg_focus                         = "#4CB7DB"
+theme.tasklist_fg_focus                         = "#ED7771"
+--blue theme
+--theme.tasklist_fg_focus                         = "#4CB7DB"
 theme.menu_height                               = 20
 theme.menu_width                                = 160
 theme.menu_icon_size                            = 32
@@ -152,6 +157,24 @@ theme.fs = lain.widget.fs({
     notification_preset = { bg = theme.bg_normal, font = "Hack 9" },
 })
 
+-- ALSA volume bar
+theme.volume = lain.widget.alsabar({
+    notification_preset = { font = "Hack 9"},
+    --togglechannel = "IEC958,3",
+    width = 60, height = 10, border_width = 0, timeout = 0,
+    colors = {
+        background = "#383838",
+        --background = "#383838",
+        unmute     = "#ED8D84",
+          -- blue theme
+        --unmute     = "#80CCE6",
+        mute       = "#FF9F9F",
+    },
+})
+theme.volume.bar.paddings = 0
+theme.volume.bar.margins = 5
+local volumewidget = wibox.container.background(theme.volume.bar, theme.bg_focus, gears.shape.rectangle)
+volumewidget = wibox.container.margin(volumewidget, 0, 0, 5, 5)
 
 -- Volume Widget
 volume_widget = wibox.container.margin(volume_widget, 0, 0, 2, 2)
@@ -274,6 +297,7 @@ function theme.at_screen_connect(s)
             s.mykbd,
             bar, 
             volume_widget,
+            volumewidget,
             bar,           
             calendar_icon,
             calendarwidget,
