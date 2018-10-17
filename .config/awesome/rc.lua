@@ -109,7 +109,7 @@ local altkey       = "Mod1"
 local terminal     = "sakura"
 local editor       = os.getenv("EDITOR") or "nano"
 local gui_editor   = "subl3"
-local browser      = "firefox"
+local browser      = "vivaldi-snapshot"
 local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
 
@@ -675,6 +675,9 @@ awful.rules.rules = {
     -- WEB
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[2], } },
+    
+    { rule = { class = "Vivaldi" },
+      properties = { screen = 1, tag = awful.util.tagnames[2], } },      
 
     -- MED
 
