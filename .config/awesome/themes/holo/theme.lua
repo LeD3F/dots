@@ -124,7 +124,7 @@ theme.cal = lain.widget.cal({
         fg = "#FFFFFF",
         bg = theme.bg_normal,
         position = "top_right",
-        font = "Monospace 10"
+        font = "Hack 10"
     }
 })
 
@@ -164,11 +164,12 @@ theme.volume = lain.widget.alsabar({
     width = 60, height = 10, border_width = 0, timeout = 0,
     colors = {
         background = "#383838",
-        --background = "#383838",
         unmute     = "#ED8D84",
           -- blue theme
         --unmute     = "#80CCE6",
-        mute       = "#FF9F9F",
+        mute       = "#525252",
+          --blue theme
+        --mute       = "#FF9F9F",
     },
 })
 theme.volume.bar.paddings = 0
@@ -296,7 +297,7 @@ function theme.at_screen_connect(s)
             bar,
             s.mykbd,
             bar, 
-            volume_widget,
+            --volume_widget,
             volumewidget,
             bar,           
             calendar_icon,
