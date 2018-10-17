@@ -276,6 +276,11 @@ globalkeys = my_table.join(
     awful.key({ altkey }, "w", function() os.execute("screenshot-window") end,
               {description = "take a screenshot", group = "hotkeys"}),
 
+    -- Take a screenshot window
+    -- https://github.com/lcpz/dots/blob/master/bin/screenshot
+    awful.key({ altkey }, "a", function() os.execute("screenshot-area") end,
+              {description = "take a screenshot", group = "hotkeys"}),
+
     -- X screen locker
     awful.key({ altkey, "Control" }, "l", function () os.execute("scrlock") end,
               {description = "lock screen", group = "hotkeys"}),
