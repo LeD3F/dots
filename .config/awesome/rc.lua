@@ -383,7 +383,9 @@ globalkeys = my_table.join(
             end
         end,
         {description = "toggle wibox", group = "awesome"}),
+    
 
+    -- Show/Hide Tray
     awful.key({ modkey }, "z", function ()
     awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible
     end, {description = "Toggle systray visibility", group = "custom"}),
