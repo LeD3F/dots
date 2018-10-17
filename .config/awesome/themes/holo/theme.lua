@@ -157,6 +157,27 @@ theme.fs = lain.widget.fs({
     notification_preset = { bg = theme.bg_normal, font = "Hack 9" },
 })
 
+-- ALSA volume bar
+theme.volume = lain.widget.alsabar({
+    notification_preset = { font = "Hack 9"},
+    --togglechannel = "IEC958,3",
+    width = 60, height = 10, border_width = 0, timeout = 1,
+    colors = {
+        background = "#383838",
+        unmute     = "#ED7771",
+          -- blue theme
+        --unmute     = "#80CCE6",
+        mute       = "#525252",
+          --blue theme
+        --mute       = "#FF9F9F",
+    },
+})
+theme.volume.bar.paddings = 0
+theme.volume.bar.margins = 5
+local volumewidget = wibox.container.background(theme.volume.bar, theme.bg_focus, gears.shape.rectangle)
+volumewidget = wibox.container.margin(volumewidget, 0, 0, 5, 5)
+
+
 -- Volume Widget
 volume_widget = wibox.container.margin(volume_widget, 0, 0, 2, 2)
 
@@ -278,6 +299,7 @@ function theme.at_screen_connect(s)
             s.mykbd,
             bar, 
             volume_widget,
+            volumewidget,
             bar,           
             calendar_icon,
             calendarwidget,
