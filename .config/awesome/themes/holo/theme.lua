@@ -297,7 +297,7 @@ function theme.at_screen_connect(s)
             bar,
             s.mykbd,
             bar, 
-            --volume_widget,
+            volume_widget,
             volumewidget,
             bar,           
             calendar_icon,
