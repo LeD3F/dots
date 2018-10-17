@@ -1,7 +1,2 @@
 #!/bin/bash
-
-timestamp="$(date +%Y%m%d%H%M%S)"
-targetbase="$HOME/Pictures/Screenshots"
-mkdir -p $targetbase
-[ -d $targetbase ] || exit 1
-scrot -u $targetbase/$timestamp.png
+maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/$(date +%s).png
