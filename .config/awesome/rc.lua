@@ -229,6 +229,12 @@ local myawesomemenu = {
     { "Shutdown", "poweroff", "/usr/share/icons/Papirus-Dark/24x24/panel/system-shutdown-panel.svg" }
 }	
 
+local myappsmenu = {
+    { "Nitrogen", "nitrogen", "/usr/share/icons/Papirus-Dark/24x24/apps/nitrogen.svg" },      
+    { "Vmware Workstation", "vmware", "/usr/share/icons/Papirus-Dark/24x24/apps/vmware-workstation.svg" },
+    { "Steam", "steam-runtime", "/usr/share/icons/Papirus-Dark/24x24/apps/steam.svg" },
+    { "Spotify", "spotify", "/usr/share/icons/Papirus-Dark/24x24/apps/spotify.svg" },
+}	
 
 
 awful.util.mymainmenu = freedesktop.menu.build({
@@ -238,14 +244,11 @@ awful.util.mymainmenu = freedesktop.menu.build({
          -- other triads can be put here
     },
     after = {
+        { "Favourite Apps", myappsmenu, "/usr/share/icons/Papirus-Dark/24x24/places/user-bookmarks.svg"},
         { "Open terminal", terminal, "/usr/share/icons/Papirus-Dark/24x24/apps/lxterminal.svg" },
-        { "Nitrogen", nitrogen, "/usr/share/icons/Papirus-Dark/24x24/apps/nitrogen.svg" },
         { "Nemo", "nemo", "/usr/share/icons/Papirus-Dark/24x24/apps/nemo.svg" },
         { "Telegram", "telegram-desktop", "/usr/share/icons/Papirus-Dark/24x24/apps/telegram.svg" },        
-        { "Vmware Workstation", "vmware", "/usr/share/icons/Papirus-Dark/24x24/apps/vmware-workstation.svg" },
         { "Pamac", "pamac-manager", "/usr/share/icons/Papirus-Dark/24x24/apps/system-software-install.svg" },
-        { "Steam", "steam-runtime", "/usr/share/icons/Papirus-Dark/24x24/apps/steam.svg" },
-        { "Spotify", "spotify", "/usr/share/icons/Papirus-Dark/24x24/apps/spotify.svg" },
         -- other triads can be put here
     }
 })
