@@ -79,6 +79,7 @@ end
 
 -- {{{ Autostart windowless processes
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
+awful.spawn.with_shell("~/.config/awesome/locker.sh")
 
 
 -- This function will run once every time Awesome is started
