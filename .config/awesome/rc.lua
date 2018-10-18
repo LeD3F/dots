@@ -245,6 +245,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
         { "Vmware Workstation", "vmware", "/usr/share/icons/Papirus-Dark/24x24/apps/vmware-workstation.svg" },
         { "Pamac", "pamac-manager", "/usr/share/icons/Papirus-Dark/24x24/apps/system-software-install.svg" },
         { "Steam", "steam-runtime", "/usr/share/icons/Papirus-Dark/24x24/apps/steam.svg" },
+        { "Spotify", "spotify", "/usr/share/icons/Papirus-Dark/24x24/apps/spotify.svg" },
         -- other triads can be put here
     }
 })
