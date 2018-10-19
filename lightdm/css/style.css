@@ -50,7 +50,7 @@
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #5294e2;
+	background-color: #F0544C;
 	border-left: 1px solid #CCCCCC;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .user-wrap2::-webkit-scrollbar-track {
-	background-color: #16A5294e2085;
+	background-color: #16AF0544C085;
 	border-left: 1px solid #CCCCCC;
 }
 
@@ -100,7 +100,7 @@ h3, .panel-heading {
 	font-size: 16px;
 	text-align: center;
 	font-weight: 400;
-	color: #5294e2 !important;
+	color: #F0544C !important;
 }
 
 a {
@@ -138,13 +138,13 @@ a {
 }
 
 .bg-switch .bgs .bg.active div, .bg-switch .bgs .bg.active img {
-	border-color: #5294e2;
+	border-color: #F0544C;
 }
 
 .bg-switch .bgs .bg div {
 	width: 145px;
 	height: 95px;
-	border: 2px solid #5294e2;
+	border: 2px solid #F0544C;
 	margin-bottom: 10px;
 	cursor: pointer;
 	transition: all 0.3s linear;
@@ -154,7 +154,7 @@ a {
 
 .hovered {
 	text-decoration: none;
-	background-color: #5294e2;
+	background-color: #F0544C;
 }
 
 #user-list2 {
@@ -231,12 +231,12 @@ a {
 
 #user-target2 i {
 	right: -21px;
-	color: #5294e2;
+	color: #F0544C;
 	font-size: 14px;
 }
 
 #trigger i {
-	color: #5294e2;
+	color: #F0544C;
 	font-size: 14px;
 	position: relative;
 	top: 10px;
@@ -250,7 +250,7 @@ a {
 	font-size: 96px;
 	line-height: 1em;
 	text-decoration: none;
-	color: #5294e2;
+	color: #F0544C;
 	background-color: rgb(60, 64, 62);
 	transition: 1s ease-out;
 	position: relative;
@@ -269,7 +269,7 @@ a {
 
 .time:hover {
 	cursor: pointer;
-	color: #5294e2;
+	color: #F0544C;
 	/* text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7); */
 }
 
@@ -293,7 +293,7 @@ a {
 	font-size: 17px;
 	position: relative;
 	right: 9px;
-	color: #5294e2;
+	color: #F0544C;
 }
 
 .panel-heading img {
@@ -327,7 +327,7 @@ a {
 
 .badge {
 	color: rgb(60, 64, 62);
-	background-color: #5294e2;
+	background-color: #F0544C;
 }
 
 .badge, .badge i {
@@ -372,13 +372,13 @@ a {
 }
 
 #actionsArea a:hover{
-	background: #5294e2;
+	background: #F0544C;
 	color: white;
 }
 
 .dropdown-menu{
 	background: rgb(40, 44, 42) !important;
-	color: #5294e2 !important;
+	color: #F0544C !important;
 }
 
 .dropdown-menu li a{
@@ -386,7 +386,7 @@ a {
 }
 
 .dropdown-menu li a:hover{
-	background: #5294e2;
+	background: #F0544C;
 	color: white;
 }
 
@@ -432,9 +432,9 @@ input.password.form-control {
 	margin-top: -1px;
 }
 input.password.form-control:focus {
-	-webkit-box-shadow: inset 0 -2px 0 #5294e2 !important;
-	box-shadow: inset 0 -2px 0 #5294e2 !important;
-	border-bottom: 2px solid #5294e2 !important;
+	-webkit-box-shadow: inset 0 -2px 0 #F0544C !important;
+	box-shadow: inset 0 -2px 0 #F0544C !important;
+	border-bottom: 2px solid #F0544C !important;
 	margin-top: 0;
 }
 
@@ -490,7 +490,7 @@ input.password.form-control:focus {
 	color: rgba(255, 255, 255, 0.72);
 	width: 145px;
 	height: 95px;
-	border: 2px solid #5294e2;
+	border: 2px solid #F0544C;
 	margin-bottom: 10px;
 	cursor: pointer;
 	padding-top: 28.5px;
@@ -506,7 +506,7 @@ input.password.form-control:focus {
 }
 
 .random.active {
-	border: 2px solid #5294e2;
+	border: 2px solid #F0544C;
 }
 
 .user-wrap2 {
@@ -563,8 +563,8 @@ input.password.form-control:focus {
 .list-group-item {
 	padding: 5px 15px;
 	background: rgb(40, 44, 42);
-	border-color: #5294e2 !important;
-	color: #5294e2 !important;
+	border-color: #F0544C !important;
+	color: #F0544C !important;
 }
 
 .list-group-item img {
@@ -584,7 +584,7 @@ a.list-group-item:focus, a.list-group-item:hover, a.list-group-item.hovered {
 	outline: none;
 	margin: 0px 0;
 	background: rgb(50, 54, 52);
-	border-color: #5294e2 !important;
+	border-color: #F0544C !important;
 	color: #969c99 !important;
 }
 
@@ -617,7 +617,7 @@ a.list-group-item:focus:after, a.list-group-item:hover:after, a.list-group-item.
 .modal-title {
 	text-align: center;
 	padding-top: 20px;
-	color: #5294e2 !important;
+	color: #F0544C !important;
 }
 
 .modal-footer {
@@ -634,7 +634,7 @@ a.list-group-item:focus:after, a.list-group-item:hover:after, a.list-group-item.
 }
 
 .modal-footer button:hover{
-	background: #5294e2 !important;
+	background: #F0544C !important;
 	color: white !important;
 }
 
@@ -649,5 +649,5 @@ a.list-group-item:focus:after, a.list-group-item:hover:after, a.list-group-item.
 }
 
 .modal-header button:hover{
-	color: #5294e2 !important;
+	color: #F0544C !important;
 }
