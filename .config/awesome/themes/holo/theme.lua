@@ -19,7 +19,7 @@ theme.default_dir                               = require("awful.util").get_them
 theme.icon_dir                                  = os.getenv("HOME") .. "/.config/awesome/themes/holo/icons"
 theme.icon_theme                                = "Papirus-Dark"
 theme.font                                      = "Roboto Bold 10"
-theme.taglist_font                              = "Roboto Condensed Regular 8"
+theme.taglist_font                              = "Roboto Regular 8"
 theme.fg_normal                                 = "#FFFFFF"
 theme.fg_focus                                  = "#F0544C"
 --blue theme
