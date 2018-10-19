@@ -78,7 +78,6 @@ end
 -- }}}
 
 -- {{{ Autostart windowless processes
---awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 
 -- This function will run once every time Awesome is started
 local function run_once(cmd_arr)
