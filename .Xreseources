@@ -19,6 +19,7 @@ URxvt.antialias: true
 URxvt.termname: xterm-256color
 URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
 
+URxvt.cursorUnderline: false
 URxvt.pointerBlank: true
 URxvt.saveLines:    5000
 URxvt.scrollBar:    false
