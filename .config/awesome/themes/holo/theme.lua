@@ -28,7 +28,7 @@ theme.bg_focus                                  = "#303030"
 theme.bg_normal                                 = "#242424"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_urgent                                 = "#006B8E"
-theme.border_width                              = 3
+theme.border_width                              = 2
 theme.border_normal                             = "#252525"
 theme.border_focus                              = "#F0544C"
 --blue theme
