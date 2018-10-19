@@ -96,7 +96,7 @@ run_once({
     "xset dpms 0 0 0",
     "xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal",
     "setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle'",
-    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &"
+    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &",
     "xrdb -merge ~/.Xresources"
 }) -- entries must be separated by commas
 
