@@ -78,7 +78,7 @@ end
 -- }}}
 
 -- {{{ Autostart windowless processes
-awful.spawn.with_shell("~/.config/awesome/autostart.sh")
+--awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 
 -- This function will run once every time Awesome is started
 local function run_once(cmd_arr)
@@ -87,7 +87,18 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "urxvtd", "unclutter -root" }) -- entries must be separated by commas
+run_once({ 
+    "compton", 
+    "unclutter", 
+    "nm-applet", 
+    "pamac-tray", 
+    "nitrogen --restore", 
+    "xset s 0 0",
+    "xset dpms 0 0 0",
+    "xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal",
+    "setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle'",
+    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &"
+}) -- entries must be separated by commas
 
 -- This function implements the XDG autostart specification
 --[[
@@ -104,22 +115,13 @@ awful.spawn.with_shell(
 -- {{{ Variable definitions
 
 local themes = {
-    "blackburn",       -- 1
-    "copland",         -- 2
-    "dremora",         -- 3
-    "holo",            -- 4
-    "multicolor",      -- 5
-    "powerarrow",      -- 6
-    "powerarrow-dark", -- 7
-    "rainbow",         -- 8
-    "steamburn",       -- 9
-    "vertex",          -- 10
+    "holo",
 }
 
-local chosen_theme = themes[4]
+local chosen_theme = themes[1]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "sakura"
+local terminal     = "alacritty"
 local editor       = os.getenv("EDITOR") or "nano"
 local gui_editor   = "subl3"
 local browser      = "vivaldi-snapshot"
@@ -127,7 +129,7 @@ local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHT", }
+awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHT", }
 awful.layout.layouts = {
     awful.layout.suit.fair,
     awful.layout.suit.max,    
