@@ -722,6 +722,11 @@ awful.rules.rules = {
 
     { rule = { class = "discord" },
       properties = { screen = 1, tag = awful.util.tagnames[5] } },
+
+    -- Floating Apps
+
+    { rule = { class = "Galculator" },
+      properties = { floating = true } },
 }
 -- }}}
 
