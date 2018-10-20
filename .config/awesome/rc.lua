@@ -236,6 +236,7 @@ local myappsmenu = {
     { "Vmware Workstation", "vmware", "/usr/share/icons/Papirus-Dark/24x24/apps/vmware-workstation.svg" },
     { "Steam", "steam-runtime", "/usr/share/icons/Papirus-Dark/24x24/apps/steam.svg" },
     { "Spotify", "spotify", "/usr/share/icons/Papirus-Dark/24x24/apps/spotify.svg" },
+    { "Deluge", "deluge", "/usr/share/icons/Papirus-Dark/24x24/apps/deluge.svg" },
 }	
 
 
