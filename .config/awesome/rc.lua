@@ -129,7 +129,7 @@ local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "  DES ", "  WEB ", "  MED ", "  MUS ", "  CHT " }
+awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHT" }
 awful.layout.layouts = {
     awful.layout.suit.fair,
     awful.layout.suit.max,    
