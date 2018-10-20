@@ -88,7 +88,7 @@ end
 
 run_once({ 
     "compton", 
-    "unclutter", 
+    "unclutter -idle 10", 
     "nm-applet", 
     "pamac-tray", 
     "nitrogen --restore", 
