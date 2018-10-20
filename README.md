@@ -5,6 +5,7 @@ Some configs based on others themes and widgets.
 
 Vivaldi Theme:
 
+| Vivaldi Theme:                    |
 | --------------------------------- |
 | Background: #222222               |
 | Foreground: #ffffff               |
