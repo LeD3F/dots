@@ -6,7 +6,7 @@ Some configs based on others themes and widgets.
 
 <img src='screenshots/awesomewm.png'>
 
-# AwesomeWM
+# Vivaldi
 
 <img src='screenshots/vivaldi.png'>
 
