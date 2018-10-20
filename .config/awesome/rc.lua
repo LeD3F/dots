@@ -729,29 +729,22 @@ awful.rules.rules = {
 
     { rule = 
       { class = "Galculator" },
-      properties = { floating = true }
-      },
+      properties = { floating = true } },
 
     { rule = { class = "Gnac" },
-      properties = { floating = true }
-      },
+      properties = { floating = true } },
 
     { rule = { class = "Nitrogen" },
-     properties = { floating = true }
-     },
+     properties = { floating = true } },
 
    { rule = { class = "Etcher" },
-     properties = { floating = true }
-     },
+     properties = { floating = true } },
 
    { rule = { class = "Woeusb" },
-     properties = { floating = true }
-     }, 
+     properties = { floating = true } }, 
 
     { rule = { class = "Pamac" },
-      properties = { floating = true }
-     },
-
+      properties = { floating = true } },
 }
 -- }}}
 
