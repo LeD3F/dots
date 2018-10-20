@@ -1,10 +1,14 @@
+!Xdefaults --
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
 Xft.autohint: false
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintfull
+!hintmedium hintslight
 Xft.lcdfilter: lcddefault
+
+!URxvt --
 
 URxvt.font: xft:xos4 Terminus:size=9:antialias=true
 
@@ -14,7 +18,7 @@ URxvt.antialias: true
 URxvt.termname: xterm-256color
 URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
 
-URxvt.cursorUnderline: true
+URxvt.cursorUnderline: false
 URxvt.pointerBlank: true
 URxvt.saveLines:    5000
 URxvt.scrollBar:    false
@@ -43,6 +47,8 @@ URxvt*geometry: 80x20
 URxvt.internalBorder: 10
 
 URxvt.colorUL: #dd5a3a
+
+!Colors --
 
 *background:  #303030
 *foreground:  #FFFFFF
