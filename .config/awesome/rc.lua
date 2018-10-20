@@ -702,11 +702,11 @@ awful.rules.rules = {
     { rule = { class = "obs" },
       properties = { screen = 2, tag = awful.util.tagnames[3] } }, 
 
-    { rule = { class = "Deluge" },
+    { rule = { class = "Deluge" }, { class = "Vmare" },
       properties = { screen = 1, tag = awful.util.tagnames[3] } },
 
-    { rule = { class = "Vmware" },
-      properties = { screen = 1, tag = awful.util.tagnames[3] } }, 
+    --{ rule = { class = "Vmware" },
+      --properties = { screen = 1, tag = awful.util.tagnames[3] } }, 
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },      
@@ -725,7 +725,8 @@ awful.rules.rules = {
 
     -- Floating Apps
 
-    { rule = { class = "Galculator" },
+    { rule = 
+      { class = "Galculator" },
       properties = { floating = true }
       },
 
@@ -734,16 +735,16 @@ awful.rules.rules = {
       },
 
     { rule = { class = "Nitrogen" },
-      properties = { floating = true }
-      },
+     properties = { floating = true }
+     },
 
-    { rule = { class = "Etcher" },
-      properties = { floating = true }
-      },
+   { rule = { class = "Etcher" },
+     properties = { floating = true }
+     },
 
-    { rule = { class = "Woeusb" },
-      properties = { floating = true }
-      },                           
+   { rule = { class = "Woeusb" },
+     properties = { floating = true }
+     },                           
 }
 -- }}}
 
