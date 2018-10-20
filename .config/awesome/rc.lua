@@ -702,16 +702,17 @@ awful.rules.rules = {
     { rule = { class = "obs" },
       properties = { screen = 2, tag = awful.util.tagnames[3] } }, 
 
-    { rule = { class = "Deluge" },,
+    { rule = { class = "Deluge" },
       properties = { screen = 1, tag = awful.util.tagnames[3] } },
 
     { rule = { class = "Vmware" },
       properties = { screen = 1, tag = awful.util.tagnames[3] } }, 
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
-          properties = { maximized = true } },      
+          properties = { maximized = true } },
 
     -- MUS
+
     { rule = { class = "Lollypop" },
       properties = { screen = 1, tag = awful.util.tagnames[4] } },   
 
