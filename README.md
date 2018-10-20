@@ -6,6 +6,10 @@ Some configs based on others themes and widgets.
 
 <img src='screenshots/awesomewm.png'>
 
+# AwesomeWM
+
+<img src='screenshots/vivaldi.png'>
+
 Vivaldi Themes:
 
 | Holo Red Theme:                   |
