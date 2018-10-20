@@ -1,6 +1,9 @@
 # dots
 
+Some configs based on others themes and widgets.
+
 Awesome WM theme is Holo from lcpz/awesome-copycats: https://github.com/lcpz/awesome-copycats
+Volume widget based on lczp's lain widget alsabar and streetturtle's Volume Widget: https://github.com/lcpz/lain / https://github.com/streetturtle/awesome-wm-widgets/tree/master/volume-widget 
 
 # AwesomeWM
 
