@@ -750,7 +750,7 @@ awful.rules.rules = {
 
     { rule = { class = "Pamac" },
       properties = { floating = true }
-      },
+     },
 
 }
 -- }}}
