@@ -726,7 +726,11 @@ awful.rules.rules = {
     -- Floating Apps
 
     { rule = { class = "Galculator" },
-      properties = { floating = true } },
+      properties = { floating = true }, 
+        callback = function(c)
+            awful.client.moveresize(800, 350, 0, 0, c)
+        end
+      },
 }
 -- }}}
 
