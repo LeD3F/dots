@@ -1,6 +1,6 @@
 # dots
 
-Some configs based on others themes and widgets.
+Awesome WM theme is Holo from lcpz/awesome-copycats: https://github.com/lcpz/awesome-copycats
 
 # AwesomeWM
 
