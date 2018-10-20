@@ -746,7 +746,12 @@ awful.rules.rules = {
 
    { rule = { class = "Woeusb" },
      properties = { floating = true }
-     },                           
+     }, 
+
+    { rule = { class = "Pamac" },
+      properties = { floating = true }
+      },
+
 }
 -- }}}
 
