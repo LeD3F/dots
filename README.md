@@ -2,6 +2,9 @@
 
 Some configs based on others themes and widgets.
 
+# AwesomeWM
+
+<img src='screenshots/awesomewm.png'>
 
 Vivaldi Themes:
 
