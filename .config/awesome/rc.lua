@@ -129,17 +129,17 @@ local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHT", }
+awful.util.tagnames = { "  DES", "  WEB", "  MED", "  MUS", "  CHT" }
 awful.layout.layouts = {
     awful.layout.suit.fair,
     awful.layout.suit.max,    
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,    
+    awful.layout.suit.tile.bottom,
     awful.layout.suit.floating,
     --awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.tile.top,
     --awful.layout.suit.spiral,
+    --awful.layout.suit.tile.top,
     --awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
     --awful.layout.suit.max.fullscreen,
@@ -688,12 +688,20 @@ awful.rules.rules = {
     { rule_any = { type = { "dialog", "normal" } },
       properties = { titlebars_enabled = false } },
 
+    -- DES
+
+    { rule = { class = "Lutris" },
+      properties = { screen = 1, tag = awful.util.tagnames[1], floating = true } },
+
+    { rule = { class = "Steam" },
+      properties = { screen = 1, tag = awful.util.tagnames[1] } },     
+
     -- WEB
     { rule = { class = "Firefox" },
-      properties = { screen = 1, tag = awful.util.tagnames[2], } },
+      properties = { screen = 1, tag = awful.util.tagnames[2] } },
     
     { rule = { class = "Vivaldi" },
-      properties = { screen = 1, tag = awful.util.tagnames[2], } },      
+      properties = { screen = 1, tag = awful.util.tagnames[2] } },      
 
     -- MED
 
@@ -717,13 +725,13 @@ awful.rules.rules = {
     { rule = { class = "Lollypop" },
       properties = { screen = 1, tag = awful.util.tagnames[4] } },   
 
-    -- CHAT
+    -- CHT
 
     { rule = { class = "Telegram" },
       properties = { screen = 1, tag = awful.util.tagnames[5] } },
 
     { rule = { class = "discord" },
-      properties = { screen = 1, tag = awful.util.tagnames[5] } },
+      properties = { screen = 1, tag = awful.util.tagnames[5] } },     
 
     -- Floating Apps
 
