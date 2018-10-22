@@ -128,6 +128,7 @@ local files        = "nemo"
 local calculator   = "galculator"
 local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
+local softwaremanager = "pamac-manager"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHT" }
@@ -429,6 +430,10 @@ globalkeys = my_table.join(
             os.execute(string.format("sp play"))
         end,
         {description = "Spotify play", group = "hotkeys"}),             
+
+    -- Open Pamac
+    awful.key({ }, "XF86Tools", function () awful.spawn(softwaremanager) end,
+              {description = "run calculator", group = "custom"}),
 
     -- Open Calculator
     awful.key({ }, "XF86Calculator", function () awful.spawn(calculator) end,
