@@ -16,6 +16,8 @@ Compositor is Compton - https://github.com/chjj/compton
 
 GTK3-Nocsd - https://github.com/PCMan/gtk3-nocsd
 
+Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f3ff7b17747ee3
+
 # AwesomeWM
 
 <img src='screenshots/awesomewm.png'>
