@@ -433,7 +433,7 @@ globalkeys = my_table.join(
 
     -- Open Pamac
     awful.key({ }, "XF86Tools", function () awful.spawn(softwaremanager) end,
-              {description = "run calculator", group = "custom"}),
+              {description = "run software manager", group = "custom"}),
 
     -- Open Calculator
     awful.key({ }, "XF86Calculator", function () awful.spawn(calculator) end,
