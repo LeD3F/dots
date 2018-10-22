@@ -49,3 +49,18 @@ Vivaldi Themes:
 | Winetricks                   | Qt QDBusViewer     |                        |                        |                  |
 | compton                      | Qt4 QDBusViewer    |                        |                        |                  |
 | Nitrogen                     | Sublime Text 3 Dev |                        |                        |                  |
+
+| Multimedia:                  | Office:                     | Settings:                | System Tools:                  |
+| ---------------------------- | -----------------------     | ----------------------   | ------------------------------ |
+| EasyTAG                      | LibreOffice Base            | ARandR                   | Pamac                          |
+| Gnac                         | LibreOffice Math            | Lxappearance             | Avahi Zeroconf Browser         |
+| GNOME Twitch                 | LibreOffice Impress         | Java                     |                                |
+| Kdenlive (AppImage)          | LibreOffice Draw            | NetworkManager           |                                |
+| Lollypop                     | LibreOffice Calc            | NVIDIA X Settings        |                                |
+| OBS                          | LibreOffice                 | Oomox                    |                                |
+| Pavucontrol                  | LibreOffice Writer          | Qt5ct                    |                                |
+| Qt V4L2 video capture        | WPS Spreadsheets            |                          |                                |
+| Qt V4L2 test utility         | WPS Presentation            |                          |                                |
+| Spotify                      | WPS Writer                  |                          |                                |
+| SMPlayer                     |                             |                          |                                |
+| MPV                          |                             |                          |                                |
