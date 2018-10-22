@@ -409,7 +409,7 @@ globalkeys = my_table.join(
     awful.key({ }, "XF86Calculator", function () awful.spawn(calculator) end,
               {description = "run calculator", group = "custom"}),
 
-    -- Open Files Manager
+    -- Open Calculator
     awful.key({ }, "XF86Explorer", function () awful.spawn(files) end,
               {description = "run files manager", group = "custom"}),
 
