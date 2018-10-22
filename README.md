@@ -49,6 +49,7 @@ Vivaldi Themes:
 | Winetricks                   | Qt QDBusViewer     |                        |                        |                  |
 | compton                      | Qt4 QDBusViewer    |                        |                        |                  |
 | Nitrogen                     | Sublime Text 3 Dev |                        |                        |                  |
+
 | Multimedia:           | Office:             | Settings:         | System Tools:                  |
 | --------------------- | ------------------- | ----------------- | ------------------------------ |
 | EasyTAG               | LibreOffice Base    | ARandR            | Pamac                          |
