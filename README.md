@@ -36,16 +36,16 @@ Vivaldi Themes:
 
 # Applications
 
-| Accessories:                      || Development:                      || Graphics:                         |
-| --------------------------------- || --------------------------------- || --------------------------------- |
-| Archive Manager: File-Roller      || CMake                             || FontForge                         |
-| Gnome Disks                       || Electron                          || GIMP                              |
-| Document Viewer: Xreader          || Qt Designer                       || InkSpace                          |
-| Etcher                            || Qt Assistant                      || Image Viewer: GPicView            |
-| Galculator                        || Qt4 Assistant                     || Krita (AppImage)                  |
-| File Manager: Nemo                || Qt Linguist                       || MComix                            |
-| Password Manager: Seahorse        || Qt4 Linguist                      || Simple Scan                       |
-| Notes: Simplenote                 || Qt4 Designer                      ||                                   |
-| Winetricks                        || Qt QDBusViewer                    ||                                   |
-| compton                           || Qt4 QDBusViewer                   ||                                   |
-| Nitrogen                          || Sublime Text 3 Dev                ||                                   |
+| Accessories:                      | Development:                       | Graphics:                         |
+| --------------------------------- | ---------------------------------- | --------------------------------- |
+| Archive Manager: File-Roller      | CMake                              | FontForge                         |
+| Gnome Disks                       | Electron                           | GIMP                              |
+| Document Viewer: Xreader          | Qt Designer                        | InkSpace                          |
+| Etcher                            | Qt Assistant                       | Image Viewer: GPicView            |
+| Galculator                        | Qt4 Assistant                      | Krita (AppImage)                  |
+| File Manager: Nemo                | Qt Linguist                        | MComix                            |
+| Password Manager: Seahorse        | Qt4 Linguist                       | Simple Scan                       |
+| Notes: Simplenote                 | Qt4 Designer                       |                                   |
+| Winetricks                        | Qt QDBusViewer                     |                                   |
+| compton                           | Qt4 QDBusViewer                    |                                   |
+| Nitrogen                          | Sublime Text 3 Dev                 |                                   |
