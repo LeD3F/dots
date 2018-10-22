@@ -6,6 +6,8 @@ Awesome WM theme is Holo from lcpz/awesome-copycats: https://github.com/lcpz/awe
 
 Volume widget based on lczp's lain widget alsabar and streetturtle's Volume Widget: https://github.com/lcpz/lain / https://github.com/streetturtle/awesome-wm-widgets/tree/master/volume-widget 
 
+For Desktop Background image i'm using Nitrogen - https://github.com/l3ib/nitrogen
+
 # AwesomeWM
 
 <img src='screenshots/awesomewm.png'>
