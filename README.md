@@ -42,10 +42,10 @@ Vivaldi Themes:
 | Gnome Disks                       || Electron                          || GIMP                              |
 | Document Viewer: Xreader          || Qt Designer                       || InkSpace                          |
 | Etcher                            || Qt Assistant                      || Image Viewer: GPicView            |
-| Galculator                        || Qt4 Assistant                     || [ ] Accent color from Active Page |
-| File Manager: Nemo                || Qt Linguist                       || [ ] Apply Accent Color to Window  |
-| Password Manager: Seahorse        || Qt4 Linguist                      || [x] Transparent Tabs              |
-| Notes: Simplenote                 || Qt4 Designer                      || Corner Rounding: 2px              |
-| Winetricks                        || Qt QDBusViewer                    || Corner Rounding: 2px              |
-| compton                           || Qt4 QDBusViewer                   || Corner Rounding: 2px              |
-| Nitrogen                          || Sublime Text 3 Dev                || Corner Rounding: 2px              |
+| Galculator                        || Qt4 Assistant                     || Krita (AppImage)                  |
+| File Manager: Nemo                || Qt Linguist                       || MComix                            |
+| Password Manager: Seahorse        || Qt4 Linguist                      || Simple Scan                       |
+| Notes: Simplenote                 || Qt4 Designer                      ||                                   |
+| Winetricks                        || Qt QDBusViewer                    ||                                   |
+| compton                           || Qt4 QDBusViewer                   ||                                   |
+| Nitrogen                          || Sublime Text 3 Dev                ||                                   |
