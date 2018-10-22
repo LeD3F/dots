@@ -124,6 +124,8 @@ local terminal     = "urxvt"
 local editor       = os.getenv("EDITOR") or "nano"
 local gui_editor   = "subl3"
 local browser      = "vivaldi-snapshot"
+local files        = "nemo"
+local calculator   = "galculator"
 local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
 
@@ -401,6 +403,15 @@ globalkeys = my_table.join(
         end,
         {description = "toggle wibox", group = "awesome"}),
     
+    ---- Custom Hotkeys
+
+    -- Open Files Manager
+    awful.key({ }, "XF86Calculator", function () awful.spawn(calculator) end,
+              {description = "run calculator", group = "custom"}),
+
+    -- Open Files Manager
+    awful.key({ }, "XF86Explorer", function () awful.spawn(files) end,
+              {description = "run files manager", group = "custom"}),
 
     -- Show/Hide Tray
     awful.key({ modkey }, "z", function ()
