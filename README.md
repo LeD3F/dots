@@ -47,7 +47,7 @@ Vivaldi Themes:
 | Etcher                       | Qt Assistant       | Image Viewer: GPicView |                        | Deluge           |
 | Galculator                   | Qt4 Assistant      | Krita (AppImage)       |                        | Hakuneko Desktop |
 | File Manager: Nemo           | Qt Linguist        | MComix                 |                        | Telegram Desktop |
-| Password Manager: Seahorse   | Qt4 Linguist       | Simple Scan            |                        | Vivaldi          |
+| Password Manager: Seahorse   | Qt4 Linguist       | Simple Scan            |                        | Vivaldi Snapshot |
 | Notes: Simplenote            | Qt4 Designer       |                        |                        |                  |
 | Winetricks                   | Qt QDBusViewer     |                        |                        |                  |
 | compton                      | Qt4 QDBusViewer    |                        |                        |                  |
