@@ -67,4 +67,4 @@ Vivaldi Themes:
 | Spotify               | WPS Writer          |                   | LXTask                         |
 | SMPlayer              |                     |                   | Vmware Workstation             |
 | MPV                   |                     |                   | WoeUSB                         |
-|                       |                     |                   | URXvt                          |
+| Cava                  |                     |                   | URXvt                          |
