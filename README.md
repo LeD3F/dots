@@ -13,6 +13,9 @@ Sublime Color Scheme is 1337 with changed background color - https://github.com/
 Sublime theme is default adaptive theme
 
 Compositor is Compton - https://github.com/chjj/compton
+
+GTK3-Nocsd - https://github.com/PCMan/gtk3-nocsd
+
 # AwesomeWM
 
 <img src='screenshots/awesomewm.png'>
