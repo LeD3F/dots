@@ -404,12 +404,37 @@ globalkeys = my_table.join(
         {description = "toggle wibox", group = "awesome"}),
     
     ---- Custom Hotkeys
+    
+    --Spotify Control
+    awful.key({ }, "XF86AudioNext",
+        function ()
+            os.execute(string.format("sp next"))
+        end,
+        {description = "Spotify next track", group = "hotkeys"}),
 
-    -- Open Files Manager
+    awful.key({ }, "XF86AudioPrev",
+        function ()
+            os.execute(string.format("sp prev"))
+        end,
+        {description = "Spotify previous track", group = "hotkeys"}),    
+
+    awful.key({ }, "XF86AudioStop",
+        function ()
+            os.execute(string.format("sp pause"))
+        end,
+        {description = "Spotify pause", group = "hotkeys"}),
+
+    awful.key({ }, "XF86AudioPlay",
+        function ()
+            os.execute(string.format("sp play"))
+        end,
+        {description = "Spotify play", group = "hotkeys"}),             
+
+    -- Open Calculator
     awful.key({ }, "XF86Calculator", function () awful.spawn(calculator) end,
               {description = "run calculator", group = "custom"}),
 
-    -- Open Calculator
+    -- Open Files Manager
     awful.key({ }, "XF86Explorer", function () awful.spawn(files) end,
               {description = "run files manager", group = "custom"}),
 
