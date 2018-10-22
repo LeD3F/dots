@@ -13,7 +13,7 @@ local wibox = require("wibox")
 local watch = require("awful.widget.watch")
 local spawn = require("awful.spawn")
 
-local path_to_icons = "/home/led3f/Pictures/Icons/"
+local path_to_icons = os.getenv("HOME") .. "/.config/awesome/themes/holo/icons/"
 
 local GET_VOLUME_CMD = 'amixer -D pulse sget Master'
 local INC_VOLUME_CMD = 'amixer -D pulse sset Master 5%+'
