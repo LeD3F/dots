@@ -8,6 +8,10 @@ Volume widget based on lczp's lain widget alsabar and streetturtle's Volume Widg
 
 For Desktop Background image i'm using Nitrogen - https://github.com/l3ib/nitrogen
 
+Sublime Color Scheme is 1337 with changed background color - https://github.com/MarkMichos/1337-Scheme
+
+Sublime theme is default adaptive theme
+
 # AwesomeWM
 
 <img src='screenshots/awesomewm.png'>
