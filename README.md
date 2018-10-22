@@ -50,17 +50,18 @@ Vivaldi Themes:
 | compton                      | Qt4 QDBusViewer    |                        |                        |                  |
 | Nitrogen                     | Sublime Text 3 Dev |                        |                        |                  |
 
-| Multimedia:                  | Office:                     | Settings:                | System Tools:                  |
-| ---------------------------- | -----------------------     | ----------------------   | ------------------------------ |
-| EasyTAG                      | LibreOffice Base            | ARandR                   | Pamac                          |
-| Gnac                         | LibreOffice Math            | Lxappearance             | Avahi Zeroconf Browser         |
-| GNOME Twitch                 | LibreOffice Impress         | Java                     |                                |
-| Kdenlive (AppImage)          | LibreOffice Draw            | NetworkManager           |                                |
-| Lollypop                     | LibreOffice Calc            | NVIDIA X Settings        |                                |
-| OBS                          | LibreOffice                 | Oomox                    |                                |
-| Pavucontrol                  | LibreOffice Writer          | Qt5ct                    |                                |
-| Qt V4L2 video capture        | WPS Spreadsheets            |                          |                                |
-| Qt V4L2 test utility         | WPS Presentation            |                          |                                |
-| Spotify                      | WPS Writer                  |                          |                                |
-| SMPlayer                     |                             |                          |                                |
-| MPV                          |                             |                          |                                |
+| Multimedia:           | Office:             | Settings:         | System Tools:                  |
+| --------------------- | ------------------- | ----------------- | ------------------------------ |
+| EasyTAG               | LibreOffice Base    | ARandR            | Pamac                          |
+| Gnac                  | LibreOffice Math    | Lxappearance      | Avahi Zeroconf Browser         |
+| GNOME Twitch          | LibreOffice Impress | Java              | Bleachbit                      |
+| Kdenlive (AppImage)   | LibreOffice Draw    | NetworkManager    | Baobab                         |
+| Lollypop              | LibreOffice Calc    | NVIDIA X Settings | Grub Customizer                |
+| OBS                   | LibreOffice         | Oomox             | Htop                           |
+| Pavucontrol           | LibreOffice Writer  | Qt5ct             | CUPS                           |
+| Qt V4L2 video capture | WPS Spreadsheets    |                   | Network Tools                  |
+| Qt V4L2 test utility  | WPS Presentation    |                   | Timeshift                      |
+| Spotify               | WPS Writer          |                   | LXTask                         |
+| SMPlayer              |                     |                   | Vmware Workstation             |
+| MPV                   |                     |                   | WoeUSB                         |
+|                       |                     |                   | URXvt                          |
