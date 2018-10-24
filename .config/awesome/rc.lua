@@ -129,6 +129,7 @@ local calculator   = "galculator"
 local guieditor    = "subl3"
 local scrlocker    = "i3lock-fancy-dualmonitor"
 local softwaremanager = "pamac-manager"
+local telegram = "telegram-desktop"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { " DES", " WEB", " MED", " MUS", " CHT" }
@@ -254,6 +255,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
         { "Nemo", "nemo", "/usr/share/icons/Papirus-Dark/24x24/apps/nemo.svg" },
         { "Telegram", "telegram-desktop", "/usr/share/icons/Papirus-Dark/24x24/apps/telegram.svg" },        
         { "Pamac", "pamac-manager", "/usr/share/icons/Papirus-Dark/24x24/apps/system-software-install.svg" },
+        { "Webmchan", "/home/led3f/Documents/webmchan-linux-x64/webmchan", "/usr/share/icons/Papirus-Dark/24x24/apps/smplayer.svg" },
         -- other triads can be put here
     }
 })
@@ -433,6 +435,10 @@ globalkeys = my_table.join(
 
     -- Open Pamac
     awful.key({ }, "XF86Tools", function () awful.spawn(softwaremanager) end,
+              {description = "run software manager", group = "custom"}),
+
+    -- Open Telegram
+    awful.key({ }, "XF86Mail", function () awful.spawn(telegram) end,
               {description = "run software manager", group = "custom"}),
 
     -- Open Calculator
