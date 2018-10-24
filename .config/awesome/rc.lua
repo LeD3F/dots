@@ -746,7 +746,7 @@ awful.rules.rules = {
     -- MED
 
     { rule = { class = "smplayer" },
-      properties = { screen = 1, tag = awful.util.tagnames[3] } },
+      properties = { screen = 1, tag = awful.util.tagnames[3] } },           
 
     { rule = { class = "obs" },
       properties = { screen = 2, tag = awful.util.tagnames[3] } }, 
