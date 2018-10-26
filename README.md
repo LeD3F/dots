@@ -41,19 +41,19 @@ Vivaldi Themes:
 
 # Applications
 
-| Accessories:                 | Development:       | Graphics:              | Games:                 | Internet:        |
-| ---------------------------- | ------------------ | ---------------------- | ---------------------- | ---------------- |
-| Archive Manager: File-Roller | CMake              | FontForge              | Steam                  | Avahi SSH        |
-| Gnome Disks                  | Electron           | GIMP                   | Lutris                 | Avahi VNC        |
-| Document Viewer: Xreader     | Qt Designer        | InkSpace               |                        | Discord          |
-| Etcher                       | Qt Assistant       | Image Viewer: GPicView |                        | Deluge           |
-| Galculator                   | Qt4 Assistant      | Krita (AppImage)       |                        | Hakuneko Desktop |
-| File Manager: Nemo           | Qt Linguist        | MComix                 |                        | Telegram Desktop |
-| Password Manager: Seahorse   | Qt4 Linguist       | Simple Scan            |                        | Vivaldi Snapshot |
-| Notes: Simplenote            | Qt4 Designer       |                        |                        |                  |
-| Winetricks                   | Qt QDBusViewer     |                        |                        |                  |
-| compton                      | Qt4 QDBusViewer    |                        |                        |                  |
-| Nitrogen                     | Sublime Text 3 Dev |                        |                        |                  |
+| Accessories:                 | Development:       | Graphics:              | Games:                  | Internet:        |
+| ---------------------------- | ------------------ | ---------------------- | ----------------------- | ---------------- |
+| Archive Manager: File-Roller | CMake              | FontForge              | Steam                   | Avahi SSH        |
+| Gnome Disks                  | Electron           | GIMP                   | Lutris                  | Avahi VNC        |
+| Document Viewer: Xreader     | Qt Designer        | InkSpace               | Linux Steam Integration | Discord          |
+| Etcher                       | Qt Assistant       | Image Viewer: GPicView |                         | Deluge           |
+| Galculator                   | Qt4 Assistant      | Krita (AppImage)       |                         | Hakuneko Desktop |
+| File Manager: Nemo           | Qt Linguist        | MComix                 |                         | Telegram Desktop |
+| Password Manager: Seahorse   | Qt4 Linguist       | Simple Scan            |                         | Vivaldi Snapshot |
+| Notes: Simplenote            | Qt4 Designer       |                        |                         |                  |
+| Winetricks                   | Qt QDBusViewer     |                        |                         |                  |
+| compton                      | Qt4 QDBusViewer    |                        |                         |                  |
+| Nitrogen                     | Sublime Text 3 Dev |                        |                         |                  |
 
 | Multimedia:           | Office:             | Settings:         | System Tools:                  |
 | --------------------- | ------------------- | ----------------- | ------------------------------ |
