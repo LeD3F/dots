@@ -15515,7 +15515,7 @@ button.inspector:hover {
   animation-duration: 0s !important;
   animation-delay: 0s !important;
 }
-.fullscreeninfobubble {
+.overlayinfobubble {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -15533,7 +15533,7 @@ button.inspector:hover {
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
 }
-.fullscreeninfobubble.show {
+.overlayinfobubble.show {
   opacity: 0.9;
   visibility: visible;
   transition: opacity 0.5s, visibility 0.5s;
