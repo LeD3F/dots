@@ -74,8 +74,13 @@ Vivaldi Themes:
 # Nemo Plugins
 
 Nemo Media Info Tab - https://github.com/linux-man/nemo-mediainfo-tab
+
 Nemo Audio Tab - https://github.com/linuxmint/nemo-extensions
+
 Nemo File-Roller - https://github.com/linuxmint/nemo-extensions
+
 Nemo Image Converter - https://github.com/linuxmint/nemo-extensions
+
 Nemo Preview - https://github.com/linuxmint/nemo-extensions
+
 Nemo Seahorse - https://github.com/linuxmint/nemo-extensions
