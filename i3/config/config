@@ -60,7 +60,7 @@ bindsym $mod+Shift+c kill
                                                           
                                                           
 # Rofi launcher
-bindsym $mod+d  exec "rofi -show run -theme Paper"
+bindsym $mod+d  exec "rofi -show run -theme flat-red"
 # Rofi window switcher
 bindsym $mod+Shift+d exec  rofi -show-icons -show window -theme flat-red
 
@@ -173,6 +173,15 @@ bindsym XF86Calculator exec galculator
 
 # Launch Explorer
 bindsym XF86Explorer exec nemo
+
+# Volume Raise
+bindsym XF86AudioRaiseVolume exec amixer set Master -q 1%+
+
+# Volume Down
+bindsym XF86AudioLowerVolume exec amixer set Master -q 1%-
+
+# Toggle Mute
+bindsym XF86AudioMute exec amixer set Master -q toggle
 
 # __          ______  _____  _  __ _____ _____        _____ ______  _____ 
 # \ \        / / __ \|  __ \| |/ // ____|  __ \ /\   / ____|  ____|/ ____|
