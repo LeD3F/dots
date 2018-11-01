@@ -1,31 +1,19 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;==========================================================
-
 [colors]
-;background = ${xrdb:color0:#222}
 background = #e8121212
-background-alt = #222222
-;foreground = ${xrdb:color7:#222}
+background-alt = #ec202020
 foreground = #FFFFFF
 foreground-alt = #999999
 primary = #df4b43
 secondary = #e60053
 alert = #bd2c40
+
+pulse = #c8dd583a
+spotify = #c848a37f
+xkb = #c83697b9
+memory = #c81858a5
+eth = #c8fe9b3d
+power = #c8f50505
+powericon = #FFFFFF
 
 [bar/nim]
 monitor = DP-2
@@ -37,30 +25,35 @@ radius = 0
 fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
+monitor-strict = false
 
-line-size = 1
+border-bottom-size = 1
+border-bottom-color = #AD3D37
+
 line-color = #f00
+underline-size = 0
+overline-size = 0
 
 border-size = 0
 border-color = #00000000
 
-padding-left = 1
-padding-right = 1
+padding-left = 0
+padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 0
+module-margin-right = 0
 
-font-0 = misc termsyn:style=Regular:pixelsize=10;1
+font-0 = misc termsyn:style=Regular:pixelsize=10;2
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;2
 font-3 = Font Awesome 5 Brands:style=Regular:pixelsize=10;2
 font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-5 = Wuncon Siji:pixelsize=10;1
+font-5 = Wuncon Siji:pixelsize=10;2
 font-6 = emojione:scale=10;1
 
-modules-left = bspwm i3
-modules-center = 
-modules-right = spotify xkeyboard cpu eth pulseaudio date
+modules-left = i3
+modules-center = date
+modules-right = spotify xkeyboard memory eth pulseaudio
 
 [bar/nim2]
 monitor = DVI-I-1
@@ -73,29 +66,33 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 1
+border-bottom-size = 1
+border-bottom-color = #AD3D37
+
 line-color = #f00
+underline-size = 0
+overline-size = 0
 
 border-size = 0
 border-color = #00000000
 
-padding-left = 1
-padding-right = 1
+padding-left = 0
+padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 0
+module-margin-right = 0
 
-font-0 = misc termsyn:style=Regular:pixelsize=10;1
+font-0 = misc termsyn:style=Regular:pixelsize=10;2
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;2
 font-3 = Font Awesome 5 Brands:style=Regular:pixelsize=10;2
 font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-5 = Wuncon Siji:pixelsize=10;1
+font-5 = Wuncon Siji:pixelsize=10;2
 font-6 = emojione:scale=10;1
 
-modules-left = powermenu bspwm i3
-modules-center =
-modules-right = spotify pulseaudio xkeyboard cpu eth
+modules-left = powermenu i3
+modules-center = date
+modules-right = xkeyboard memory eth pulseaudio
 
 ## Tray ##
 
@@ -105,13 +102,9 @@ modules-right = spotify pulseaudio xkeyboard cpu eth
 ;tray-padding = 1
 ;tray-background = #e8121212
 
-;wm-restack = bspwm
 wm-restack = i3
 
 override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -127,12 +120,14 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 format-prefix-underline = ${colors.secondary}
+format-prefix-background = ${colors.xkb}
 
-label-layout = %layout%
+label-layout = "%layout% "
 label-layout-underline = ${colors.secondary}
+label-layout-background  = ${colors.xkb}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -148,28 +143,6 @@ mount-0 = /
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground}
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
 
 [module/i3]
 ; Use fuzzy (partial) matching on labels when assigning 
@@ -187,6 +160,7 @@ ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
+ws-icon-6 = 7;
 ws-icon-default = ♟
 ; NOTE: You cannot skip icons, e.g. to get a ws-icon-6
 ; you must also define a ws-icon-5.
@@ -206,13 +180,13 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
@@ -222,47 +196,11 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
 
 ; Separator in between workspaces
 ;label-separator = |
-
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
@@ -275,10 +213,12 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 format-underline = #4bffdc
-label = %percentage_used%%
+format-prefix-background = ${colors.memory}
+label = "%percentage_used% "
+label-background = ${colors.memory}
 
 [module/wlan]
 type = internal/network
@@ -308,9 +248,11 @@ interface = enp3s0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = ${colors.foreground}
-label-connected = %upspeed% %downspeed%
+format-connected-prefix-background = ${colors.eth}
+label-connected = "%upspeed% %downspeed% "
+label-connected-background = ${colors.eth}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -323,35 +265,39 @@ type = internal/date
 interval = 1
 
 date =
-date-alt = "%Y-%m-%d "
+date-alt = "%d-%m-%Y "
 
-time = %H:%M
+time = %a %d %H:%M
 time-alt = %H:%M:%S
 
 
 format-underline = #F0544C
 
-label = %date%%time%
+label =  %date%%time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> 
-label-volume = VOL %percentage%%
-;label-volume-foreground = ${root.foreground}
+format-volume = <ramp-volume><label-volume>
+label-volume = " %percentage% "
+;format-volume-underline = #bd2c40
+label-volume-background = ${colors.pulse}
 
-label-muted = muted
+label-muted = "  muted "
+label-muted-background = ${colors.background-alt}
 label-muted-foreground = #666
+format-muted-underline = #303030
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-background = ${colors.pulse}
 
 [module/alsa]
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
+label-focused-background = ${colors.background-alt}
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
@@ -434,10 +380,12 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-open = "  "
+label-open-background = ${colors.power}
+label-open-foreground = ${colors.powericon}
+label-close = "  cancel "
+label-close-background = "${colors.power}"
+label-close-foreground = ${colors.powericon}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
 
@@ -467,13 +415,14 @@ screenchange-reload = true
 margin-top = 0
 margin-bottom = 0
 
-## Spotify ##
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = "  "
 format = <label>
-exec = python /home/led3f/.config/polybar/spotify_status.py -f '{artist}: {song}'
+exec = python /home/led3f/.config/polybar/spotify_status.py -f '{artist}: {song} '
 format-underline = #1db954
+label-background = ${colors.spotify}
+format-background = ${colors.spotify}
 
 ; vim:ft=dosini
