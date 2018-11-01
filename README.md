@@ -24,6 +24,7 @@ Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f
 
 # i3
 
+<img src='screenshots/i3.png'>
 
 # i3 info
 
