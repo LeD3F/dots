@@ -62,7 +62,7 @@ bindsym $mod+Shift+c kill
 # Rofi launcher
 bindsym $mod+d  exec "rofi -show run -theme Paper"
 # Rofi window switcher
-bindsym $mod+Shift+d exec  rofi -show-icons -show window -theme Paper
+bindsym $mod+Shift+d exec  rofi -show-icons -show window -theme flat-red
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#121212' -sb '#F0544C' -sf '#FFFFFF' -fn 'misc termsyn-10' -p 'run :'"
