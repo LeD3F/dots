@@ -151,6 +151,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 ## Floating Windows ##
 for_window [class="Nitrogen"] floating enable
+for_window [class="Pamac"] floating enable
 
 # reload the configuration file
 #bindsym $mod+Shift+c reload
