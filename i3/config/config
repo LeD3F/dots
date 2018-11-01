@@ -213,14 +213,13 @@ assign [class="Gimp"] $ws3
 
 # Autostart
 
-exec --no-startup-id "nitrogen --restore"
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id pamac-tray
-exec --no-startup-id nm-applet
 exec --no-startup-id "xset s 0 0"
 exec --no-startup-id "xset dpms 0 0 0"
-exec --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &"
-exec --no-startup-id "xrdb -merge ~/.Xresources"
-exec --no-startup-id "xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal"
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+exec --no-startup-id xrdb -merge ~/.Xresources
+exec --no-startup-id xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal
 exec --no-startup-id setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle'
-exec --no-startup-id dunst
+exec --no-startup-id dunst -config /home/led3f/.config/dunst/dunstrc
