@@ -59,8 +59,43 @@ font-5 = Wuncon Siji:pixelsize=10;1
 font-6 = emojione:scale=10;1
 
 modules-left = bspwm i3 title
-modules-center = date
-modules-right = spotify pulseaudio xkeyboard memory cpu eth battery temperature
+modules-center = 
+modules-right = spotify xkeyboard cpu eth pulseaudio date
+
+[bar/nim2]
+monitor = DVI-I-1
+width = 100%
+height = 25
+;offset-x = 1%
+;offset-y = 1%
+radius = 0
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 1
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = misc termsyn:style=Regular:pixelsize=10;1
+font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
+font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;2
+font-3 = Font Awesome 5 Brands:style=Regular:pixelsize=10;2
+font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-5 = Wuncon Siji:pixelsize=10;1
+font-6 = emojione:scale=10;1
+
+modules-left = powermenu bspwm i3
+modules-center =
+modules-right = spotify pulseaudio xkeyboard cpu eth
 
 ## Tray ##
 
@@ -269,13 +304,13 @@ ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
 type = internal/network
-interface = ens3p0
+interface = enp3s0
 interval = 3.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground}
-label-connected = %local_ip%
+label-connected = %upspeed% %downspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -301,7 +336,7 @@ label = %date%%time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume>
+format-volume = <label-volume> 
 label-volume = VOL %percentage%%
 ;label-volume-foreground = ${root.foreground}
 
