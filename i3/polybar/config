@@ -58,7 +58,7 @@ font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-5 = Wuncon Siji:pixelsize=10;1
 font-6 = emojione:scale=10;1
 
-modules-left = bspwm i3 title
+modules-left = bspwm i3
 modules-center = 
 modules-right = spotify xkeyboard cpu eth pulseaudio date
 
@@ -466,29 +466,6 @@ screenchange-reload = true
 [global/wm]
 margin-top = 0
 margin-bottom = 0
-
-## Xwindow ##
-
-[module/title]
-type = internal/xwindow
-; Available tags:
-;   <label> (default)
-format = <label>
-format-background = #303030
-format-foreground = #FFFFFF
-format-padding = 1
-
-; Available tokens:
-;   %title%
-; Default: %title%
-label = %title%
-label-maxlen = 50
-
-; Used instead of label when there is no window title
-; Available tokens:
-;   None
-label-empty = Empty
-label-empty-foreground = #707880
 
 ## Spotify ##
 [module/spotify]
