@@ -1,18 +1,18 @@
 [colors]
-background = #e8121212
-background-alt = #ec202020
+background = #E6121212
+background-alt = #E6202020
 foreground = #FFFFFF
 foreground-alt = #999999
 primary = #df4b43
 secondary = #e60053
 alert = #bd2c40
 
-pulse = #c8dd583a
-spotify = #c848a37f
-xkb = #c83697b9
-memory = #c81858a5
-eth = #c8fe9b3d
-power = #c8f50505
+pulse = #CCdd583a
+spotify = #CC48a37f
+xkb = #CC3697b9
+memory = #CC1858a5
+eth = #CCfe9b3d
+power = #CCf50505
 powericon = #FFFFFF
 
 [bar/nim]
@@ -96,13 +96,11 @@ modules-left = powermenu i3
 modules-center = date
 modules-right = xkeyboard memory eth pulseaudio
 
-## Tray ##
-
-;tray-position = right
-;tray-maxsize=14
-;tray-transparent = true
-;tray-padding = 1
-;tray-background = #e8121212
+tray-position = right
+tray-maxsize=14
+tray-transparent = true
+tray-padding = 1
+tray-background = #e8121212
 
 wm-restack = i3
 
@@ -270,7 +268,7 @@ interval = 1
 date =
 date-alt = "%d-%m-%Y "
 
-time = %a %d %H:%M
+time = %a %d, %H:%M
 time-alt = %H:%M:%S
 
 
