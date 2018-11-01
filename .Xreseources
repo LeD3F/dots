@@ -10,7 +10,7 @@ Xft.lcdfilter: lcddefault
 
 !URxvt --
 
-URxvt.font: xft:erus erusfont:size=9:antialias=true
+URxvt.font: xft:xos4 Terminus:size=9:antialias=true
 
 URxvt.letterSpace: 0
 URxvt.antialias: true
