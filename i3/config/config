@@ -162,6 +162,18 @@ bindsym XF86AudioPlay exec sp play
 # Launch Vivaldi
 bindsym $mod+q exec vivaldi-snapshot
 
+# Launch Pamac
+bindsym XF86Tools exec pamac-manager
+
+# Launch Telegram
+bindsym XF86Mail exec telegram-desktop
+
+# Launch Calculator
+bindsym XF86Calculator exec galculator
+
+# Launch Explorer
+bindsym XF86Explorer exec nemo
+
 # __          ______  _____  _  __ _____ _____        _____ ______  _____ 
 # \ \        / / __ \|  __ \| |/ // ____|  __ \ /\   / ____|  ____|/ ____|
 #  \ \  /\  / / |  | | |__) | ' /| (___ | |__) /  \ | |    | |__  | (___  
@@ -230,6 +242,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
                                                                                                                                                                                                                                                                                                                                               
 for_window [class="Nitrogen"] floating enable
 for_window [class="Pamac"] floating enable
+for_window [class="Galculator"] floating enable
+for_window [class="Gnac"] floating enable
+for_window [class="Etcher"] floating enable
+for_window [class="Woeusb"] floating enable
 
 #  _____           _             _   
 # |  __ \         | |           | |  
