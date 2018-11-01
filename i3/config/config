@@ -159,6 +159,9 @@ bindsym XF86AudioStop exec sp pause
 # Spotify Play
 bindsym XF86AudioPlay exec sp play
 
+# Launch Vivaldi
+bindsym $mod+q exec vivaldi-snapshot
+
 # __          ______  _____  _  __ _____ _____        _____ ______  _____ 
 # \ \        / / __ \|  __ \| |/ // ____|  __ \ /\   / ____|  ____|/ ____|
 #  \ \  /\  / / |  | | |__) | ' /| (___ | |__) /  \ | |    | |__  | (___  
