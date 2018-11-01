@@ -22,6 +22,20 @@ Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f
 
 <img src='screenshots/awesomewm.png'>
 
+# i3
+
+<img src='screenshots/i3.png'>
+
+# i3 info
+
+Menu is Rofi - https://github.com/DaveDavenport/rofi
+
+Bar is Polybar - https://github.com/jaagr/polybar
+
+Notification Daemon is Dunst - https://github.com/dunst-project/dunst
+
+Spotify Track Module for Polybar made by Jvanrhijn - https://github.com/Jvanrhijn/polybar-spotify
+
 # Vivaldi
 
 <img src='screenshots/vivaldi.png'>
