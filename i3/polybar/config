@@ -26,6 +26,8 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 monitor-strict = false
+enable-ipc = true
+
 
 border-bottom-size = 1
 border-bottom-color = #AD3D37
@@ -43,7 +45,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = misc termsyn:style=Regular:pixelsize=10;2
+font-0 = erus erusfont:style=Regular:pixelsize=10;2
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;2
 font-3 = Font Awesome 5 Brands:style=Regular:pixelsize=10;2
@@ -53,7 +55,7 @@ font-6 = emojione:scale=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = spotify xkeyboard memory eth pulseaudio
+modules-right = spotify  xkeyboard memory eth pulseaudio
 
 [bar/nim2]
 monitor = DVI-I-1
@@ -180,7 +182,8 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-background = ${colors.background-alt}
+label-focused-foreground = #AD3D37
+label-focused-background = ${colors.background}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
@@ -418,7 +421,7 @@ margin-bottom = 0
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = "  "
+format-prefix = "  "
 format = <label>
 exec = python /home/led3f/.config/polybar/spotify_status.py -f '{artist}: {song} '
 format-underline = #1db954
