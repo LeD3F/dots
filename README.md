@@ -36,6 +36,8 @@ Notification Daemon is Dunst - https://github.com/dunst-project/dunst
 
 Spotify Track Module for Polybar made by Jvanrhijn - https://github.com/Jvanrhijn/polybar-spotify
 
+Pipes - https://github.com/pipeseroni/pipes.sh
+
 # Vivaldi
 
 <img src='screenshots/vivaldi.png'>
