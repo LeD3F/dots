@@ -176,9 +176,6 @@ bindsym XF86AudioNext exec sp next
 # Spotify Previous Track
 bindsym XF86AudioPrev exec sp prev
 
-# Spotify Stop
-bindsym XF86AudioStop exec sp pause
-
 # Spotify Play
 bindsym XF86AudioPlay exec sp play
 
@@ -205,6 +202,9 @@ bindsym XF86AudioLowerVolume exec amixer set Master -q 1%-
 
 # Toggle Mute
 bindsym XF86AudioMute exec amixer set Master -q toggle
+
+# Audio Sources List
+bindsym XF86AudioStop exec rofi-pulse
 
 
 
@@ -285,7 +285,8 @@ for_window [class="Galculator"] floating enable
 for_window [class="Gnac"] floating enable
 for_window [class="Etcher"] floating enable
 for_window [class="Woeusb"] floating enable
-for_window [class="Archive"] floating enable
+for_window [class="^Pavucontrol$"] floating enable
+for_window [class="^File-roller$"] floating enable
 
 #######################################
 #  _____           _             _    #
