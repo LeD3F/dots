@@ -1,0 +1,21 @@
+{
+	"Fg": 7,
+	"Bg": -1,
+
+	"BorderLabel": 15,
+	"BorderLine":  1,
+
+	"CPULines": [4, 3, 2, 1, 5, 6, 7, 8],
+
+	"MainMem": 5,
+	"SwapMem": 11,
+
+	"ProcCursor": 88,
+
+	"Sparkline": 88,
+
+	"DiskBar": 7,
+
+	"TempLow":  2,
+	"TempHigh": 1
+}
