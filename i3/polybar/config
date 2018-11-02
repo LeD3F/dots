@@ -1,3 +1,16 @@
+# Polybar Config by LeD3F
+# Polybar - https://github.com/jaagr/polybar
+
+##################################
+#   _____      _                 #
+#  / ____|    | |                #
+# | |     ___ | | ___  _ __ ___  #
+# | |    / _ \| |/ _ \| '__/ __| #
+# | |___| (_) | | (_) | |  \__ \ #
+#  \_____\___/|_|\___/|_|  |___/ #
+#                                #
+##################################                               
+                               
 [colors]
 background = #E6121212
 background-alt = #E6202020
@@ -15,6 +28,16 @@ eth = #CCfe9b3d
 power = #CCf50505
 powericon = #FFFFFF
 
+############################################
+#  ____               ___   _ _            #
+# |  _ \             / / \ | (_)           #
+# | |_) | __ _ _ __ / /|  \| |_ _ __ ___   #
+# |  _ < / _` | '__/ / | . ` | | '_ ` _ \  #
+# | |_) | (_| | | / /  | |\  | | | | | | | #
+# |____/ \__,_|_|/_/   |_| \_|_|_| |_| |_| #
+#                                          #
+############################################                                         
+                                         
 [bar/nim]
 monitor = DP-2
 width = 100%
@@ -65,6 +88,16 @@ override-redirect = false
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+#################################################
+#  ____               ___   _ _           ___   #
+# |  _ \             / / \ | (_)         |__ \  #
+# | |_) | __ _ _ __ / /|  \| |_ _ __ ___    ) | #
+# |  _ < / _` | '__/ / | . ` | | '_ ` _ \  / /  #
+# | |_) | (_| | | / /  | |\  | | | | | | |/ /_  #
+# |____/ \__,_|_|/_/   |_| \_|_|_| |_| |_|____| #
+#                                               #
+#################################################                                              
+                                              
 [bar/nim2]
 monitor = DVI-I-1
 width = 100%
@@ -119,6 +152,17 @@ override-redirect = false
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+######################################################
+# __   ___              _                         _  #
+# \ \ / / |            | |                       | | #
+#  \ V /| | _____ _   _| |__   ___   __ _ _ __ __| | #
+#   > < | |/ / _ \ | | | '_ \ / _ \ / _` | '__/ _` | #
+#  / . \|   <  __/ |_| | |_) | (_) | (_| | | | (_| | #
+# /_/ \_\_|\_\___|\__, |_.__/ \___/ \__,_|_|  \__,_| #
+#                  __/ |                             #
+#                 |___/                              #
+#                                                    #
+######################################################
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -138,28 +182,17 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
+#############
+#  _ ____   #
+# (_)___ \  #
+#  _  __) | #
+# | ||__ <  #
+# | |___) | #
+# |_|____/  #
+#           #
+#############         
+          
 [module/i3]
-; Use fuzzy (partial) matching on labels when assigning 
-; icons to workspaces
-; Example: code;♚ will apply the icon to all workspaces 
-; containing 'code' in the label
-; Default: false
-fuzzy-match = false
-
-; ws-icon-[0-9]+ = label;icon
-; NOTE: The label needs to match the name of the i3 workspace
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-default = ♟
-; NOTE: You cannot skip icons, e.g. to get a ws-icon-6
-; you must also define a ws-icon-5.
-
-
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
@@ -197,6 +230,38 @@ label-urgent-padding = 2
 ; Separator in between workspaces
 ;label-separator = |
 
+; Use fuzzy (partial) matching on labels when assigning 
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces 
+; containing 'code' in the label
+; Default: false
+fuzzy-match = false
+
+; ws-icon-[0-9]+ = label;icon
+; NOTE: The label needs to match the name of the i3 workspace
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-default = ♟
+; NOTE: You cannot skip icons, e.g. to get a ws-icon-6
+; you must also define a ws-icon-5.
+
+############################################
+#  __  __                                  #
+# |  \/  |                                 #
+# | \  / | ___ _ __ ___   ___  _ __ _   _  #
+# | |\/| |/ _ \ '_ ` _ \ / _ \| '__| | | | #
+# | |  | |  __/ | | | | | (_) | |  | |_| | #
+# |_|  |_|\___|_| |_| |_|\___/|_|   \__, | #
+#                                    __/ | #
+#                                   |___/  #
+#                                          #
+############################################
+
 [module/memory]
 type = internal/memory
 interval = 2
@@ -206,6 +271,16 @@ format-underline = #4bffdc
 format-prefix-background = ${colors.memory}
 label = "%percentage_used% "
 label-background = ${colors.memory}
+
+################################
+# __          ___              #
+# \ \        / / |             #
+#  \ \  /\  / /| | __ _ _ __   #
+#   \ \/  \/ / | |/ _` | '_ \  #
+#    \  /\  /  | | (_| | | | | #
+#     \/  \/   |_|\__,_|_| |_| #
+#                              #
+################################                             
 
 [module/wlan]
 type = internal/network
@@ -229,6 +304,16 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground}
 
+################################
+# __          ___              #
+# \ \        / / |             #
+#  \ \  /\  / /| | __ _ _ __   #
+#   \ \/  \/ / | |/ _` | '_ \  #
+#    \  /\  /  | | (_| | | | | #
+#     \/  \/   |_|\__,_|_| |_| #
+#                              #
+################################                       
+                             
 [module/eth]
 type = internal/network
 interface = enp3s0
@@ -247,6 +332,17 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground}
 
+##########################
+#  _____        _        #
+# |  __ \      | |       #
+# | |  | | __ _| |_ ___  #
+# | |  | |/ _` | __/ _ \ #
+# | |__| | (_| | ||  __/ #
+# |_____/ \__,_|\__\___| #
+#                        #
+##########################                       
+                       
+
 [module/date]
 type = internal/date
 interval = 1
@@ -260,6 +356,16 @@ time-alt = %H:%M:%S
 format-underline = #F0544C
 
 label =  %date%%time%
+
+########################################################
+#  _____       _                            _ _        #
+# |  __ \     | |            /\            | (_)       #
+# | |__) |   _| |___  ___   /  \  _   _  __| |_  ___   #
+# |  ___/ | | | / __|/ _ \ / /\ \| | | |/ _` | |/ _ \  #
+# | |   | |_| | \__ \  __// ____ \ |_| | (_| | | (_) | #
+# |_|    \__,_|_|___/\___/_/    \_\__,_|\__,_|_|\___/  #
+#                                                      #
+########################################################  
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -277,6 +383,18 @@ format-muted-underline = #303030
 ramp-volume-0 = " "
 ramp-volume-1 = " "
 ramp-volume-background = ${colors.pulse}
+
+########################################
+#  ____        _   _                   # 
+# |  _ \      | | | |                  #
+# | |_) | __ _| |_| |_ ___ _ __ _   _  #
+# |  _ < / _` | __| __/ _ \ '__| | | | #
+# | |_) | (_| | |_| ||  __/ |  | |_| | #
+# |____/ \__,_|\__|\__\___|_|   \__, | #
+#                                __/ | #
+#                               |___/  #
+#                                      #
+########################################
 
 [module/battery]
 type = internal/battery
@@ -311,6 +429,16 @@ animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
+#########################################################
+#  _____                       __  __                   #
+# |  __ \                     |  \/  |                  #
+# | |__) |____      _____ _ __| \  / | ___ _ __  _   _  #
+# |  ___/ _ \ \ /\ / / _ \ '__| |\/| |/ _ \ '_ \| | | | #
+# | |  | (_) \ V  V /  __/ |  | |  | |  __/ | | | |_| | #
+# |_|   \___/ \_/\_/ \___|_|  |_|  |_|\___|_| |_|\__,_| #
+#                                                       #
+#########################################################
+
 [module/powermenu]
 type = custom/menu
 
@@ -342,6 +470,18 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
+###########################################
+#   _____      _   _   _                  #
+#  / ____|    | | | | (_)                 # 
+# | (___   ___| |_| |_ _ _ __   __ _ ___  #
+#  \___ \ / _ \ __| __| | '_ \ / _` / __| #
+#  ____) |  __/ |_| |_| | | | | (_| \__ \ #
+# |_____/ \___|\__|\__|_|_| |_|\__, |___/ #
+#                               __/ |     #
+#                              |___/      #
+#                                         #
+###########################################
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -349,9 +489,31 @@ screenchange-reload = true
 ;compositing-foreground = source
 ;compositing-border = over
 
+#########################
+# __          ____  __  #
+# \ \        / /  \/  | #
+#  \ \  /\  / /| \  / | #
+#   \ \/  \/ / | |\/| | #
+#    \  /\  /  | |  | | #
+#     \/  \/   |_|  |_| #
+#                       #
+#########################                    
+
 [global/wm]
 margin-top = 0
 margin-bottom = 0
+
+########################################
+#   _____             _   _  __        #
+#  / ____|           | | (_)/ _|       #
+# | (___  _ __   ___ | |_ _| |_ _   _  #
+#  \___ \| '_ \ / _ \| __| |  _| | | | #
+#  ____) | |_) | (_) | |_| | | | |_| | #
+# |_____/| .__/ \___/ \__|_|_|  \__, | #
+#        | |                     __/ | #
+#        |_|                    |___/  #
+#                                      #
+########################################
 
 [module/spotify]
 type = custom/script
