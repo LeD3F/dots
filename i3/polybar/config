@@ -26,8 +26,6 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 monitor-strict = false
-enable-ipc = true
-
 
 border-bottom-size = 1
 border-bottom-color = #AD3D37
@@ -56,6 +54,16 @@ font-6 = emojione:scale=10;1
 modules-left = i3
 modules-center = date
 modules-right = spotify  xkeyboard memory eth pulseaudio
+
+wm-restack = i3
+
+override-redirect = false
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
 
 [bar/nim2]
 monitor = DVI-I-1
