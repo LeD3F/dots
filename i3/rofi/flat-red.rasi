@@ -25,7 +25,7 @@ window {
    background-color: @blackdarkest;
    anchor: north;
    location: north;
-   y-offset: 35%;
+   y-offset: 40%;
 }
 
 mainbox {
