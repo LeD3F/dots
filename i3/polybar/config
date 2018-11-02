@@ -52,7 +52,7 @@ font-5 = Wuncon Siji:pixelsize=10;2
 font-6 = emojione:scale=10;1
 
 modules-left = i3
-modules-center = date
+modules-center = date 
 modules-right = spotify  xkeyboard memory eth pulseaudio
 
 wm-restack = i3
@@ -120,10 +120,6 @@ override-redirect = false
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
@@ -141,16 +137,6 @@ label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground}
 
 [module/i3]
 ; Use fuzzy (partial) matching on labels when assigning 
@@ -210,14 +196,6 @@ label-urgent-padding = 2
 
 ; Separator in between workspaces
 ;label-separator = |
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-underline = #f90000
-label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
@@ -279,7 +257,6 @@ date-alt = "%d-%m-%Y "
 time = %a %d, %H:%M
 time-alt = %H:%M:%S
 
-
 format-underline = #F0544C
 
 label =  %date%%time%
@@ -300,35 +277,6 @@ format-muted-underline = #303030
 ramp-volume-0 = " "
 ramp-volume-1 = " "
 ramp-volume-background = ${colors.pulse}
-
-[module/alsa]
-type = internal/alsa
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-focused-background = ${colors.background-alt}
-label-volume-foreground = ${root.foreground}
-
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -362,25 +310,6 @@ animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground}
 
 [module/powermenu]
 type = custom/menu
