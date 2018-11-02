@@ -48,16 +48,16 @@ Pipes - https://github.com/pipeseroni/pipes.sh
 
 Vivaldi Themes:
 
-| Holo Red Theme:                   || Nim Theme:                        |
-| --------------------------------- || --------------------------------- |
-| Background: #222222               || Background: #121212               |
-| Foreground: #ffffff               || Foreground: #ffffff               |
-| Highlight: #f0544c                || Highlight: #ad3d37                |
-| Accent: #303030                   || Accent: #202020                   |
-| [ ] Accent color from Active Page || [x] Accent color from Active Page |
-| [ ] Apply Accent Color to Window  || [ ] Apply Accent Color to Window  |
-| [x] Transparent Tabs              || [x] Transparent Tabs              |
-| Corner Rounding: 2px              || Corner Rounding: 1px              |
+| Holo Red Theme:                   | Nim Theme:                        |
+| --------------------------------- | --------------------------------- |
+| Background: #222222               | Background: #121212               |
+| Foreground: #ffffff               | Foreground: #ffffff               |
+| Highlight: #f0544c                | Highlight: #ad3d37                |
+| Accent: #303030                   | Accent: #202020                   |
+| [ ] Accent color from Active Page | [x] Accent color from Active Page |
+| [ ] Apply Accent Color to Window  | [ ] Apply Accent Color to Window  |
+| [x] Transparent Tabs              | [x] Transparent Tabs              |
+| Corner Rounding: 2px              | Corner Rounding: 1px              |
 
 # Nemo Plugins
 
