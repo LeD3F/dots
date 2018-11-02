@@ -75,8 +75,8 @@ font-5 = Wuncon Siji:pixelsize=10;2
 font-6 = emojione:scale=10;1
 
 modules-left = i3
-modules-center = date 
-modules-right = spotify  xkeyboard memory eth pulseaudio
+modules-center = date
+modules-right = spotify xkeyboard memory eth pulseaudio
 
 wm-restack = i3
 
@@ -520,7 +520,7 @@ type = custom/script
 interval = 1
 format-prefix = "  "
 format = <label>
-exec = python /home/led3f/.config/polybar/spotify_status.py -f '{artist}: {song} '
+exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song} '
 format-underline = #1db954
 label-background = ${colors.spotify}
 format-background = ${colors.spotify}
