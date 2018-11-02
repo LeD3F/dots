@@ -75,7 +75,7 @@ font-5 = Wuncon Siji:pixelsize=10;2
 font-6 = emojione:scale=10;1
 
 modules-left = i3
-modules-center = date
+modules-center = date updates
 modules-right = spotify xkeyboard memory eth pulseaudio
 
 wm-restack = i3
@@ -177,7 +177,7 @@ label-layout = "%layout% "
 label-layout-underline = ${colors.secondary}
 label-layout-background  = ${colors.xkb}
 
-label-indicator-padding = 2
+label-indicator-padding = 1
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
@@ -483,5 +483,10 @@ exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song} '
 format-underline = #1db954
 label-background = ${colors.spotify}
 format-background = ${colors.spotify}
+
+[module/updates]
+type = custom/script
+exec = /home/led3f/.config/polybar/updates-arch-combined.sh
+interval = 600
 
 ; vim:ft=dosini
