@@ -408,7 +408,7 @@ h3 {
 }
 button,
 input,
-.tab-strip .tab,
+.tab-strip .tab-position,
 .topmenu,
 .menu.horizontal > ul > li > .menu,
 .tab-group-indicator,
@@ -3254,6 +3254,7 @@ svg.folder-icon .folder-evaluating circle {
 }
 .fullwidth,
 .fullheight {
+  touch-action: none;
   position: absolute;
   margin: 0;
   padding: 0;
@@ -3264,7 +3265,7 @@ svg.folder-icon .folder-evaluating circle {
 .fullwidth {
   cursor: ns-resize;
   min-width: 100%;
-  min-height: 5px;
+  min-height: 7px;
   right: 0;
   bottom: -3px;
   left: 0;
@@ -3284,7 +3285,7 @@ svg.folder-icon .folder-evaluating circle {
 }
 .fullheight {
   cursor: ew-resize;
-  min-width: 5px;
+  min-width: 7px;
   min-height: 100%;
   top: 0;
   right: -3px;
@@ -3308,20 +3309,6 @@ svg.folder-icon .folder-evaluating circle {
   left: -6px;
   bottom: -2px;
   width: var(--padding);
-}
-#panels-container.right .fullheight {
-  left: -2px;
-}
-#panels-container.right .fullheight:active,
-#panels-container.right .fullheight.touch-active {
-  left: -100px;
-}
-#panels-container.left .fullheight {
-  right: -2px;
-}
-#panels-container.left .fullheight:active,
-#panels-container.left .fullheight.touch-active {
-  right: -100px;
 }
 #modal-bg {
   position: absolute;
@@ -5036,6 +5023,9 @@ webview,
   width: auto;
   height: auto;
   outline: none;
+}
+.active.internal.webpageview .webpage > webview {
+  visibility: hidden;
 }
 .addressfield,
 .searchfield {
@@ -8429,6 +8419,7 @@ button.button-startpage.up svg {
   height: 36px;
 }
 .startpage .startpage-drawer section.drawer-suggestions .dial-suggestions .dial .dial-image img {
+  width: 36px;
   height: 36px;
   padding: 6px;
   background-color: var(--colorBg);
@@ -8658,6 +8649,41 @@ button.button-startpage.up svg {
   flex-direction: column;
   flex: 0;
 }
+.vivaldi-settings .settings-sidebar .button-category {
+  display: flex;
+  flex: 0 0 auto;
+  height: 28px;
+  padding-left: 6px;
+  fill: var(--colorFgFaded);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  align-items: center;
+}
+.vivaldi-settings .settings-sidebar .button-category svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin: auto 9px;
+  pointer-events: none;
+}
+.vivaldi-settings .settings-sidebar .button-category.section {
+  padding-left: 40px;
+  background-color: var(--colorBgDarker);
+  margin-right: 1px;
+}
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+  border-top-color: var(--colorBorder);
+  border-bottom-color: var(--colorBorder);
+  background-color: var(--colorBgLightIntense);
+  fill: var(--colorHighlightBg);
+  color: var(--colorHighlightBg);
+  margin-right: 0;
+}
+.vivaldi-settings .settings-sidebar .settings-navigation:focus-within .tree-row[data-selected] .button-category:not(:active) {
+  border-color: var(--colorHighlightBg);
+  box-shadow: inset 0 0 0 1px var(--colorHighlightBg);
+}
 .vivaldi-settings .settings-sidebar .settings-navigation-header {
   padding: 7px 12px 6px 12px;
   flex: 0 0 auto;
@@ -8671,170 +8697,6 @@ button.button-startpage.up svg {
   min-width: 170px;
   margin-right: 0;
   padding: 0 0 0 0;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category {
-  display: flex;
-  flex-flow: column;
-  flex: 1;
-  border: 0 solid transparent;
-  border-top-width: 1px;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .button-category {
-  display: flex;
-  flex: 0 0 auto;
-  padding-top: var(--padding);
-  padding-right: 0;
-  padding-bottom: var(--padding);
-  padding-left: 12px;
-  fill: var(--colorFgFaded);
-  background: transparent;
-  border: 0 solid transparent;
-  border-radius: 0;
-  text-align: left;
-  margin-right: 1px;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .button-category svg {
-  width: 16px;
-  height: 16px;
-  display: block;
-  margin: auto 9px;
-  pointer-events: none;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .button-category.sync.sync-in-progress path {
-  fill: var(--colorHighlightBgAlpha);
-  stroke: var(--colorHighlightBg);
-  stroke-width: 1;
-  stroke-dasharray: 3;
-  animation: cloudsync 15s linear infinite;
-  mask: url(#sync-cloud);
-}
-@keyframes cloudsync {
-  to {
-    stroke-dashoffset: 500;
-  }
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .button-category:focus:not([tabindex='-1']) {
-  background-color: var(--colorBgLight);
-  box-shadow: none;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category.category-selected {
-  border-color: var(--colorBorder);
-  background-color: var(--colorBg);
-  box-shadow: inset -1px 0 var(--colorBgDark);
-  color: var(--colorFgIntense);
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category.category-selected:last-child {
-  border-bottom-width: 1px;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category.category-selected + .navigation-category {
-  border-color: var(--colorBorder);
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category.category-selected .button-category {
-  margin-right: 0;
-  fill: var(--colorHighlightBg);
-  color: var(--colorHighlightBg);
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected {
-  background-color: var(--colorBgLightIntense);
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected + .navigation-sections {
-  position: relative;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected + .navigation-sections:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: var(--colorBorder);
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .navigation-sections {
-  display: block;
-  overflow: hidden;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .navigation-sections .button-section {
-  display: flex;
-  width: 100%;
-  background-color: transparent;
-  text-align: left;
-  padding: 4px 6px;
-  padding-left: 46px;
-  border: 0 solid transparent;
-  border-top-width: 1px;
-  border-radius: 0;
-  transform-origin: 50% 0%;
-  transition: margin .2s, transform .2s, opacity .2s;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .navigation-sections .button-section svg {
-  width: 16px;
-  height: 16px;
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 9px;
-  pointer-events: none;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .navigation-sections .button-section:disabled {
-  margin-bottom: -25px;
-  transform: scaleY(1) translateY(-25px);
-  opacity: 0;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .navigation-sections .button-section:focus:not([tabindex='-1']) {
-  background-color: var(--colorBgLight);
-  box-shadow: none;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .navigation-sections .button-section.section-selected.section-selected {
-  background-color: var(--colorBgLightIntense);
-  border-color: var(--colorBgDarker);
-}
-.vivaldi-settings .settings-sidebar .settings-navigation .navigation-category .navigation-sections .button-section.section-selected.section-selected + .button-section {
-  border-color: var(--colorBgDarker);
-}
-.vivaldi-settings.initial:after {
-  content: initial;
-}
-.vivaldi-settings.initial .settings-navigation {
-  background-color: var(--colorBg);
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  flex: 1;
-}
-.vivaldi-settings.initial .settings-navigation-header {
-  border-bottom: 1px solid var(--colorBorder);
-  display: flex;
-}
-.vivaldi-settings.initial .settings-search {
-  max-width: 256px;
-  margin: 0 auto;
-  width: 100%;
-}
-.vivaldi-settings.initial section {
-  padding: 3px 12px;
-  flex-flow: row wrap;
-  flex: 1;
-  overflow-y: auto;
-  justify-content: left;
-  align-content: flex-start;
-}
-.vivaldi-settings.initial button {
-  background-size: 32px;
-  flex: 0 0 100px;
-  padding: 54px 0 18px;
-  text-align: center;
-  height: 90px;
-  background-position: 50% 18px;
-  border: 1px solid transparent;
-}
-.vivaldi-settings.initial button:focus {
-  border-color: var(--colorBorderHighlight);
-  box-shadow: 0 0 0 1px var(--colorBorderHighlight);
-}
-.vivaldi-settings.initial button:before,
-.vivaldi-settings.initial button:after {
-  content: initial;
 }
 .vivaldi-settings .settings-content {
   overflow-x: hidden;
@@ -9846,6 +9708,9 @@ input.circular.openkey {
 }
 .privacy-link {
   margin-bottom: 12px;
+}
+.privacy-link a:focus {
+  outline: 2px solid var(--colorHighlightBgAlpha);
 }
 .setting-rules {
   margin-top: 12px;
@@ -14223,7 +14088,7 @@ input.circular.openkey {
   border-radius: 0;
   flex: 1;
   background-color: transparent;
-  padding: 0;
+  padding: 0 6px 0 0;
   height: 22px;
 }
 #browser .searchfield .searchfield-input:focus {
@@ -15547,8 +15412,9 @@ button.inspector:hover {
 
 #browser #tabs-container.top {
         height: 30px !important;
-	padding-top: 0 !important
+  padding-top: 0 !important
 }
 .pageload.progressing .pageload-ticker {
-	display: none;
+  display: none;
 }
+
