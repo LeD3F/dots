@@ -133,7 +133,7 @@ font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-5 = Wuncon Siji:pixelsize=10;2
 font-6 = emojione:scale=10;1
 
-modules-left = powermenu i3
+modules-left = i3
 modules-center = date
 modules-right = xkeyboard memory eth pulseaudio
 
@@ -428,47 +428,6 @@ animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
-
-#########################################################
-#  _____                       __  __                   #
-# |  __ \                     |  \/  |                  #
-# | |__) |____      _____ _ __| \  / | ___ _ __  _   _  #
-# |  ___/ _ \ \ /\ / / _ \ '__| |\/| |/ _ \ '_ \| | | | #
-# | |  | (_) \ V  V /  __/ |  | |  | |  __/ | | | |_| | #
-# |_|   \___/ \_/\_/ \___|_|  |_|  |_|\___|_| |_|\__,_| #
-#                                                       #
-#########################################################
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = "  "
-label-open-background = ${colors.power}
-label-open-foreground = ${colors.powericon}
-label-close = "  cancel "
-label-close-background = "${colors.power}"
-label-close-foreground = ${colors.powericon}
-label-separator = |
-label-separator-foreground = ${colors.foreground}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 ###########################################
 #   _____      _   _   _                  #
