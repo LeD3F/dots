@@ -98,7 +98,7 @@ Nemo Seahorse - https://github.com/linuxmint/nemo-extensions
 | Lollypop              | LibreOffice Calc    | NVIDIA X Settings | Grub Customizer                |
 | OBS                   | LibreOffice         | Oomox             | Htop                           |
 | Pavucontrol           | LibreOffice Writer  | Qt5ct             | CUPS                           |
-| Qt V4L2 video capture | WPS Spreadsheets    |                   | Network Tools                  |
+| Qt V4L2 video capture | WPS Spreadsheets    | Gotop             | Network Tools                  |
 | Qt V4L2 test utility  | WPS Presentation    |                   | Timeshift                      |
 | Spotify               | WPS Writer          |                   | LXTask                         |
 | SMPlayer              |                     |                   | Vmware Workstation             |
