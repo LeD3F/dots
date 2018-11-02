@@ -72,11 +72,11 @@ bindsym $mod+Shift+c kill
 #############################################################           
                                                           
 # Rofi launcher drun
-bindsym $mod+d  exec "rofi -show drun -theme flat-red"
+bindsym $mod+d exec "rofi -show drun -theme flat-red"
 # Rofi launcher run
-bindsym $mod+Shift+d  exec "rofi -show run -theme flat-red"
+bindsym $mod+Shift+d exec "rofi -show run -theme flat-red"
 # Rofi window switcher
-bindsym $mod+Tab exec  rofi -show-icons -show window -theme flat-red
+bindsym $mod+Tab exec rofi -show-icons -show window -theme flat-red
 #Rofi Power Menu
 bindsym $alt+e exec rofi-power "i3-msg exit" -theme flat-red
 
