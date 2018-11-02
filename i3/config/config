@@ -395,6 +395,7 @@ for_window [class="Spotify"] move to workspace $ws4
 assign [class="Telegram"] $ws5
 assign [class="Gimp"] $ws3
 assign [class="Vmware"] $ws3
+assign [class="Deluge"] $ws3
 
 ################################################## 
 #                _            _             _    #
