@@ -30,6 +30,8 @@ Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f
 
 Menu is Rofi - https://github.com/DaveDavenport/rofi
 
+Rofi Power Menu - https://github.com/okraits/rofi-tools
+
 Bar is Polybar - https://github.com/jaagr/polybar
 
 Notification Daemon is Dunst - https://github.com/dunst-project/dunst
