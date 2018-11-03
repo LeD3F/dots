@@ -397,6 +397,7 @@ assign [class="Telegram"] $ws5
 assign [class="Gimp"] $ws3
 assign [class="Vmware"] $ws3
 assign [class="Deluge"] $ws3
+assign [class="obs"] $ws7
 
 ################################################## 
 #                _            _             _    #
