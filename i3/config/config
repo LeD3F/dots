@@ -66,6 +66,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+c kill
 
+# Popurs during fullscreen
+popup_during_fullscreen smart
+
 #############################################################
 #  _              _    _ _   _  _____ _    _ ______ _____   #
 # | |        /\  | |  | | \ | |/ ____| |  | |  ____|  __ \  #
