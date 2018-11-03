@@ -55,7 +55,7 @@ smart_borders on
 ##############################################                                        
                                            
 default_border pixel 2
-default_floating_border normal
+default_floating_border pixel 2
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
