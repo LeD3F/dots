@@ -66,12 +66,6 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+c kill
 
-# Popurs during fullscreen
-popup_during_fullscreen smart
-
-# Focus follow mouse
-focus_follows_mouse no
-
 #############################################################
 #  _              _    _ _   _  _____ _    _ ______ _____   #
 # | |        /\  | |  | | \ | |/ ____| |  | |  ____|  __ \  #
@@ -273,6 +267,12 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Popurs during fullscreen
+popup_during_fullscreen smart
+
+# Focus follow mouse
+focus_follows_mouse no
 
 #######################################################################
 #  ______ _             _   _                                         #
