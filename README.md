@@ -89,6 +89,7 @@ Nemo Seahorse - https://github.com/linuxmint/nemo-extensions
 | compton                      | Qt4 QDBusViewer    |                        |                         |                  |
 | Nitrogen                     | Sublime Text 3 Dev |                        |                         |                  |
 
+
 | Multimedia:           | Office:             | Settings:         | System Tools:                  |
 | --------------------- | ------------------- | ----------------- | ------------------------------ |
 | EasyTAG               | LibreOffice Base    | ARandR            | Pamac                          |
