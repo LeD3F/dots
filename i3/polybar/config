@@ -323,7 +323,7 @@ format-connected-underline = #55aa55
 format-connected-prefix = "  "
 format-connected-prefix-foreground = ${colors.foreground}
 format-connected-prefix-background = ${colors.eth}
-label-connected = "%upspeed% %downspeed% "
+label-connected = "%downspeed% %upspeed%  "
 label-connected-background = ${colors.eth}
 
 format-disconnected =
