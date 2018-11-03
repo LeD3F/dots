@@ -69,6 +69,9 @@ bindsym $mod+Shift+c kill
 # Popurs during fullscreen
 popup_during_fullscreen smart
 
+# Focus follow mouse
+focus_follows_mouse no
+
 #############################################################
 #  _              _    _ _   _  _____ _    _ ______ _____   #
 # | |        /\  | |  | | \ | |/ ____| |  | |  ____|  __ \  #
