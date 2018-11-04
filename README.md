@@ -42,6 +42,8 @@ Spotify Track Module for Polybar made by Jvanrhijn - https://github.com/Jvanrhij
 
 Pipes - https://github.com/pipeseroni/pipes.sh
 
+Mpd Notification - https://github.com/vehk/mpdnotify
+
 # Vivaldi
 
 <img src='screenshots/vivaldi.png'>
