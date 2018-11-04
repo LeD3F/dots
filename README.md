@@ -98,7 +98,7 @@ Nemo Seahorse - https://github.com/linuxmint/nemo-extensions
 | Gnac                  | LibreOffice Math    | Lxappearance      | Avahi Zeroconf Browser         |
 | GNOME Twitch          | LibreOffice Impress | Java              | Bleachbit                      |
 | Kdenlive (AppImage)   | LibreOffice Draw    | NetworkManager    | Baobab                         |
-| Lollypop              | LibreOffice Calc    | NVIDIA X Settings | Grub Customizer                |
+| ncmpcpp               | LibreOffice Calc    | NVIDIA X Settings | Grub Customizer                |
 | OBS                   | LibreOffice         | Oomox             | Htop                           |
 | Pavucontrol           | LibreOffice Writer  | Qt5ct             | CUPS                           |
 | Qt V4L2 video capture | WPS Spreadsheets    | Gotop             | Network Tools                  |
