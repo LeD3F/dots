@@ -723,7 +723,7 @@ xoffset=0
 # Default: ''
 # Values:  'color', 'blue'
 # Flag:    --bg_color
-background_color=
+background_color=black
 
 
 # Misc Options
