@@ -483,8 +483,6 @@ format-background = ${colors.spotify}
 type = internal/mpd
 format-online = <icon-prev> <toggle> <icon-next> <label-time> <label-song> 
 
-label-offline = 🎜 mpd is offline
-
 label-time = " %elapsed% / %total%"
 label-song = "| %title% "
 
