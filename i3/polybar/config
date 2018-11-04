@@ -481,15 +481,20 @@ format-background = ${colors.spotify}
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song> <icon-prev> <toggle> <icon-next>
+format-online = <icon-prev> <toggle> <icon-next> <label-time> <label-song> 
 
-icon-prev = ﭢ
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = ﭠ
+label-offline = 🎜 mpd is offline
 
-label-song-maxlen = 25
+label-time = " %elapsed% / %total%"
+label-song = "| %title% "
+
+icon-prev = " ﭢ"
+icon-stop =  " "
+icon-play =  " "
+icon-pause =  " "
+icon-next =  " ﭠ"
+
+label-song-maxlen = 50
 label-song-ellipsis = true
 
 ; vim:ft=dosini
