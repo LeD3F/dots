@@ -272,7 +272,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 popup_during_fullscreen smart
 
 # Focus follow mouse
-focus_follows_mouse no
+focus_follows_mouse yes
 
 #######################################################################
 #  ______ _             _   _                                         #
@@ -417,6 +417,7 @@ assign [class="obs"] $ws7
 ##################################################
                                                
 exec --no-startup-id "nitrogen --restore"
+exec --no-startup-id "mpd"
 exec --no-startup-id "compton"
 exec --no-startup-id "pamac-tray"
 exec --no-startup-id "xset s 910 910"
