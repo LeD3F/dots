@@ -371,7 +371,7 @@ label-volume = " %percentage% "
 ;format-volume-underline = #bd2c40
 label-volume-background = ${colors.pulse}
 
-label-muted = "  muted "
+label-muted = "  muted "
 label-muted-background = ${colors.background-alt}
 label-muted-foreground = #666
 format-muted-underline = #303030
