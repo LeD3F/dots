@@ -26,7 +26,7 @@ LightDM WebKit2 Theme - https://github.com/Litarvan/lightdm-webkit-theme-litarva
 
 # i3
 
-<img src='screenshots/i3.png'>
+<img src='screenshots/i3_wm.png'>
 
 # i3 info
 
@@ -43,6 +43,8 @@ Spotify Track Module for Polybar made by Jvanrhijn - https://github.com/Jvanrhij
 Pipes - https://github.com/pipeseroni/pipes.sh
 
 Mpd Notification - https://github.com/vehk/mpdnotify
+
+Polybar Icon Fonts - Nerd Fonts
 
 # Vivaldi
 
