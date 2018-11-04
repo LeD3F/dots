@@ -295,7 +295,6 @@ for_window [class="Woeusb"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 for_window [class="^File-roller$"] floating enable
 for_window [class="Lutris"] floating enable
-for_window [class="^ncmpcpp$"] floating enable
 
 #######################################
 #  _____           _             _    #
