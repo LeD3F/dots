@@ -67,12 +67,10 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = erus erusfont:style=Regular:pixelsize=10;2
-font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
-font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;2
-font-3 = Font Awesome 5 Brands:style=Regular:pixelsize=10;2
-font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-5 = Wuncon Siji:pixelsize=10;2
-font-6 = emojione:scale=10;1
+font-1 = Material Design Icons:style=Regular:pixelsize=12;2
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = Wuncon Siji:pixelsize=10;2
+font-4 = emojione:scale=10;1
 
 modules-left = i3
 modules-center = date
@@ -126,12 +124,10 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = erus erusfont:style=Regular:pixelsize=10;2
-font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
-font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;2
-font-3 = Font Awesome 5 Brands:style=Regular:pixelsize=10;2
-font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-5 = Wuncon Siji:pixelsize=10;2
-font-6 = emojione:scale=10;1
+font-1 = Material Design Icons:style=Regular:pixelsize=12;2
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = Wuncon Siji:pixelsize=10;2
+font-4 = emojione:scale=10;1
 
 modules-left = i3
 modules-center = date
@@ -168,7 +164,7 @@ cursor-scroll = ns-resize
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 format-prefix-underline = ${colors.secondary}
 format-prefix-background = ${colors.xkb}
@@ -239,13 +235,13 @@ fuzzy-match = false
 
 ; ws-icon-[0-9]+ = label;icon
 ; NOTE: The label needs to match the name of the i3 workspace
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
 ws-icon-default = ♟
 ; NOTE: You cannot skip icons, e.g. to get a ws-icon-6
 ; you must also define a ws-icon-5.
@@ -265,7 +261,7 @@ ws-icon-default = ♟
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 format-underline = #4bffdc
 format-prefix-background = ${colors.memory}
@@ -320,7 +316,7 @@ interface = enp3s0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = "  "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = ${colors.foreground}
 format-connected-prefix-background = ${colors.eth}
 label-connected = "%downspeed% %upspeed%  "
@@ -355,7 +351,7 @@ time-alt = %H:%M:%S
 
 format-underline = #F0544C
 
-label =  %date%%time%
+label = %date%%time%
 
 ########################################################
 #  _____       _                            _ _        #
@@ -375,13 +371,14 @@ label-volume = " %percentage% "
 ;format-volume-underline = #bd2c40
 label-volume-background = ${colors.pulse}
 
-label-muted = "  muted "
+label-muted = "  muted "
 label-muted-background = ${colors.background-alt}
 label-muted-foreground = #666
 format-muted-underline = #303030
 
-ramp-volume-0 = " "
-ramp-volume-1 = " "
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
 ramp-volume-background = ${colors.pulse}
 
 ########################################
@@ -477,11 +474,24 @@ margin-bottom = 0
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = "  "
+format-prefix = "  "
 format = <label>
 exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song} '
 format-underline = #1db954
 label-background = ${colors.spotify}
 format-background = ${colors.spotify}
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
 
 ; vim:ft=dosini
