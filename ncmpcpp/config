@@ -50,6 +50,7 @@ mouse_support = "yes"
 header_visibility = "no"
 display_remaining_time = "no"
 ask_before_clearing_playlists = "yes"
+volume_change_step = "5"
 execute_on_song_change = mpdnotify
 
 # Visualizer
