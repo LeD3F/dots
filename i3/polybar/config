@@ -479,6 +479,8 @@ type = custom/script
 interval = 1
 exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song} '
 format-underline = #1db954
+format-prefix = "  "
+format = <label>
 label-background = ${colors.spotify}
 format-background = ${colors.spotify}
 
