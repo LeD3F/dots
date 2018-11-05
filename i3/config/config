@@ -172,13 +172,13 @@ bindsym $alt+w exec maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/$(
 bindsym $alt+Ctrl+L exec i3lock-fancy-dualmonitor -pf Hack -- scrot -z
 
 # Spotify / MPD Next Track
-bindsym XF86AudioNext exec "sp next || mpc next"
+bindsym XF86AudioNext exec --no-startup-id "sp next || mpc next"
 
 # Spotify / MPD Previous Track
-bindsym XF86AudioPrev exec "sp prev || mpc prev"
+bindsym XF86AudioPrev exec --no-startup-id "sp prev || mpc prev"
 
 # Spotify / MPD Play
-bindsym XF86AudioPlay exec "sp play || mpc toggle"
+bindsym XF86AudioPlay exec --no-startup-id "sp play || mpc toggle"
 
 # Launch Vivaldi
 bindsym $mod+q exec vivaldi-snapshot
