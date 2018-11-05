@@ -73,7 +73,7 @@ font-3 = Wuncon Siji:pixelsize=10;2
 font-4 = emojione:scale=10;1
 
 modules-left = i3 mpd
-modules-center = date
+modules-center = calendar
 modules-right = spotify xkeyboard memory eth pulseaudio
 
 wm-restack = i3
@@ -130,7 +130,7 @@ font-3 = Wuncon Siji:pixelsize=10;2
 font-4 = emojione:scale=10;1
 
 modules-left = i3
-modules-center = date
+modules-center = calendar
 modules-right = xkeyboard memory eth pulseaudio
 
 tray-position = right
@@ -473,5 +473,21 @@ icon-next =  " ﭠ"
 
 label-song-maxlen = 50
 label-song-ellipsis = true
+
+###############################################
+#   _____      _                _             #
+#  / ____|    | |              | |            #
+# | |     __ _| | ___ _ __   __| | __ _ _ __  #
+# | |    / _` | |/ _ \ '_ \ / _` |/ _` | '__| #
+# | |___| (_| | |  __/ | | | (_| | (_| | |    #
+#  \_____\__,_|_|\___|_| |_|\__,_|\__,_|_|    #
+#                                             #                                  
+###############################################                                       
+
+[module/calendar]
+type = custom/script
+exec = ~/.config/polybar/popup-calendar.sh
+interval = 5
+click-left = ~/.config/polybar/popup-calendar.sh --popup
 
 ; vim:ft=dosini
