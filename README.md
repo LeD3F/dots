@@ -38,7 +38,7 @@ Bar is Polybar - https://github.com/jaagr/polybar
 
 Notification Daemon is Dunst - https://github.com/dunst-project/dunst
 
-Spotify Track Module for Polybar made by Jvanrhijn - https://github.com/Jvanrhijn/polybar-spotify
+Spotify Track Module for Polybar - https://github.com/Jvanrhijn/polybar-spotify
 
 Pipes - https://github.com/pipeseroni/pipes.sh
 
