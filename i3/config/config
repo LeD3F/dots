@@ -81,7 +81,7 @@ bindsym $mod+d exec "rofi -show drun -theme flat-red"
 # Rofi launcher run
 bindsym $mod+Shift+d exec "rofi -show run -theme flat-red"
 # Rofi window switcher
-bindsym $mod+Tab exec rofi -show-icons -show window -theme flat-red
+bindsym $mod+Tab exec rofi -show window -theme flat-red
 #Rofi Power Menu
 bindsym $alt+e exec rofi-power "i3-msg exit" -theme flat-red
 
@@ -396,6 +396,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #Move apps on specific workspace
 
 assign [class="Vivaldi"] $ws2
+assign [class="Firefox"] $ws2
 assign [class="smplayer"] $ws3
 assign [class="^URxvt$"] $ws6
 for_window [class="Spotify"] move to workspace $ws4
