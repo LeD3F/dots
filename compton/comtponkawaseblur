@@ -43,6 +43,7 @@ blur-background-fixed = true;
 blur-background-exclude = [
 	"window_type = 'desktop'",
 	"class_g = 'Firefox'",
+	"name *= 'Sublime Text'",
 	"name *= 'Telegram'",
 	"class_g = 'Nemo'",
 	"class_g = 'Telegram'",
