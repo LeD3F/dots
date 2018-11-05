@@ -16,6 +16,7 @@ shadow-exclude = [
 	"name = 'Notification'",
     "name = 'Kupfer'",
 	"name *= 'VLC'",
+	"name *= 'Telegram' && argb",
 	"class_g = 'Conky'",
 	"class_g = 'Cairo-clock'",
 	"_GTK_FRAME_EXTENTS@:c"
