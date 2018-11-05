@@ -42,6 +42,10 @@ blur-kern = "7x7box";
 blur-background-fixed = true;
 blur-background-exclude = [
 	"window_type = 'desktop'",
+	"class_g = 'Firefox'",
+	"name *= 'Telegram'",
+	"class_g = 'Nemo'",
+	"class_g = 'Telegram'",
 	"class_g = 'slop'",
 	"_GTK_FRAME_EXTENTS@:c",
     "_NET_WM_NAME@:s = 'rofi'"
