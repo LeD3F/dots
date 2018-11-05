@@ -89,7 +89,6 @@ shadow-exclude = [
     "name *= 'compton'",
     "name *= 'Chromium'",
     "name *= 'Chrome'",
-    "class_g = 'Firefox' && argb",
     "class_g = 'Conky'",
     "class_g = 'Kupfer'",
     "class_g = 'Synapse'",
@@ -128,7 +127,8 @@ blur-background-fixed = true;
 blur-background-exclude = [
     "window_type = 'desktop'",
     "class_g = 'slop'",
-    "_NET_WM_NAME@:s = 'rofi'"
+    "class_g = 'Firefox'",
+    "name *= 'Telegram'"
 ];
 
 #################################
