@@ -96,7 +96,8 @@ run_once({
     "xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal",
     "setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle'",
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &",
-    "xrdb -merge ~/.Xresources"
+    "xrdb -merge ~/.Xresources",
+    "mpd"
 }) -- entries must be separated by commas
 
 -- This function implements the XDG autostart specification
@@ -439,7 +440,7 @@ globalkeys = my_table.join(
 
     -- Open Telegram
     awful.key({ }, "XF86Mail", function () awful.spawn(telegram) end,
-              {description = "run software manager", group = "custom"}),
+              {description = "run telegram", group = "custom"}),
 
     -- Open Calculator
     awful.key({ }, "XF86Calculator", function () awful.spawn(calculator) end,
