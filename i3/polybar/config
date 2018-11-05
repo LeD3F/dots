@@ -134,10 +134,12 @@ modules-center = date
 modules-right = xkeyboard memory eth pulseaudio
 
 tray-position = right
-tray-maxsize=14
-tray-transparent = true
-tray-padding = 1
+tray-padding = 3
+tray-detached = true
+tray-maxsize = 14
 tray-background = #e8121212
+tray-offset-x = -249
+tray-scale = 1.0
 
 wm-restack = i3
 
@@ -148,6 +150,7 @@ override-redirect = false
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
 ######################################################
 # __   ___              _                         _  #
 # \ \ / / |            | |                       | | #
