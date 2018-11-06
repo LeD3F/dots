@@ -385,7 +385,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 assign [class="Vivaldi"] $ws2
 assign [class="Firefox"] $ws2
 assign [class="smplayer"] $ws3
-assign [class="^URxvt$"] $ws6
 for_window [class="Spotify"] move to workspace $ws4
 assign [class="Telegram"] $ws5
 assign [class="Gimp"] $ws3
