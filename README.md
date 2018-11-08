@@ -26,7 +26,7 @@ LightDM WebKit2 Theme - https://github.com/Litarvan/lightdm-webkit-theme-litarva
 
 # i3
 
-<img src='screenshots/i3_wm.png'>
+<img src='screenshots/i3.png'>
 
 # i3 info
 
@@ -49,6 +49,8 @@ Polybar Icon Fonts - Nerd Fonts
 # Vivaldi
 
 <img src='screenshots/Galaxy.png'>
+
+Start Page - https://catgrills.github.io/Galaxy/
 
 Vivaldi Themes:
 
