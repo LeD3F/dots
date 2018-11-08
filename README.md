@@ -48,7 +48,7 @@ Volume widget based on lczp's lain widget alsabar and streetturtle's Volume Widg
 
 # Vivaldi
 
-<img src='screenshots/Galaxy.png'>
+<img src='https://raw.githubusercontent.com/LeD3F/dots/master/screenshots/Galaxy.png'>
 
 Start Page - https://catgrills.github.io/Galaxy/
 
