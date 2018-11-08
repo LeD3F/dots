@@ -160,13 +160,13 @@ bindsym $mod+p focus child
 ##############################################################################
 
 # Screenshot Full
-bindsym $alt+p exec --no-startup-id "maim ~/Pictures/Screenshots/$(date +%s).png"
+bindsym Print exec --no-startup-id "maim --hidecursor ~/Pictures/Screenshots/$(date +%s).png"
 
 # Screenshot Area
-bindsym $alt+a exec --no-startup-id "maim -s --hidecursor ~/Pictures/Screenshots/$(date +%s).png"
+bindsym $mod+a exec --no-startup-id "maim --hidecursor -s ~/Pictures/Screenshots/$(date +%s).png"
 
 # Screenshot Window
-bindsym $alt+w exec --no-startup-id "maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/$(date +%s).png"
+bindsym $mod+Ctrl+w exec --no-startup-id "maim --hidecursor -i $(xdotool getactivewindow) ~/Pictures/Screenshots/$(date +%s).png"
 
 # Lock Screen
 bindsym $alt+Ctrl+L exec i3lock-fancy-dualmonitor -pf Hack -- scrot -z
