@@ -48,7 +48,7 @@ Polybar Icon Fonts - Nerd Fonts
 
 # Vivaldi
 
-<img src='screenshots/vivaldi.png'>
+<img src='screenshots/Galaxy.png'>
 
 Vivaldi Themes:
 
