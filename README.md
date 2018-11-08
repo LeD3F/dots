@@ -1,16 +1,10 @@
 # dots
 
-Some configs based on others themes and widgets.
-
-Awesome WM theme is Holo from lcpz/awesome-copycats: https://github.com/lcpz/awesome-copycats
-
-Volume widget based on lczp's lain widget alsabar and streetturtle's Volume Widget: https://github.com/lcpz/lain / https://github.com/streetturtle/awesome-wm-widgets/tree/master/volume-widget 
-
 For Desktop Background image i'm using Nitrogen - https://github.com/l3ib/nitrogen
 
 Sublime Color Scheme is 1337 with changed background color - https://github.com/MarkMichos/1337-Scheme
 
-Sublime theme is default adaptive theme
+Sublime theme is ayu dark
 
 Compositor is Compton - https://github.com/chjj/compton
 
@@ -19,10 +13,6 @@ GTK3-Nocsd - https://github.com/PCMan/gtk3-nocsd
 Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f3ff7b17747ee3
 
 LightDM WebKit2 Theme - https://github.com/Litarvan/lightdm-webkit-theme-litarvan
-
-# AwesomeWM
-
-<img src='screenshots/awesomewm.png'>
 
 # i3
 
@@ -45,6 +35,16 @@ Pipes - https://github.com/pipeseroni/pipes.sh
 Mpd Notification - https://github.com/vehk/mpdnotify
 
 Polybar Icon Fonts - Nerd Fonts
+
+# AwesomeWM
+
+<img src='screenshots/awesomewm.png'>
+
+# Awesome info
+
+Theme is Holo from lcpz/awesome-copycats: https://github.com/lcpz/awesome-copycats
+
+Volume widget based on lczp's lain widget alsabar and streetturtle's Volume Widget: https://github.com/lcpz/lain / https://github.com/streetturtle/awesome-wm-widgets/tree/master/volume-widget 
 
 # Vivaldi
 
