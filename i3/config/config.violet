@@ -77,13 +77,13 @@ bindsym $mod+Shift+c kill
 #############################################################           
                                                           
 # Rofi launcher drun
-bindsym $mod+d exec "rofi -show drun -theme flat-red"
+bindsym $mod+d exec "rofi -show drun -theme flat-violet"
 # Rofi launcher run
-bindsym $mod+Shift+d exec "rofi -show run -theme flat-red"
+bindsym $mod+Shift+d exec "rofi -show run -theme flat-violet"
 # Rofi window switcher
-bindsym $mod+Tab exec rofi -show window -theme flat-red
+bindsym $mod+Tab exec rofi -show window -theme flat-violet
 #Rofi Power Menu
-bindsym $alt+e exec rofi-power "i3-msg exit" -theme flat-red
+bindsym $alt+e exec rofi-power "i3-msg exit" -theme flat-violet
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#121212' -sb '#F0544C' -sf '#FFFFFF' -fn 'misc termsyn-10' -p 'run :'"
