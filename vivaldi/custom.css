@@ -1469,10 +1469,7 @@ select[size]:focus option:checked {
 }
 select:not([multiple]):not([size]),
 input[type=date] {
-  background-image: linear-gradient(45deg, var(--colorBgIntense) 45%, transparent 45%), linear-gradient(-225deg, transparent 53%, var(--colorBgIntense) 53%), linear-gradient(-180deg, var(--colorBgIntense) 31%, var(--colorFg) 31%);
-  background-size: 28px 16px;
-  background-repeat: no-repeat;
-  background-position: right 0 center, right center, right center;
+  -webkit-appearance: menulist;
   background-color: var(--colorBgIntense);
 }
 select:not([multiple]):not([size])::-webkit-calendar-picker-indicator,
@@ -5081,7 +5078,6 @@ webview,
   margin-left: 4px;
 }
 .addressfield .pageload {
-  contain: layout;
   display: flex;
   pointer-events: none;
   order: 1;
@@ -6052,19 +6048,6 @@ webview,
 .inner.anchor-tabs #tabs-container.right {
   right: 0;
 }
-.fullscreen.stacks-off #tabs-container.top,
-.tabs-at-edge #tabs-container.top {
-  padding-top: 0;
-}
-#tabs-container.bottom {
-  z-index: 0;
-}
-.tabs-at-edge #tabs-container.bottom {
-  padding: 0;
-}
-.tabs-at-edge #tabs-container.bottom .tab-strip {
-  margin: 0;
-}
 #tabs-container.top,
 #tabs-container.bottom {
   border-color: var(--colorBg);
@@ -6075,6 +6058,10 @@ webview,
 }
 #tabs-container.top {
   padding-top: 7px;
+}
+.fullscreen.stacks-off #tabs-container.top,
+.tabs-at-edge #tabs-container.top {
+  padding-top: 0;
 }
 .win.normal #tabs-container.top,
 .linux.normal #tabs-container.top {
@@ -6117,13 +6104,20 @@ webview,
   order: 3;
   flex: 0 1 auto;
   padding: 0;
+  z-index: 0;
 }
 .stacks-on #tabs-container.bottom {
   padding-bottom: var(--padding);
 }
+.stacks-on.tabs-at-edge #tabs-container.bottom {
+  padding-bottom: 0;
+}
 .address-top #tabs-container.bottom,
 .address-off #tabs-container.bottom {
   border-top-width: 2px;
+}
+#tabs-container.bottom .tab-strip {
+  margin: 0;
 }
 #tabs-container.bottom .tab-strip .tab {
   padding-top: 0;
@@ -6582,10 +6576,6 @@ webview,
   flex-direction: column;
   position: relative;
   background-color: var(--colorBgDark);
-  contain: strict;
-}
-#panels.leak #switch {
-  contain: layout;
 }
 #panels-container.left #switch {
   box-shadow: inset -1px 0 var(--colorBorder);
@@ -7465,6 +7455,11 @@ p.warning {
   color: var(--colorAccentFg);
   fill: var(--colorAccentBg);
   stroke: var(--colorAccentFgFaded);
+  --yield: 60px;
+}
+.bookmark-bar.iconexceptfolders,
+.bookmark-bar.icon {
+  --yield: 28px;
 }
 .color-behind-tabs-on .bookmark-bar {
   background-color: var(--colorBgDark);
@@ -7602,23 +7597,21 @@ p.warning {
   opacity: 0.5;
   box-shadow: none;
 }
-.bookmark-bar button.dragover {
+.bookmark-bar button.dragover.folder {
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.15) inset;
 }
 .bookmark-bar button.dragoverLeft,
 .bookmark-bar button.dragoverRight + button {
-  max-width: 180px;
+  max-width: calc(@button-max-width + var(--yield));
 }
 .bookmark-bar button.dragoverLeft span,
 .bookmark-bar button.dragoverRight + button span {
   max-width: 84px;
 }
 .bookmark-bar button:not(.dragging) + .dragoverLeft::before,
-.bookmark-bar button:first-of-type.dragoverLeft::before {
-  width: 60px;
-}
+.bookmark-bar button:first-of-type.dragoverLeft::before,
 .bookmark-bar button.dragoverRight + button:not(.dragging)::before {
-  width: 60px;
+  width: var(--yield);
 }
 .bookmark-bar button:last-of-type.dragoverRight::after {
   content: "";
@@ -12506,46 +12499,31 @@ input.circular.openkey {
   max-height: 600px;
   margin-top: 0;
   flex: 0;
+  padding-top: 6px;
 }
 .contact-view {
-  border-top: 1px solid var(--colorBorder);
-  display: flex;
-  flex-direction: column;
   flex: 1;
+  overflow-y: auto;
+  display: grid;
+  width: 100%;
+  padding: 6px 12px;
+  grid-gap: 1px 6px;
+  grid-template-columns: [photo-field] auto [input-fields] auto;
 }
-.contact-view input[type=text] {
-  width: auto;
-  margin-bottom: 1px;
+.contact-view > * {
+  grid-column: input-fields;
 }
 .contact-view .contact-header {
-  display: flex;
-  flex: 0 0 auto;
-  padding-top: 12px;
-  padding-left: 12px;
-  padding-right: 12px;
-  align-items: center;
+  display: contents;
+}
+.contact-view .contact-header .contact-photo-picker {
+  grid-column: photo-field;
 }
 .contact-view .contact-header .contact-name {
   font-weight: calc(var(--fontWeight) + 300);
   font-size: var(--fontSizeLarge);
-  flex: 1;
-  min-width: 0;
-}
-.contact-view .contact-email {
-  margin-left: 68px;
-  margin-right: 12px;
-}
-.contact-view .contact-phone {
-  margin-left: 68px;
-  margin-right: 12px;
-}
-.contact-view .contact-postal {
-  margin-left: 68px;
-  margin-right: 12px;
-}
-.contact-view .contact-trusted {
-  margin-left: 68px;
-  margin-right: 12px;
+  margin: auto;
+  grid-column: input-fields;
 }
 .contact-view .contact-trusted input {
   margin: 6px 0 6px 6px;
@@ -12558,14 +12536,10 @@ input.circular.openkey {
   opacity: 0.5;
   pointer-events: none;
 }
-.contact-photo-picker {
-  position: relative;
-  display: inline-block;
-}
 .contact-photo-picker .contact-photo {
-  height: 50px;
-  width: 50px;
-  margin-right: var(--padding);
+  --photo-size: 50px;
+  height: var(--photo-size);
+  width: var(--photo-size);
   background-color: transparent;
   border-radius: var(--radiusRound);
   background-size: cover;
@@ -15417,4 +15391,3 @@ button.inspector:hover {
 .pageload.progressing .pageload-ticker {
   display: none;
 }
-
