@@ -36,7 +36,7 @@ Mpd Notification - https://github.com/vehk/mpdnotify
 
 Polybar Icon Fonts - Nerd Fonts
 
-# AwesomeWM
+# Awesome
 
 <img src='screenshots/awesomewm.png'>
 
