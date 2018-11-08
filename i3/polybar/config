@@ -460,6 +460,16 @@ format = <label>
 label-background = ${colors.spotify}
 format-background = ${colors.spotify}
 
+##########################
+#  __  __ _____  _____   #
+# |  \/  |  __ \|  __ \  #
+# | \  / | |__) | |  | | #
+# | |\/| |  ___/| |  | | #
+# | |  | | |    | |__| | #
+# |_|  |_|_|    |_____/  #
+#                        #
+##########################
+
 [module/mpd]
 type = internal/mpd
 format-online = <icon-prev> <toggle> <icon-next> <label-time> <label-song> 
