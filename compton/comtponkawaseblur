@@ -53,7 +53,7 @@ blur-background-exclude = [
 	"class_g = 'Telegram'",
 	"class_g = 'slop'",
 	"_GTK_FRAME_EXTENTS@:c",
-    "_NET_WM_NAME@:s = 'rofi'"
+        "_NET_WM_NAME@:s = 'rofi'"
 ];
 # opacity-rule = [ "80:class_g = 'URxvt'" ];
 
