@@ -227,6 +227,7 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
+set $ws8 "8"
 
 # Workspaces for each monitor
 workspace 1 output DP-2
@@ -234,8 +235,9 @@ workspace 2 output DP-2
 workspace 3 output DP-2
 workspace 4 output DP-2
 workspace 5 output DP-2
-workspace 6 output DVI-I-1
+workspace 6 output DP-2
 workspace 7 output DVI-I-1
+workspace 8 output DVI-I-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -245,6 +247,7 @@ bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -254,6 +257,8 @@ bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+
 # Popurs during fullscreen
 popup_during_fullscreen smart
 
@@ -391,6 +396,7 @@ assign [class="Gimp"] $ws3
 assign [class="Vmware"] $ws3
 assign [class="Deluge"] $ws3
 assign [class="obs"] $ws7
+assign [class="Lutris"] $ws6
 
 ################################################## 
 #                _            _             _    #
