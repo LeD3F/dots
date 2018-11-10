@@ -46,14 +46,14 @@ blur-background-exclude = [
 	"class_g = 'Firefox'",
 	"name *= 'Vivaldi'",
 	"name *= 'Chromium'",
-        "name *= 'Chrome'",
+       "name *= 'Chrome'",
 	"name *= 'Sublime Text'",
 	"name *= 'Telegram'",
 	"class_g = 'Nemo'",
 	"class_g = 'Telegram'",
 	"class_g = 'slop'",
 	"_GTK_FRAME_EXTENTS@:c",
-        "_NET_WM_NAME@:s = 'rofi'"
+       "_NET_WM_NAME@:s = 'rofi'"
 ];
 # opacity-rule = [ "80:class_g = 'URxvt'" ];
 
