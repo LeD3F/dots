@@ -1,8 +1,6 @@
 #My Settings
 neofetch
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /home/led3f/.oh-my-zsh/plugins/fzf/zsh-interactive-cd.plugin.zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -66,7 +64,15 @@ ZSH_THEME="punctual"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages)
+plugins=(
+git 
+colored-man-pages
+bgnotify
+sublime
+zsh-autosuggestions
+history-substring-search
+zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,5 +105,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#My Aliases
+# My Aliases
 alias update="sudo pacman -Syu && pikaur -Syu"
