@@ -11,7 +11,7 @@ Xft.lcdfilter: lcddefault
 
 !URxvt --
 
-URxvt.font: xft:kakwafont:size=10:antialias=true
+URxvt.font: xft:kakwafont:size=10:antialias=true,xft:xos4 Terminus:size=8:antialias=true
 URxvt.boldFont:
 
 URxvt.letterSpace: 0
