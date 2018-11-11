@@ -357,10 +357,10 @@ set_from_resource $bc i3wm.color1 #f0f0f0
 
 # class                 border  bground text    indicator child_border
 client.focused          $bg     $bg     $fg     $bg       $bg
-client.focused_inactive $bg     $bg     $fg     $bg       $bc
-client.unfocused        $bg     $bg     $fg     $bg       $bc
-client.urgent           $bg     $bg     $fg     $bg       $bc
-client.placeholder      $bg     $bg     $fg     $bg       $bc
+client.focused_inactive $bc     $bc     $fg     $bg       $bc
+client.unfocused        $bc     $bc     $fg     $bg       $bc
+client.urgent           $bc     $bc     $fg     $bg       $bc
+client.placeholder      $bc     $bc     $fg     $bg       $bc
 client.background       $bg
 
 #########################################
