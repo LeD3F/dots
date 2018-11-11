@@ -108,7 +108,7 @@ element alternate.active {
 scrollbar {
    background-color: @blackwidget;
    handle-color: @darkgray;
-   handle-width: 15px;
+   handle-width: 10px;
 }
 
 sidebar {
