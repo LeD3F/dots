@@ -138,7 +138,7 @@ tray-position = right
 tray-padding = 3
 tray-detached = true
 tray-maxsize = 14
-tray-background = #e8121212
+tray-background = ${colors.background}
 tray-offset-x = -249
 tray-scale = 1.0
 
