@@ -1,0 +1,72 @@
+!Xdefaults --
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintfull
+!hintmedium hintslight hintfull
+Xft.lcdfilter: lcddefault
+
+!URxvt --
+
+URxvt.font: xft:kakwafont:size=10:antialias=true
+URxvt.boldFont:
+
+URxvt.letterSpace: 0
+URxvt.antialias: true
+
+URxvt.termname: xterm-256color
+URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
+
+URxvt.cursorUnderline: false
+URxvt.pointerBlank: true
+URxvt.saveLines:    5000
+URxvt.scrollBar:    false
+URxvt.cursorBlink:  true
+URxvt.urgentOnBell: true
+URxvt*scrollTtyOutput: true
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+
+URxvt.perl-ext: default,clipboard,url-select,keyboard-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Control-Up:\033[1;5A
+URxvt.keysym.Control-Down:\033[1;5B
+URxvt.keysym.Control-Left:\033[1;5D
+URxvt.keysym.Control-Right:\033[1;5C
+
+URxvt*geometry: 80x20
+URxvt.internalBorder: 15
+
+URxvt.colorUL: #dd5a3a
+
+!Colors --
+
+*background:  #121212
+*foreground:  #FFFFFF
+*color0:  #3e3e3e
+*color1:  #dd5a3a
+*color2:  #48a37f
+*color3:  #fe9b3d
+*color4:  #1858a5
+*color5:  #e58da3
+*color6:  #3697b9
+*color7:  #f8e9f2
+*color8:  #4e4e4e
+*color9:  #f0544c
+*color10:  #0bbaa7
+*color11:  #f5b427
+*color12:  #3caed9
+*color13:  #fa96a3
+*color14:  #84c4ee
+*color15:  #ffffff
