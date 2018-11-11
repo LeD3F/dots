@@ -20,11 +20,12 @@ primary = ${xrdb:color12}
 secondary = ${xrdb:color2}
 alert = ${xrdb:color3}
 
-pulse = ${xrdb:color5}
-spotify = ${xrdb:color1}
-xkb = ${xrdb:color2}
-memory = ${xrdb:color3}
-eth = ${xrdb:color4}
+i3border = ${xrdb:color2}
+pulse = ${xrdb:color4}
+spotify = ${xrdb:color5}
+xkb = ${xrdb:color1}
+memory = ${xrdb:color2}
+eth = ${xrdb:color3}
 
 ############################################
 #  ____               ___   _ _            #
@@ -49,7 +50,7 @@ foreground = ${colors.foreground}
 monitor-strict = false
 
 border-bottom-size = 1
-border-bottom-color = ${colors.secondary}
+border-bottom-color = ${colors.i3border}
 
 line-color = #f00
 underline-size = 0
@@ -107,7 +108,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 border-bottom-size = 1
-border-bottom-color = ${colors.secondary}
+border-bottom-color = ${colors.i3border}
 
 line-color = #f00
 underline-size = 0
@@ -203,7 +204,7 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-foreground = ${colors.secondary}
+label-focused-foreground = ${colors.i3border}
 label-focused-background = ${colors.background}
 label-focused-padding = 2
 
