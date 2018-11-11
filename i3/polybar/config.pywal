@@ -20,11 +20,11 @@ primary = ${xrdb:color12}
 secondary = ${xrdb:color2}
 alert = ${xrdb:color3}
 
-pulse = ${xrdb:color3}
+pulse = ${xrdb:color5}
 spotify = ${xrdb:color1}
-xkb = ${xrdb:color4}
-memory = ${xrdb:color5}
-eth = ${xrdb:color1}
+xkb = ${xrdb:color2}
+memory = ${xrdb:color3}
+eth = ${xrdb:color4}
 
 ############################################
 #  ____               ___   _ _            #
@@ -49,7 +49,7 @@ foreground = ${colors.foreground}
 monitor-strict = false
 
 border-bottom-size = 1
-border-bottom-color = #AD3D37
+border-bottom-color = ${colors.secondary}
 
 line-color = #f00
 underline-size = 0
@@ -107,7 +107,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 border-bottom-size = 1
-border-bottom-color = #AD3D37
+border-bottom-color = ${colors.secondary}
 
 line-color = #f00
 underline-size = 0
@@ -203,7 +203,7 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-foreground = #AD3D37
+label-focused-foreground = ${colors.secondary}
 label-focused-background = ${colors.background}
 label-focused-padding = 2
 
@@ -309,7 +309,7 @@ interval = 3.0
 format-connected-prefix = " 龍 "
 format-connected-prefix-foreground = ${colors.foreground}
 format-connected-prefix-background = ${colors.eth}
-label-connected = "%downspeed% %upspeed%  "
+label-connected = "%downspeed% %upspeed% "
 label-connected-background = ${colors.eth}
 
 format-disconnected =
@@ -351,16 +351,16 @@ label = %date%%time%
 type = internal/pulseaudio
 
 format-volume = <ramp-volume><label-volume>
-label-volume = " %percentage% "
+label-volume = "%percentage% "
 label-volume-background = ${colors.pulse}
 
 label-muted = "  muted "
 label-muted-background = ${colors.background-alt}
 label-muted-foreground = #666
 
-ramp-volume-0 = " "
-ramp-volume-1 = " "
-ramp-volume-2 = " "
+ramp-volume-0 = "  "
+ramp-volume-1 = "  "
+ramp-volume-2 = "  "
 ramp-volume-background = ${colors.pulse}
 
 ########################################
