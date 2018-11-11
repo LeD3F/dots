@@ -16,7 +16,7 @@ LightDM WebKit2 Theme - https://github.com/Litarvan/lightdm-webkit-theme-litarva
 
 # i3
 
-<img src='screenshots/i3.png'>
+<img src='screenshots/i3wm.png'>
 
 # i3 info
 
