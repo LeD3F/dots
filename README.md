@@ -16,7 +16,7 @@ Files with pywal in the end are for usage with Pywal
 
 # i3
 
-<img src='screenshots/i3_wm.jpg'>
+<img src='screenshots/i3_wm.png'>
 
 # i3 info
 
