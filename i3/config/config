@@ -77,7 +77,7 @@ bindsym $mod+Shift+c kill
 #############################################################           
                                                           
 # Rofi launcher drun
-bindsym $mod+d exec "rofi -show drun -theme ~/.cache/wal/flat-red.rasi"
+bindsym $mod+d exec "rofi -show drun -theme flat-red"
 # Rofi launcher run
 bindsym $mod+Shift+d exec "rofi -show run -theme flat-red"
 # Rofi window switcher
@@ -351,17 +351,12 @@ bindsym $mod+r mode "resize"
 #                                          #
 ############################################      
 
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
-set_from_resource $bc i3wm.color1 #f0f0f0
-
-# class                 border  bground text    indicator child_border
-client.focused          $bg     $bg     $fg     $bg       $bg
-client.focused_inactive $bc     $bc     $fg     $bg       $bc
-client.unfocused        $bc     $bc     $fg     $bg       $bc
-client.urgent           $bc     $bc     $fg     $bg       $bc
-client.placeholder      $bc     $bc     $fg     $bg       $bc
-client.background       $bg
+client.focused          #AD3D37 #AD3D37 #FFFFFF #F0544C   #AD3D37
+client.focused_inactive #121212 #121212 #FFFFFF #272626   #121212
+client.unfocused        #222222 #222222 #888888 #292D2E   #222222
+client.urgent           #A50101 #a50101 #FFFFFF #A50101   #A50101
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.background       #FFFFFF
 
 #########################################
 #  _____      _       _                 #
@@ -414,7 +409,6 @@ assign [class="Steam"] $ws6
 #                                                #
 ##################################################
                                                
-exec --no-startup-id sleep 1 ; wal -n -R
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id mpd
 exec --no-startup-id compton
