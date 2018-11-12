@@ -39,6 +39,12 @@ URxvt*scrollTtyKeypress: true
 
 URxvt.perl-ext: default,clipboard,url-select,keyboard-select
 
+!Tabs
+!URxvt.tabbed.tabbar-fg: 7
+!URxvt.tabbed.tabbar-bg: 0
+!URxvt.tabbed.tab-fg: 7
+!URxvt.tabbed.tab-bg: 0
+
 !URL Launcher --
 
 URxvt.keysym.M-u: perl:url-select:select_next
