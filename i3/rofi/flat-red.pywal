@@ -26,7 +26,6 @@ window {
    anchor: center;
    location: center;
    width: 500;
-   height: 186;
 }
 
 mainbox {
@@ -50,7 +49,7 @@ listview {
    dynamic: true;
    scrollbar: true;
    spacing: 0px;
-   padding: 1px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
    margin: 0px 0px 1px 0px;
    background: @blackdarkest;
 }
