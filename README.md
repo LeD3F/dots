@@ -2,9 +2,7 @@
 
 For Desktop Background image i'm using Nitrogen - https://github.com/l3ib/nitrogen
 
-Sublime Color Scheme is 1337 with changed background color - https://github.com/MarkMichos/1337-Scheme
-
-Sublime theme is ayu dark
+Sublime theme is ayu dark - https://github.com/dempfi/ayu
 
 Compositor is Compton - https://github.com/chjj/compton
 
@@ -37,16 +35,6 @@ Mpd Notification - https://github.com/vehk/mpdnotify
 Polybar Icon Fonts - Nerd Fonts
 
 Colorschemes - https://github.com/dylanaraps/pywal
-
-# Awesome
-
-<img src='screenshots/awesomewm.png'>
-
-# Awesome info
-
-Theme is Holo from lcpz/awesome-copycats: https://github.com/lcpz/awesome-copycats
-
-Volume widget based on lczp's lain widget alsabar and streetturtle's Volume Widget: https://github.com/lcpz/lain / https://github.com/streetturtle/awesome-wm-widgets/tree/master/volume-widget 
 
 # Vivaldi
 
