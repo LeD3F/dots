@@ -77,7 +77,7 @@ bindsym $mod+Shift+c kill
 #############################################################           
                                                           
 # Rofi launcher drun
-bindsym $mod+d exec "rofi -show drun -theme flat-red"
+bindsym $mod+d exec "rofi -show drun -theme ~/.cache/wal/flat-red.rasi"
 # Rofi launcher run
 bindsym $mod+Shift+d exec "rofi -show run -theme flat-red"
 # Rofi window switcher
@@ -351,13 +351,17 @@ bindsym $mod+r mode "resize"
 #                                          #
 ############################################      
 
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $bc i3wm.color1 #f0f0f0
+
 # class                 border  bground text    indicator child_border
-client.focused          #AD3D37 #AD3D37 #FFFFFF #F0544C   #AD3D37
-client.focused_inactive #121212 #121212 #FFFFFF #272626   #121212
-client.unfocused        #222222 #222222 #888888 #292D2E   #222222
-client.urgent           #A50101 #a50101 #FFFFFF #A50101   #A50101
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-client.background       #FFFFFF
+client.focused          $bg     $bg     $fg     $bg       $bg
+client.focused_inactive $bc     $bc     $fg     $bg       $bc
+client.unfocused        $bc     $bc     $fg     $bg       $bc
+client.urgent           $bc     $bc     $fg     $bg       $bc
+client.placeholder      $bc     $bc     $fg     $bg       $bc
+client.background       $bg
 
 #########################################
 #  _____      _       _                 #
@@ -392,11 +396,13 @@ assign [class="Firefox"] $ws2
 assign [class="smplayer"] $ws3
 for_window [class="Spotify"] move to workspace $ws4
 assign [class="Telegram"] $ws5
+assign [class="Discord"] $ws5
 assign [class="Gimp"] $ws3
 assign [class="Vmware"] $ws3
 assign [class="Deluge"] $ws3
 assign [class="obs"] $ws7
 assign [class="Lutris"] $ws6
+assign [class="Steam"] $ws6
 
 ################################################## 
 #                _            _             _    #
@@ -408,16 +414,16 @@ assign [class="Lutris"] $ws6
 #                                                #
 ##################################################
                                                
-exec --no-startup-id "nitrogen --restore"
-exec --no-startup-id "mpd"
-exec --no-startup-id "compton"
-exec --no-startup-id "pamac-tray"
-exec --no-startup-id "xset s 910 910"
-exec --no-startup-id "xset dpms 910 920 930"
-exec --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &"
-exec --no-startup-id "xrdb -merge ~/.Xresources"
-exec --no-startup-id "xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal"
-exec --no-startup-id "setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle'"
-exec --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
-exec --no-startup-id "caffeine"
+exec --no-startup-id sleep 1 ; wal -n -R
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id mpd
+exec --no-startup-id compton
+exec --no-startup-id pamac-tray
+exec --no-startup-id xset s 910 910
+exec --no-startup-id xset dpms 910 920 930
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+exec --no-startup-id xrdb -merge ~/.Xresources
+exec --no-startup-id xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id caffeine
 exec --no-startup-id xautolock -detectsleep -time 15 -locker "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"  -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
