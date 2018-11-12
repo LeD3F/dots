@@ -12,6 +12,8 @@ Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f
 
 LightDM WebKit2 Theme - https://github.com/Litarvan/lightdm-webkit-theme-litarvan
 
+Files with pywal in the end are for usage with Pywal
+
 # i3
 
 <img src='screenshots/i3wm.png'>
