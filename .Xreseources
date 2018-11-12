@@ -9,16 +9,18 @@ Xft.hintstyle: hintfull
 !hintmedium hintslight hintfull
 Xft.lcdfilter: lcddefault
 
-!URxvt --
+!Fonts --
 
+URxvt.font: xft:kakwafont:size=10:antialias=true,xft:xos4 Terminus:size=8:antialias=true
+URxvt.boldFont:
+URxvt.letterSpace: 0
+URxvt.antialias: true
+
+!Transparency --
 URxvt.depth: 32
 URxvt.background: [80]#000000
 
-URxvt.font: xft:kakwafont:size=10:antialias=true
-URxvt.boldFont:
-
-URxvt.letterSpace: 0
-URxvt.antialias: true
+!URxvt --
 
 URxvt.termname: xterm-256color
 URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
@@ -33,25 +35,38 @@ URxvt*scrollTtyOutput: true
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
+!Extensions
+
 URxvt.perl-ext: default,clipboard,url-select,keyboard-select
+
+!URL Launcher --
+
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
+URxvt.colorUL: #e58da3
+
+!Disable iso14755 --
 
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
+!Clipboard --
+
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+!Control + arrow navigation --
+
 URxvt.keysym.Control-Up:\033[1;5A
 URxvt.keysym.Control-Down:\033[1;5B
 URxvt.keysym.Control-Left:\033[1;5D
 URxvt.keysym.Control-Right:\033[1;5C
 
+!URxvt window --
+
 URxvt*geometry: 80x20
 URxvt.internalBorder: 15
-
-URxvt.colorUL: #dd5a3a
 
 !Colors --
 
