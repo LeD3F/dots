@@ -107,3 +107,4 @@ source $ZSH/oh-my-zsh.sh
 
 # My Aliases
 alias update="sudo pacman -Syu && pikaur -Syu"
+alias wal="wal -n -i"
