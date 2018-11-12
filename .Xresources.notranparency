@@ -48,7 +48,7 @@ URxvt.keysym.Control-Right:\033[1;5C
 URxvt*geometry: 80x20
 URxvt.internalBorder: 15
 
-URxvt.colorUL: #dd5a3a
+URxvt.colorUL: #e58da3
 
 !Colors --
 
