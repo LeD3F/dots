@@ -31,11 +31,12 @@ URxvt*scrollTtyOutput: true
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
-!Extensions
+!Extensions --
 
 URxvt.perl-ext: default,clipboard,url-select,keyboard-select
 
-!Tabs
+!Tabs --
+
 !URxvt.tabbed.tabbar-fg: 7
 !URxvt.tabbed.tabbar-bg: 0
 !URxvt.tabbed.tab-fg: 7
