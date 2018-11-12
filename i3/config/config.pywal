@@ -77,7 +77,7 @@ bindsym $mod+Shift+c kill
 #############################################################           
                                                           
 # Rofi launcher drun
-bindsym $mod+d exec "rofi -show drun -theme flat-red"
+bindsym $mod+d exec "rofi -show drun -theme ~/.cache/wal/flat-red.rasi"
 # Rofi launcher run
 bindsym $mod+Shift+d exec "rofi -show run -theme flat-red"
 # Rofi window switcher
@@ -424,7 +424,6 @@ exec --no-startup-id xset dpms 910 920 930
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal
-exec --no-startup-id setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle'
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
-exec --no-startup-id caffeine"
+exec --no-startup-id caffeine
 exec --no-startup-id xautolock -detectsleep -time 15 -locker "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"  -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
