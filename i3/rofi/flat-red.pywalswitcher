@@ -1,0 +1,15 @@
+// Rofi
+* {{
+   maincolor:        {color2};
+   highlight:        bold {color4};
+   urgentcolor:      #fe9b3d;
+
+   fgwhite:          {foreground};
+   blackdarkest:     {background};
+   blackwidget:      {background};
+   blackentry:       {background};
+   blackselect:      {color1};
+   darkgray:         {color2};
+   scrollbarcolor:   #505050;
+    // ...
+}}
