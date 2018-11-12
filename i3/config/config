@@ -169,7 +169,7 @@ bindsym $mod+a exec --no-startup-id "~/.scripts/maim/screenshotarea.sh"
 bindsym $mod+Ctrl+w exec --no-startup-id "~/.scripts/maim/screenshotwindow.sh"
 
 # Lock Screen
-bindsym $alt+Ctrl+L exec i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z 
+bindsym $alt+Ctrl+L exec --no-startup-id "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"
 
 # Spotify / MPD Next Track
 bindsym XF86AudioNext exec --no-startup-id "sp next || mpc next"
