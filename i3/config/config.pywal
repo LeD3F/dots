@@ -79,11 +79,11 @@ bindsym $mod+Shift+c kill
 # Rofi launcher drun
 bindsym $mod+d exec "rofi -show drun -theme ~/.cache/wal/flat-red.rasi"
 # Rofi launcher run
-bindsym $mod+Shift+d exec "rofi -show run -theme flat-red"
+bindsym $mod+Shift+d exec "rofi -show run -theme ~/.cache/wal/flat-red.rasi"
 # Rofi window switcher
-bindsym $mod+Tab exec rofi -show window -theme flat-red
+bindsym $mod+Tab exec rofi -show window -theme ~/.cache/wal/flat-red.rasi
 #Rofi Power Menu
-bindsym $alt+e exec rofi-power "i3-msg exit" -theme flat-red
+bindsym $alt+e exec rofi-power "i3-msg exit" -theme ~/.cache/wal/flat-red.rasi
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#121212' -sb '#F0544C' -sf '#FFFFFF' -fn 'misc termsyn-10' -p 'run :'"
@@ -169,7 +169,7 @@ bindsym $mod+a exec --no-startup-id "~/.scripts/maim/screenshotarea.sh"
 bindsym $mod+Ctrl+w exec --no-startup-id "~/.scripts/maim/screenshotwindow.sh"
 
 # Lock Screen
-bindsym $alt+Ctrl+L exec i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z 
+bindsym $alt+Ctrl+L exec --no-startup-id "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z" 
 
 # Spotify / MPD Next Track
 bindsym XF86AudioNext exec --no-startup-id "sp next || mpc next"
@@ -196,13 +196,13 @@ bindsym XF86Calculator exec galculator
 bindsym XF86Explorer exec nemo
 
 # Volume Raise
-bindsym XF86AudioRaiseVolume exec amixer set Master -q 1%+
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master -q 1%+"
 
 # Volume Down
-bindsym XF86AudioLowerVolume exec amixer set Master -q 1%-
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master -q 1%-"
 
 # Toggle Mute
-bindsym XF86AudioMute exec amixer set Master -q toggle
+bindsym XF86AudioMute exec amixer --no-startup-id "set Master -q toggle"
 
 # Audio Sources List
 bindsym XF86AudioStop exec rofi-pulse
