@@ -1,7 +1,7 @@
 [global]
     ### Display ###
     monitor = DP-2
-    follow = mouse
+    follow = none
     geometry = "300x40-14+41"
     indicate_hidden = yes
     shrink = no
