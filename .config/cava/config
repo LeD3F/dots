@@ -19,7 +19,7 @@ method = ncurses
 # Visual channels. Can be 'stereo' or 'mono'.
 # 'stereo' mirrors both channels with low frequencies in center.
 # 'mono' averages both channels and outputs left to right lowest to highest frequencies.
-channels = mono
+channels = stereo
 
 [color]
 
