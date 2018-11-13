@@ -175,10 +175,6 @@ format-prefix-background = ${colors.xkb}
 label-layout = "%layout% "
 label-layout-background  = ${colors.xkb}
 
-label-indicator-padding = 1
-label-indicator-margin = 0
-label-indicator-background = ${colors.secondary}
-
 #############
 #  _ ____   #
 # (_)___ \  #
