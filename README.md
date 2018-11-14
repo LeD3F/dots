@@ -38,6 +38,8 @@ Polybar Icon Fonts - Nerd Fonts
 
 Colorschemes - https://github.com/dylanaraps/pywal
 
+Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/.config/wal/templates 
+
 # Vivaldi
 
 <img src='https://raw.githubusercontent.com/LeD3F/dots/master/screenshots/Galaxy.png'>
