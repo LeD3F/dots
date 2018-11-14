@@ -106,9 +106,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # My Aliases
-alias update="sudo pacman -Syu && pikaur -Syu"
+alias update="sudo pacman -Syu && yay -Syu"
 alias w="wal -n -i"
 alias wtr="curl http://wttr.in/Nizhniy_Novgorod\?1\?q"
+
+# env
+export EDITOR="/usr/bin/vim"
 
 # Transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
