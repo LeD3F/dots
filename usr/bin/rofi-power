@@ -11,7 +11,7 @@ OPTIONS="Reboot system\nPower-off system\nSuspend system\nHibernate system"
 if [ -f $HOME/.config/rofi-power/config ]; then
   source $HOME/.config/rofi-power/config
 else
-  LAUNCHER="rofi -width 30 -dmenu -i -p power:"
+  LAUNCHER="rofi -width 30 -dmenu -i -p Power Menu:"
   USE_LOCKER="false"
   LOCKER="i3lock"
 fi
@@ -35,10 +35,7 @@ then
         systemctl poweroff
         ;;
       Suspend)
-        $($USE_LOCKER) && "$LOCKER"; systemctl suspend
-        ;;
-      Hibernate)
-        $($USE_LOCKER) && "$LOCKER"; systemctl hibernate
+        $($USE_LOCKER) && "$LOCKER";  systemctl suspend
         ;;
       *)
         ;;
