@@ -57,6 +57,9 @@ xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --outp
 # Cursor
 xsetroot -cursor_name left_ptr
 
+# Numlock
+numlockx &
+
 # Window Managers
 session=${1:-i3}
 
