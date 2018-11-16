@@ -8,6 +8,7 @@ Xft.autohint: false
 Xft.hintstyle: hintfull
 !hintmedium hintslight hintfull
 Xft.lcdfilter: lcddefault
+Xcursor.theme: Bibata_Oil
 
 !Fonts --
 
@@ -15,10 +16,6 @@ URxvt.font: xft:kakwafont:size=10:antialias=true,xft:xos4 Terminus:size=8:antial
 URxvt.boldFont:
 URxvt.letterSpace: 0
 URxvt.antialias: true
-
-!Transparency --
-URxvt.depth: 32
-URxvt.background: [80]#000000
 
 !URxvt --
 
@@ -51,7 +48,7 @@ URxvt.perl-ext: default,clipboard,url-select,keyboard-select
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
-URxvt.colorUL: #e58da3
+URxvt.colorUL: #D9A9A2
 
 !Disable iso14755 --
 
@@ -95,3 +92,4 @@ URxvt.internalBorder: 15
 *color13:  #fa96a3
 *color14:  #84c4ee
 *color15:  #ffffff
+
