@@ -48,8 +48,14 @@ xset dpms 910 920 930 &
 # Pulseaudio
 pulseuadio &
 
+# Pywal
+sleep 0.1 ; wal -n -R
+
 # Xrandr
-xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal &\
+xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal &
+
+# Cursor
+xsetroot -cursor_name left_ptr
 
 # Window Managers
 session=${1:-i3}
