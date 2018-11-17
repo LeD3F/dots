@@ -65,10 +65,11 @@ numlockx &
 session=${1:-i3}
 
 # Polybar
-polybar -c ~/.config/polybar/config2b 2b &
-polybar -c ~/.config/polybar/config2b 2b1 &
-polybar -c ~/.config/polybar/config2b 2bws &
-polybar -c ~/.config/polybar/config2b 2bmus &
+polybar -c /home/led3f/.config/polybar/config2b 2b &
+polybar -c /home/led3f/.config/polybar/config2b 2bws &
+polybar -c /home/led3f/.config/polybar/config2b 2bmus &
+polybar -c /home/led3f/.config/polybar/config2b 2bmust &
+polybar -c /home/led3f/.config/polybar/config2b 2b1 &
 
 case $session in
 	i3|i3wm ) exec i3;;
