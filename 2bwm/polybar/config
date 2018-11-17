@@ -13,34 +13,47 @@
                                
 [colors]
 background = ${xrdb:color0}
-background-alt = #E6202020
+background-alt = #121212
 foreground = ${xrdb:color7}
 foreground-alt = ${xrdb:color7}
 primary = ${xrdb:color12}
 secondary = ${xrdb:color2}
 alert = ${xrdb:color3}
 
-i3border = ${xrdb:color2}
+mus = ${xrdb:color2}
 pulse = ${xrdb:color4}
+xwindow = ${xrdb:color3}
 spotify = ${xrdb:color5}
 xkb = ${xrdb:color1}
 memory = ${xrdb:color2}
 eth = ${xrdb:color3}
+pc = ${xrdb:color4}
+
+###################################################
+#  _____  _____      ___    ____          _____   #
+# |  __ \|  __ \    |__ \  |  _ \   /\   |  __ \  #
+# | |  | | |__) |_____ ) | | |_) | /  \  | |__) | #
+# | |  | |  ___/______/ /  |  _ < / /\ \ |  _  /  #
+# | |__| | |         / /_  | |_) / ____ \| | \ \  #
+# |_____/|_|        |____| |____/_/    \_\_|  \_\ #
+#                                                 #
+###################################################                                               
                      
 [bar/2b]
 monitor = DP-2
-width = 100%
-height = 25
-;offset-x = 1%
-;offset-y = 1%
+width = 20.4%
+height = 40
+offset-x = 77.5%
+offset-y = 1%
 radius = 0
-fixed-center = true
+fixed-center = false
+bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 monitor-strict = true
 
-border-bottom-size = 1
-border-bottom-color = ${colors.i3border}
+border-bottom-size = 3
+border-bottom-color = ${colors.pc}
 
 line-color = #f00
 underline-size = 0
@@ -55,16 +68,16 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = kakwafont:style=Regular:pixelsize=10;2
+font-0 = scientifica:style=Regular:pixelsize=10;2
 font-1 = erus erusfont:style=Regular:pixelsize=10;3
-font-2 = FuraCode Nerd Font:style=Regular:size=10;2
-font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-4 = Wuncon Siji:pixelsize=10;2
-font-5 = emojione:scale=10;1
+#font-2 = FuraCode Nerd Font:style=Regular:size=10;3
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = Wuncon Siji:pixelsize=10;2
+font-4 = emojione:scale=10;1
 
-modules-left = 
-modules-center = date
-modules-right = spotify xkeyboard memory eth pulseaudio
+modules-left = pc
+modules-center = xkeyboard memory eth pulseaudio date
+modules-right = 
 
 override-redirect = false
 
@@ -75,69 +88,62 @@ cursor-scroll = ns-resize
 monitor = DP-2
 width = 10%
 height = 40
-offset-x = 45%
+offset-x = 44.5%
 offset-y = 1%
 radius = 0
 bottom = true
-fixed-center = true
+fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
-monitor-strict = false
+monitor-strict = true
 
-border-bottom-size = 1
-border-bottom-color = ${colors.i3border}
+border-bottom-size = 3
+border-bottom-color = ${colors.xwindow}
 
-line-color = #f00
-underline-size = 0
-overline-size = 0
+#line-color = #f00
+#underline-size = 0
+#overline-size = 0
 
-border-size = 0
-border-color = #00000000
+#border-size = 0
+#border-color = #00000000
 
-padding-left = 0
-padding-right = 0
+#padding-left = 0
+#padding-right = 0
 
-module-margin-left = 0
-module-margin-right = 0
+#module-margin-left = 0
+#module-margin-right = 0
 
-font-0 = kakwafont:style=Regular:pixelsize=10;2
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Wuncon Siji:pixelsize=10;2
+font-0 = scientifica:style=Regular:pixelsize=10;2
+font-1 = xos4 Terminus:style=Regular:pixelsize=5;2
+#font-2 = FuraCode Nerd Font:style=Regular:size=10;2
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = Wuncon Siji:pixelsize=10;2
 
 
-modules-left = 
-modules-center = 2bws
+modules-left = 2bws 
+modules-center = xwindow
 modules-right = 
 
-override-redirect = false
+override-redirect = true
 
 cursor-click = pointer
-cursor-scroll = ns-resize        
-
-workspace-label-current = "x " 
-workspace-current-foreground = ${colors.foreground}
-
-workspace-label-occupied = ∙
-workspace-occupied-foreground = ${colors.foreground}
-
-workspace-label-unoccupied = ⋅
-workspace-unoccupied-foreground = ${colors.foreground} 
+cursor-scroll = ns-resize
 
 [bar/2bmus]
 monitor = DP-2
-width = 15%
+width = 16%
 height = 40
 offset-x = 2%
 offset-y = 1%
 radius = 0
 bottom = true
-fixed-center = true
+fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 monitor-strict = false
 
-border-bottom-size = 1
-border-bottom-color = ${colors.i3border}
+border-bottom-size = 3
+border-bottom-color = ${colors.mus}
 
 line-color = #f00
 underline-size = 0
@@ -152,22 +158,32 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = kakwafont:style=Regular:pixelsize=10;2
+font-0 = scientifica:style=Regular:pixelsize=10;2
 font-1 = erus erusfont:style=Regular:pixelsize=10;3
-font-2 = FuraCode Nerd Font:style=Regular:size=10;2
+font-2 = FuraCode Nerd Font:style=Regular:size=10;3
 font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-4 = Wuncon Siji:pixelsize=10;2
 font-5 = emojione:scale=10;1
 
-modules-left =
-modules-center = mpd
+modules-left = mus
+modules-center = mpd spotify
 modules-right = 
 
-override-redirect = false
+override-redirect = true
 
 cursor-click = pointer
-cursor-scroll = ns-resize                       
-                                              
+cursor-scroll = ns-resize                      
+
+#################################################################
+#  _______      _______    _____     __   ____          _____   #
+# |  __ \ \    / /_   _|  |_   _|   /_ | |  _ \   /\   |  __ \  #
+# | |  | \ \  / /  | |______| |______| | | |_) | /  \  | |__) | #
+# | |  | |\ \/ /   | |______| |______| | |  _ < / /\ \ |  _  /  #
+# | |__| | \  /   _| |_    _| |_     | | | |_) / ____ \| | \ \  #
+# |_____/   \/   |_____|  |_____|    |_| |____/_/    \_\_|  \_\ #
+#                                                               #
+#################################################################
+
 [bar/2b1]
 monitor = DVI-I-1
 width = 100%
@@ -179,8 +195,8 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-bottom-size = 1
-border-bottom-color = ${colors.i3border}
+border-bottom-size = 3
+border-bottom-color = ${colors.mus}
 
 line-color = #f00
 underline-size = 0
@@ -197,7 +213,7 @@ module-margin-right = 0
 
 font-0 = kakwafont:style=Regular:pixelsize=10;2
 font-1 = erus erusfont:style=Regular:pixelsize=10;3
-font-2 = FuraCode Nerd Font:style=Regular:size=10;2
+font-2 = FuraCode Nerd Font:style=Regular:size=5;2
 font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-4 = Wuncon Siji:pixelsize=10;2
 font-5 = emojione:scale=10;1
@@ -208,17 +224,15 @@ modules-right = xkeyboard memory eth
 
 tray-position = right
 tray-padding = 3
-tray-detached = true
+tray-detached = false
 tray-maxsize = 14
 tray-background = ${colors.background}
-tray-offset-x = -249
 tray-scale = 1.0
 
 override-redirect = false
 
 cursor-click = pointer
-cursor-scroll = ns-resize
-
+cursor-scroll = ns-resize              
 
 ######################################################
 # __   ___              _                         _  #
@@ -236,77 +250,11 @@ cursor-scroll = ns-resize
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.xkb}
+#format-prefix = "  " # Nerd Fonts
+format-prefix = " "
+format-prefix-foreground = ${colors.xkb}
 
-label-layout = "%layout% "
-label-layout-background  = ${colors.xkb}
-
-#############
-#  _ ____   #
-# (_)___ \  #
-#  _  __) | #
-# | ||__ <  #
-# | |___) | #
-# |_|____/  #
-#           #
-#############         
-          
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-pin-workspaces = true
-
-label-mode-padding = 1
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
-
-; focused = Active workspace on focused monitor
-label-focused = %icon%
-label-focused-foreground = ${colors.i3border}
-label-focused-background = ${colors.background}
-label-focused-padding = 2
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon%
-label-unfocused-padding = 2
-
-; visible = Active workspace on unfocused monitor
-label-visible = %icon%
-label-visible-background = ${self.label-focused-background}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-; Separator in between workspaces
-;label-separator = |
-
-; Use fuzzy (partial) matching on labels when assigning 
-; icons to workspaces
-; Example: code;♚ will apply the icon to all workspaces 
-; containing 'code' in the label
-; Default: false
-fuzzy-match = false
-
-; ws-icon-[0-9]+ = label;icon
-; NOTE: The label needs to match the name of the i3 workspace
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-default = 
+label-layout = " %layout% "
 
 ############################################
 #  __  __                                  #
@@ -323,38 +271,10 @@ ws-icon-default = 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.memory}
-label = "%percentage_used% "
-label-background = ${colors.memory}
-
-################################
-# __          ___              #
-# \ \        / / |             #
-#  \ \  /\  / /| | __ _ _ __   #
-#   \ \/  \/ / | |/ _` | '_ \  #
-#    \  /\  /  | | (_| | | | | #
-#     \/  \/   |_|\__,_|_| |_| #
-#                              #
-################################                             
-
-[module/wlan]
-type = internal/network
-interface = net1
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
-
-format-disconnected =
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground}
+#format-prefix = "  " # Nerd Fonts
+format-prefix = "  "
+format-prefix-foreground = ${colors.memory}
+label = " %percentage_used% "
 
 ###########################
 #  ______ _______ _    _  #
@@ -371,11 +291,12 @@ type = internal/network
 interface = enp3s0
 interval = 3.0
 
-format-connected-prefix = " 龍 "
-format-connected-prefix-foreground = ${colors.foreground}
-format-connected-prefix-background = ${colors.eth}
-label-connected = "%downspeed% %upspeed% "
-label-connected-background = ${colors.eth}
+#format-connected-prefix = " 龍 " # Nerd Fonts
+format-connected-prefix = "  "
+format-connected-prefix-foreground = ${colors.eth}
+#format-connected-prefix-background = ${colors.eth}
+label-connected = " %downspeed% %upspeed% "
+#label-connected-background = ${colors.eth}
 
 format-disconnected =
 
@@ -394,13 +315,14 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date =
-date-alt = "%d-%m-%Y "
+#format =    <label> # Nerd Fonts
+format =    <label>
+format-foreground = ${colors.xkb}
+
+label = "%date%%time% "
+label-foreground = ${colors.foreground}
 
 time = %a %d, %H:%M
-time-alt = %H:%M:%S
-
-label = %date%%time%
 
 ########################################################
 #  _____       _                            _ _        #
@@ -416,17 +338,24 @@ label = %date%%time%
 type = internal/pulseaudio
 
 format-volume = <ramp-volume><label-volume>
-label-volume = "%percentage% "
-label-volume-background = ${colors.pulse}
+label-volume = " %percentage%  "
+label-volume-foreground = ${colors.foreground}
+#label-volume-background = ${colors.pulse}
 
-label-muted = "  muted "
-label-muted-background = ${colors.background-alt}
-label-muted-foreground = #666
+#label-muted = "  muted " # Nerd Fonts
+label-muted = "  muted "
+label-muted-foreground = ${colors.background-alt}
 
-ramp-volume-0 = "  "
-ramp-volume-1 = "  "
-ramp-volume-2 = "  "
-ramp-volume-background = ${colors.pulse}
+#ramp-volume-0 = "  " # Nerd Fonts
+#ramp-volume-1 = "  " # Nerd Fonts
+#ramp-volume-2 = "  " # Nerd Fonts
+
+ramp-volume-0 = "  "
+ramp-volume-1 = "  "
+ramp-volume-2 = "  "
+
+#ramp-volume-background = ${colors.pulse}
+ramp-volume-foreground = ${colors.pulse}
 
 ########################################
 #  ____        _   _                   # 
@@ -527,8 +456,8 @@ interval = 1
 exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song} '
 format-prefix = "  "
 format = <label>
-label-background = ${colors.spotify}
-format-background = ${colors.spotify}
+label-foreground = ${colors.foreground}
+format-foreground = ${colors.spotify}
 
 ##########################
 #  __  __ _____  _____   #
@@ -547,18 +476,61 @@ format-online = <label-time> <icon-prev> <toggle> <icon-next>  <label-song>
 label-time = "%elapsed% / %total% |"
 label-song = "| %title%"
 
-icon-prev = " ﭢ"
-icon-stop =  " "
-icon-play =  " "
-icon-pause = " "
-icon-next =  " ﭠ"
+#icon-prev = " ﭢ"
+icon-prev = " "
+#icon-stop =  " "
+icon-stop =  " "
+#icon-play =  " "
+icon-play=  " "
+#icon-pause = " "
+icon-pause = " "
+#icon-next =  " ﭠ"
+icon-next =  " "
 
-label-song-maxlen = 15
+label-song-maxlen = 18
 label-song-ellipsis = true
+
+[module/mus]
+type = custom/text
+#content = "" # Nerd Fonts
+content = ""
+content-background = ${colors.mus}
+content-foreground = ${colors.foreground}
+content-padding = 3
+
+[module/pc]
+type = custom/text
+#content = "" # Nerd Fonts
+content = ""
+content-background = ${colors.pc}
+content-foreground = ${colors.foreground}
+content-padding = 3
 
 [module/2bws]
 type = custom/script
 exec = ~/.scripts/2bws.sh
-interval = 0.01
+interval = 0.1
+
+format = <label>
+
+label = " %output% "
+label-background = ${colors.xwindow}
+label-foreground = ${colors.foreground}
+label-padding = 1
+
+[module/xwindow]
+type=internal/xwindow
+format=<label>
+#label=%title%
+label="%title% "
+label-foreground=${colors.foreground}
+label-padding=0
+label-maxlen = 28
+
+label-empty = No Windows
+label-empty-foreground = ${colors.foreground}
+
+format-prefix-foreground=${colors.foreground}
+format-prefix-padding=0
 
 ; vim:ft=dosini
