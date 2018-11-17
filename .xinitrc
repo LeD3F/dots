@@ -37,6 +37,7 @@ nitrogen --restore &
 compton &
 dunst -config ~/.cache/wal/dunstrc &
 xautolock -detectsleep -time 15 -locker "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"  -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
+urxvtd -q -f -o
 
 # Xset
 xset s 910 910 &
@@ -62,6 +63,12 @@ numlockx &
 
 # Window Managers
 session=${1:-i3}
+
+# Polybar
+polybar -c ~/.config/polybar/config2b 2b &
+polybar -c ~/.config/polybar/config2b 2b1 &
+polybar -c ~/.config/polybar/config2b 2bws &
+polybar -c ~/.config/polybar/config2b 2bmus &
 
 case $session in
 	i3|i3wm ) exec i3;;
