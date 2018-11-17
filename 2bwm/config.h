@@ -22,13 +22,13 @@ static const uint8_t offsets[] = {
 };
 ///---Colors---///
 static const char *colors[] = {
-	"#A6595A", // 0)focuscol
-	"#091114", // 1)unfocuscol
-	"#7a8c5c", // 2)fixedcol
-	"#ff6666", // 3)unkilcol
-	"#cc9933", // 4)fixedunkilcol
-	"#131d21", // 5)outerbordercol
-	"#000000"  // 6)emptycol
+	"#A9363D", // 0)focuscol
+	"#091018", // 1)unfocuscol
+	"#AC3B42", // 2)fixedcol
+	"#C5494C", // 3)unkilcol
+	"#998776", // 4)fixedunkilcol
+	"#131d29", // 5)outerbordercol
+	"#878b8f"  // 6)emptycol
 };
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = true;
@@ -40,27 +40,24 @@ static const bool inverted_colors = true;
 #define CURSOR_POSITION MIDDLE
 ///---Borders---///
 static const uint8_t borders[] = {
-	4, // 0) Outer border size.
-	8, // 1) Full borderwidth
+	3, // 0) Outer border size.
+	6, // 1) Full borderwidth
 	3, // 2) Magnet border size
-	4  //3) Resize border size
+	3  //3) Resize border size
 };
 /* Windows that won't have a border.*/
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"bar", "xclock"};
 ///--Menus and Programs---///
+static const char *terminal[]  = { "urxvtc", "-geometry", "80x20", NULL };
 static const char *menucmd[]   = { "/home/led3f/.scripts/rofi.sh", NULL };
-static const char *pwr[]   = { "/usr/bin/rofi-power", NULL };
-static const char *terminal[]  = { "urxvtc", NULL };
+static const char *menuwin[]   = { "/home/led3f/.scripts/rofiwin.sh", NULL };
+static const char *menurun[]   = { "/home/led3f/.scripts/rofirun.sh", NULL };
+static const char *pwr[]       = { "/usr/bin/rofi-power.sh", NULL };
+static const char *browser[]   = { "/usr/bin/vivaldi-snapshot", NULL };
 static const char *scrfull[]   = { "/home/led3f/.scripts/maim/screenshotfull.sh", NULL };
 static const char *scrarea[]   = { "/home/led3f/.scripts/maim/screenshotarea.sh", NULL };
 static const char *scrwdw[]    = { "/home/led3f/.scripts/maim/screenshotwindow.sh", NULL };
-static const char *click1[]    = { "xdotool","click", "1", NULL };
-static const char *click2[]    = { "xdotool","click", "2", NULL };
-static const char *click3[]    = { "xdotool","click", "3", NULL };
-static const char *vol_up[]    = { "pamixer", "-u", "-i", "3", "--allow-boost", NULL };
-static const char *vol_down[]  = { "pamixer", "-u", "-d", "3", "--allow-boost", NULL };
-static const char *vol_mute[]  = { "amixer", "set", "Master", "mute", "-q", NULL };
 ///--Custom foo---///
 static void halfandcentered(const Arg *arg)
 {
@@ -144,7 +141,7 @@ static key keys[] = {
     {  MOD ,              XK_Home,       resizestep_aspect, {.i=TWOBWM_RESIZE_KEEP_ASPECT_GROW}},
     {  MOD ,              XK_End,        resizestep_aspect, {.i=TWOBWM_RESIZE_KEEP_ASPECT_SHRINK}},
     // Full screen window without borders
-    {  MOD ,              XK_x,         maximize,          {.i=TWOBWM_FULLSCREEN}},
+    {  MOD ,              XK_x,          maximize,          {.i=TWOBWM_FULLSCREEN}},
     //Full screen window without borders overiding offsets
     {  MOD |SHIFT ,       XK_x,          maximize,          {.i=TWOBWM_FULLSCREEN_OVERRIDE_OFFSETS}},
     // Maximize vertically
@@ -199,22 +196,18 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}},
     // Start programs
     {  MOD ,              XK_Return,     start,             {.com = terminal}},
-    {  ALT ,              XK_e,          start,             {.com = pwr}},
     {  MOD ,              XK_d,          start,             {.com = menucmd}},
+    {  MOD |SHIFT,        XK_d,          start,             {.com = menurun}},
+    {  ALT ,              XK_Tab,        start,             {.com = menuwin}},
     {  MOD ,              XK_Print,      start,             {.com = scrfull}},
     {  MOD ,              XK_a,          start,             {.com = scrarea}},
     {  MOD |SHIFT,        XK_w,          start,             {.com = scrwdw}},
+    {  ALT,               XK_e,          start,             {.com = pwr}},
+    {  MOD ,              XK_w,          start,             {.com = browser}},
     // Exit or restart 2bwm
     {  MOD |SHIFT,        XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
     {  MOD ,              XK_space,      halfandcentered,   {.i=0}},
-    // Fake clicks using xdotool
-    {  MOD |CONTROL,      XK_Up,         start,             {.com = click1}},
-    {  MOD |CONTROL,      XK_Down,       start,             {.com = click2}},
-	{  MOD |CONTROL,      XK_Right,      start,             {.com = click3}},
-    {  0x000000,          0x1008ff13, start,             {.com = vol_up}},
-    {  0x000000,          0x1008ff11,  start,             {.com = vol_down}},
-    {  0x000000,          0x1008ff15, start,             {.com = vol_mute}},
     // Change current workspace
        DESKTOPCHANGE(     XK_1,                             0)
        DESKTOPCHANGE(     XK_2,                             1)
