@@ -42,7 +42,7 @@ Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/
 
 # 2bwm
 
-<img src='screenshots/i3_wm.jpg'>
+<img src='screenshots/2bwm.jpg'>
 
 # 2bwm info
 
