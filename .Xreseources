@@ -12,9 +12,9 @@ Xcursor.theme: Bibata_Oil
 
 !Fonts --
 
-URxvt.font: xft:kakwafont:size=10:antialias=true,xft:xos4 Terminus:size=8:antialias=true
+URxvt.font: xft:Curie:size=10:antialias=true,xft:xos4 Terminus:size=8:antialias=true
 URxvt.boldFont:
-URxvt.letterSpace: 0
+URxvt.letterSpace: 1
 URxvt.antialias: true
 
 !URxvt --
