@@ -35,9 +35,10 @@ fi
 # Start Apps
 nitrogen --restore &
 compton &
-dunst -config ~/.cache/wal/dunstrc &
+dunst -config ~/.cache/wal/dunstrc2b &
 xautolock -detectsleep -time 15 -locker "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"  -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
 urxvtd -q -f -o
+mpd &
 
 # Xset
 xset s 910 910 &
@@ -68,7 +69,6 @@ session=${1:-i3}
 polybar -c /home/led3f/.config/polybar/config2b 2b &
 polybar -c /home/led3f/.config/polybar/config2b 2bws &
 polybar -c /home/led3f/.config/polybar/config2b 2bmus &
-polybar -c /home/led3f/.config/polybar/config2b 2bmust &
 polybar -c /home/led3f/.config/polybar/config2b 2b1 &
 
 case $session in
