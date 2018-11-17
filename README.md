@@ -40,6 +40,14 @@ Colorschemes - https://github.com/dylanaraps/pywal
 
 Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/.config/wal/templates 
 
+# 2bwm
+
+<img src='screenshots/i3_wm.jpg'>
+
+# 2bwm info
+
+2bws script - https://github.com/drumsetmonkey/.dotfiles/blob/master/scripts/.scripts/2bws
+
 # Vivaldi
 
 <img src='https://raw.githubusercontent.com/LeD3F/dots/master/screenshots/Galaxy.png'>
