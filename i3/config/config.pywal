@@ -61,7 +61,7 @@ default_floating_border pixel 1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -83,7 +83,7 @@ bindsym $mod+Shift+d exec "rofi -show run -theme ~/.cache/wal/flat-red.rasi"
 # Rofi window switcher
 bindsym $mod+Tab exec rofi -show window -theme ~/.cache/wal/flat-red.rasi
 #Rofi Power Menu
-bindsym $alt+e exec rofi-power "i3-msg exit" -theme ~/.cache/wal/flat-red.rasi
+bindsym $alt+e exec rofi-power "i3-msg exit"
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#121212' -sb '#F0544C' -sf '#FFFFFF' -fn 'misc termsyn-10' -p 'run :'"
@@ -413,17 +413,5 @@ assign [class="Steam"] $ws6
 # /_/    \_\__,_|\__\___/|___/\__\__,_|_|   \__| #
 #                                                #
 ##################################################
-                                               
-exec --no-startup-id sleep 1 ; wal -n -R
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id mpd
-exec --no-startup-id compton
-exec --no-startup-id pamac-tray
-exec --no-startup-id xset s 910 910
-exec --no-startup-id xset dpms 910 920 930
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
-exec --no-startup-id xrdb -merge ~/.Xresources
-exec --no-startup-id xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal
-exec --no-startup-id dunst -config ~/.cache/wal/dunstrc
-exec --no-startup-id caffeine
-exec --no-startup-id xautolock -detectsleep -time 15 -locker "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"  -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+                                        
+                                        
