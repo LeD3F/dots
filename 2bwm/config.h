@@ -4,8 +4,8 @@
 #define WORKSPACES      7 // Number Of Workspaces
 ///--Speed---///
 static const uint16_t movements[] = {
-	20, // 0)move step slow
-	40, // 1)move step fast
+	10, // 0)move step slow
+	20, // 1)move step fast
 	15, // 2)mouse slow 
 	400 // 3)mouse fast
 };
@@ -53,8 +53,13 @@ static const char *terminal[]  = { "urxvtc", "-geometry", "80x20", NULL };
 static const char *menucmd[]   = { "/home/led3f/.scripts/rofi.sh", NULL };
 static const char *menuwin[]   = { "/home/led3f/.scripts/rofiwin.sh", NULL };
 static const char *menurun[]   = { "/home/led3f/.scripts/rofirun.sh", NULL };
-static const char *pwr[]       = { "/usr/bin/rofi-power.sh", NULL };
+static const char *pwr[]       = { "/usr/bin/rofi-power", NULL };
+static const char *lock[]      = { "/home/led3f/.scripts/lock.sh", NULL };
 static const char *browser[]   = { "/usr/bin/vivaldi-snapshot", NULL };
+static const char *next[]      = { "/home/led3f/.scripts/next.sh", NULL };
+static const char *prev[]      = { "/home/led3f/.scripts/prev.sh", NULL };
+static const char *play[]      = { "/home/led3f/.scripts/play.sh", NULL };
+static const char *channels[]  = { "/usr/bin/rofi-pulse", NULL };
 static const char *scrfull[]   = { "/home/led3f/.scripts/maim/screenshotfull.sh", NULL };
 static const char *scrarea[]   = { "/home/led3f/.scripts/maim/screenshotarea.sh", NULL };
 static const char *scrwdw[]    = { "/home/led3f/.scripts/maim/screenshotwindow.sh", NULL };
@@ -199,11 +204,17 @@ static key keys[] = {
     {  MOD ,              XK_d,          start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_d,          start,             {.com = menurun}},
     {  ALT ,              XK_Tab,        start,             {.com = menuwin}},
-    {  MOD ,              XK_Print,      start,             {.com = scrfull}},
+    {  0x000000 ,         XK_Print,      start,             {.com = scrfull}},
     {  MOD ,              XK_a,          start,             {.com = scrarea}},
     {  MOD |SHIFT,        XK_w,          start,             {.com = scrwdw}},
+    {  ALT |CONTROL,      XK_l,          start,             {.com = lock}},
     {  ALT,               XK_e,          start,             {.com = pwr}},
     {  MOD ,              XK_w,          start,             {.com = browser}},
+    // Sound Controls
+    {  0x000000 ,         0x1008ff16,    start,             {.com = prev}},
+    {  0x000000 ,         0x1008ff17,    start,             {.com = next}},
+    {  0x000000 ,         0x1008ff14,    start,             {.com = play}},
+    {  0x000000 ,         0x1008ff15,    start,             {.com = channels}},
     // Exit or restart 2bwm
     {  MOD |SHIFT,        XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
