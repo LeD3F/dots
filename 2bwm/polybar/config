@@ -75,7 +75,6 @@ border-bottom-color = ${colors.pc}
 
 font-0 = scientifica:style=Regular:pixelsize=10;2
 font-1 = erus erusfont:style=Regular:pixelsize=10;3
-#font-2 = FuraCode Nerd Font:style=Regular:size=10;3
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-3 = Wuncon Siji:pixelsize=10;2
 
@@ -115,7 +114,6 @@ border-bottom-color = ${colors.xwindow}
 
 font-0 = scientifica:style=Regular:pixelsize=10;2
 font-1 = xos4 Terminus:style=Regular:pixelsize=5;2
-#font-2 = FuraCode Nerd Font:style=Regular:size=10;2
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-3 = Wuncon Siji:pixelsize=10;2
 
@@ -203,7 +201,6 @@ border-bottom-color = ${colors.mus}
 
 font-0 = kakwafont:style=Regular:pixelsize=10;2
 font-1 = erus erusfont:style=Regular:pixelsize=10;3
-font-2 = FuraCode Nerd Font:style=Regular:size=5;2
 font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-4 = Wuncon Siji:pixelsize=10;2
 font-5 = emojione:scale=10;1
@@ -240,7 +237,6 @@ cursor-scroll = ns-resize
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-#format-prefix = "  " # Nerd Fonts
 format-prefix = "  "
 format-prefix-foreground = ${colors.xkb}
 
@@ -261,7 +257,6 @@ label-layout = " %layout% "
 [module/memory]
 type = internal/memory
 interval = 2
-#format-prefix = "  " # Nerd Fonts
 format-prefix = "  "
 format-prefix-foreground = ${colors.memory}
 label = " %percentage_used% "
@@ -281,12 +276,9 @@ type = internal/network
 interface = enp3s0
 interval = 3.0
 
-#format-connected-prefix = " 龍 " # Nerd Fonts
 format-connected-prefix = "  "
 format-connected-prefix-foreground = ${colors.eth}
-#format-connected-prefix-background = ${colors.eth}
 label-connected = " %downspeed% %upspeed% "
-#label-connected-background = ${colors.eth}
 
 format-disconnected =
 
@@ -305,7 +297,6 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-#format =    <label> # Nerd Fonts
 format =    <label>
 format-foreground = ${colors.xkb}
 
@@ -330,21 +321,14 @@ type = internal/pulseaudio
 format-volume = <ramp-volume><label-volume>
 label-volume = " %percentage%  "
 label-volume-foreground = ${colors.foreground}
-#label-volume-background = ${colors.pulse}
 
-#label-muted = "  muted " # Nerd Fonts
 label-muted = "  muted "
 label-muted-foreground = ${colors.background-alt}
-
-#ramp-volume-0 = "  " # Nerd Fonts
-#ramp-volume-1 = "  " # Nerd Fonts
-#ramp-volume-2 = "  " # Nerd Fonts
 
 ramp-volume-0 = "  "
 ramp-volume-1 = "  "
 ramp-volume-2 = "  "
 
-#ramp-volume-background = ${colors.pulse}
 ramp-volume-foreground = ${colors.pulse}
 
 ########################################
@@ -466,15 +450,10 @@ format-online = <label-time> <icon-prev> <toggle> <icon-next>  <label-song>
 label-time = "%elapsed% / %total% |"
 label-song = "| %title%"
 
-#icon-prev = " ﭢ"
 icon-prev = " "
-#icon-stop =  " "
 icon-stop =  " "
-#icon-play =  " "
 icon-play=  " "
-#icon-pause = " "
 icon-pause = " "
-#icon-next =  " ﭠ"
 icon-next =  " "
 
 label-song-maxlen = 18
@@ -492,7 +471,6 @@ label-song-ellipsis = true
 
 [module/mus]
 type = custom/text
-#content = "" # Nerd Fonts
 content = ""
 content-background = ${colors.mus}
 content-foreground = ${colors.foreground}
@@ -510,7 +488,6 @@ content-padding = 3
 
 [module/pc]
 type = custom/text
-#content = "" # Nerd Fonts
 content = ""
 content-background = ${colors.pc}
 content-foreground = ${colors.foreground}
@@ -551,7 +528,6 @@ label-padding = 1
 [module/xwindow]
 type=internal/xwindow
 format=<label>
-#label=%title%
 label="%title% "
 label-foreground=${colors.foreground}
 label-padding=0
