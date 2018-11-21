@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # You can call this script like this:
-# $ ./volumeControl.sh up
-# $ ./volumeControl.sh down
-# $ ./volumeControl.sh mute
+# $ ./volumedunst.sh up
+# $ ./volumedunst.sh down
+# $ ./volumedunst.sh mute
 
 # Script modified from these wonderful people:
 # https://github.com/dastorm/volume-notification-dunst/blob/master/volume.sh
@@ -28,7 +28,7 @@ function send_notification {
     # https://en.wikipedia.org/wiki/Box-drawing_character
     bar=$(seq --separator="━" 0 "$((volume / 5))" | sed 's/[0-9]//g')
     # Send the notification
-    dunstify -i $iconSound -r 2593 -u normal "    $bar"
+    dunstify -i $iconSound -r 2593 -u normal "   $bar"
   fi
 }
 
@@ -37,12 +37,12 @@ case $1 in
     # set the volume on (if it was muted)
     amixer -D pulse set Master on > /dev/null
     # up the volume (+ 5%)
-    amixer -D pulse sset Master 5%+ > /dev/null
+    amixer -D pulse sset Master 1%+ > /dev/null
     send_notification
     ;;
   down)
     amixer -D pulse set Master on > /dev/null
-    amixer -D pulse sset Master 5%- > /dev/null
+    amixer -D pulse sset Master 1%- > /dev/null
     send_notification
     ;;
   mute)
