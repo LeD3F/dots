@@ -196,13 +196,13 @@ bindsym XF86Calculator exec galculator
 bindsym XF86Explorer exec nemo
 
 # Volume Raise
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master -q 1%+"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "/home/led3f/.scripts/volumedunst.sh up"
 
 # Volume Down
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master -q 1%-"
+bindsym XF86AudioLowerVolume exec --no-startup-id "/home/led3f/.scripts/volumedunst.sh down"
 
 # Toggle Mute
-bindsym XF86AudioMute exec amixer --no-startup-id "set Master -q toggle"
+bindsym XF86AudioMute exec --no-startup-id "/home/led3f/.scripts/volumedunst.sh mute"
 
 # Audio Sources List
 bindsym XF86AudioStop exec rofi-pulse
