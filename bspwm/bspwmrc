@@ -1,0 +1,79 @@
+#! /bin/sh
+
+# Autostart
+
+sxhkd &
+
+# Dusnt
+
+killall dunst
+dunst -config ~/.cache/wal/dunstrcbspwm &
+
+# Polybar
+
+$HOME/.config/polybar/bspwm.sh
+
+# Monitor setup
+
+bspc monitor DP-2 -d desktop web multimedia music chat games
+bspc monitor DVI-I-1 -d obs other
+
+# Bspwm Settings
+
+bspc config border_width         1
+bspc config window_gap          10
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      false
+bspc config single_monocle       true
+
+bspc config initial_polarity second_child
+
+bspc config focus_follows_pointer true
+
+# Pywal Colors
+
+. "${HOME}/.cache/wal/colors.sh"
+
+bspc config normal_border_color "$color1"
+bspc config active_border_color "$color15"
+bspc config focused_border_color "$color2"
+bspc config presel_feedback_color "$color1"
+
+# Apps to workspace
+
+bspc rule -a "Gimp-2.10" desktop=multimedia
+bspc rule -a "Vivaldi-snapshot" desktop=web
+bspc rule -a TelegramDesktop desktop=chat
+bspc rule -a Smplayer desktop=multimedia
+bspc rule -a mpve desktop=multimedia
+bspc rule -a obs desktop=obs
+bspc rule -a Vmware desktop=multimedia
+bspc rule -a Deluge desktop=multimedia
+bspc rule -a Steam desktop=games
+bspc rule -a discord desktop=chat
+
+# Floating Apps
+
+bspc rule -a Lutris desktop=games state=floating
+bspc rule -a Nitrogen state=floating
+bspc rule -a "Pamac-manager" state=floating
+bspc rule -a Galculator state=floating
+bspc rule -a Gnac state=floating
+bspc rule -a Etcher state=floating
+bspc rule -a Woeusbgui state=floating
+bspc rule -a Pavucontrol state=floating
+bspc rule -a File-roller state=floating
+
+# External Rules
+
+bspc config external_rules_command $HOME/.scripts/spotify.sh
+bspc config external_rules_command $HOME/.scripts/windows/lutris.sh
+bspc config external_rules_command $HOME/.scripts/windows/pamac.sh
+bspc config external_rules_command $HOME/.scripts/windows/galculator.sh
+bspc config external_rules_command $HOME/.scripts/windows/gnac.sh
+bspc config external_rules_command $HOME/.scripts/windows/etcher.sh
+bspc config external_rules_command $HOME/.scripts/windows/woeusb.sh
+bspc config external_rules_command $HOME/.scripts/windows/pavucontrol.sh
+bspc config external_rules_command $HOME/.scripts/windows/fileroller.sh
