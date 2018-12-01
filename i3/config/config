@@ -1,3 +1,14 @@
+################################################
+# ________  ______   __ __ __   ___ __ __      #
+#/_______/\/_____/\ /_//_//_/\ /__//_//_/\     #
+#\__.::._\/\:::_:\ \\:\\:\\:\ \\::\| \| \ \    #
+#   \::\ \    /_\:\ \\:\\:\\:\ \\:.      \ \   #
+#   _\::\ \__ \::_:\ \\:\\:\\:\ \\:.\-/\  \ \  #
+#  /__\::\__/\/___\:\ '\:\\:\\:\ \\. \  \  \ \ #
+#  \________\/\______/  \_______\/ \__\/ \__\/ #
+#                                              #
+################################################
+
 # i3 Config by LeD3F
 # i3 - https://i3wm.org
 
@@ -61,7 +72,7 @@ default_floating_border pixel 1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -77,13 +88,13 @@ bindsym $mod+Shift+c kill
 #############################################################           
                                                           
 # Rofi launcher drun
-bindsym $mod+d exec "rofi -show drun -theme flat-red"
+bindsym $mod+d exec "rofi -show drun -modi drun -theme ~/.cache/wal/flat-red.rasi"
 # Rofi launcher run
-bindsym $mod+Shift+d exec "rofi -show run -theme flat-red"
+bindsym $mod+Shift+d exec "rofi -show run -theme ~/.cache/wal/flat-red.rasi"
 # Rofi window switcher
-bindsym $mod+Tab exec rofi -show window -theme flat-red
-#Rofi Power Menu
-bindsym $alt+e exec rofi-power "i3-msg exit" -theme flat-red
+bindsym $mod+Tab exec rofi -show window -theme ~/.cache/wal/flat-red.rasi
+# Rofi Power Menu
+bindsym $alt+e exec rofi-power "i3-msg exit"
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#121212' -sb '#F0544C' -sf '#FFFFFF' -fn 'misc termsyn-10' -p 'run :'"
@@ -169,7 +180,7 @@ bindsym $mod+a exec --no-startup-id "~/.scripts/maim/screenshotarea.sh"
 bindsym $mod+Ctrl+w exec --no-startup-id "~/.scripts/maim/screenshotwindow.sh"
 
 # Lock Screen
-bindsym $alt+Ctrl+L exec --no-startup-id "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"
+bindsym $alt+Ctrl+L exec --no-startup-id "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z" 
 
 # Spotify / MPD Next Track
 bindsym XF86AudioNext exec --no-startup-id "sp next || mpc next"
@@ -196,13 +207,13 @@ bindsym XF86Calculator exec galculator
 bindsym XF86Explorer exec nemo
 
 # Volume Raise
-bindsym XF86AudioRaiseVolume exec amixer set Master -q 1%+
+bindsym XF86AudioRaiseVolume exec --no-startup-id "/home/led3f/.scripts/volumedunst.sh up"
 
 # Volume Down
-bindsym XF86AudioLowerVolume exec amixer set Master -q 1%-
+bindsym XF86AudioLowerVolume exec --no-startup-id "/home/led3f/.scripts/volumedunst.sh down"
 
 # Toggle Mute
-bindsym XF86AudioMute exec amixer set Master -q toggle
+bindsym XF86AudioMute exec --no-startup-id "/home/led3f/.scripts/volumedunst.sh mute"
 
 # Audio Sources List
 bindsym XF86AudioStop exec rofi-pulse
@@ -285,7 +296,6 @@ for_window [class="Etcher"] floating enable
 for_window [class="Woeusb"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 for_window [class="^File-roller$"] floating enable
-for_window [class="Lutris"] floating enable
 
 #######################################
 #  _____           _             _    #
@@ -351,13 +361,17 @@ bindsym $mod+r mode "resize"
 #                                          #
 ############################################      
 
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $bc i3wm.color1 #f0f0f0
+
 # class                 border  bground text    indicator child_border
-client.focused          #AD3D37 #AD3D37 #FFFFFF #F0544C   #AD3D37
-client.focused_inactive #121212 #121212 #FFFFFF #272626   #121212
-client.unfocused        #222222 #222222 #888888 #292D2E   #222222
-client.urgent           #A50101 #a50101 #FFFFFF #A50101   #A50101
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-client.background       #FFFFFF
+client.focused          $bg     $bg     $fg     $bg       $bg
+client.focused_inactive $bc     $bc     $fg     $bg       $bc
+client.unfocused        $bc     $bc     $fg     $bg       $bc
+client.urgent           $bc     $bc     $fg     $bg       $bc
+client.placeholder      $bc     $bc     $fg     $bg       $bc
+client.background       $bg
 
 #########################################
 #  _____      _       _                 #
@@ -390,6 +404,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 assign [class="Vivaldi"] $ws2
 assign [class="Firefox"] $ws2
 assign [class="smplayer"] $ws3
+assign [class="mpv"] $ws3
 for_window [class="Spotify"] move to workspace $ws4
 assign [class="Telegram"] $ws5
 assign [class="Discord"] $ws5
@@ -409,16 +424,5 @@ assign [class="Steam"] $ws6
 # /_/    \_\__,_|\__\___/|___/\__\__,_|_|   \__| #
 #                                                #
 ##################################################
-                                               
-exec --no-startup-id "nitrogen --restore"
-exec --no-startup-id "mpd"
-exec --no-startup-id "compton"
-exec --no-startup-id "pamac-tray"
-exec --no-startup-id "xset s 910 910"
-exec --no-startup-id "xset dpms 910 920 930"
-exec --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &"
-exec --no-startup-id "xrdb -merge ~/.Xresources"
-exec --no-startup-id "xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal"
-exec --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
-exec --no-startup-id "caffeine"
-exec --no-startup-id xautolock -detectsleep -time 15 -locker "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"  -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+                                        
+                                        
