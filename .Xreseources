@@ -70,7 +70,7 @@ URxvt.keysym.Control-Right:\033[1;5C
 !URxvt window --
 
 URxvt*geometry: 80x20
-URxvt.internalBorder: 15
+URxvt.internalBorder: 20
 
 !Colors --
 
