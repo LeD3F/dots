@@ -139,13 +139,11 @@ border-bottom-size = 1
 border-bottom-color = ${colors.tray}
 
 font-0 = scientifica:style=Regular:pixelsize=10;2
-font-1 = erus erusfont:style=Regular:pixelsize=10;2
-font-2 = FuraCode Nerd Font:style=Regular:size=10;3
-font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-4 = Wuncon Siji:pixelsize=10;2
-font-5 = emojione:scale=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = Wuncon Siji:pixelsize=10;2
+font-3 = emojione:scale=10;1
 
-modules-left = tray
+modules-left = nimtray
 modules-center =
 modules-right = 
 
@@ -254,11 +252,11 @@ fixed-values = true
 spacing = 2
 
 format-mounted = <label-mounted>
-format-background = ${colors.mus}
+format-background = ${colors.tray}
 format-foreground = ${colors.foreground}
 
 label-mounted = "  %used% "
-label-background = ${colors.mus}
+label-background = ${colors.tray}
 label-foreground = ${colors.foreground}
 
 ####################
@@ -383,10 +381,10 @@ label-song-ellipsis = true
 #                 /____/   #               
 ############################
 
-[module/tray]
+[module/nimtray]
 type = custom/text
-content = ""
-content-background = ${colors.mus}
+content = ""
+content-background = ${colors.tray}
 content-foreground = ${colors.foreground}
 content-padding = 2
 
