@@ -22,7 +22,6 @@ alert = ${xrdb:color3}
 
 bspwmborder = ${xrdb:color2}
 pulse = ${xrdb:color4}
-spotify = ${xrdb:color5}
 xkb = ${xrdb:color1}
 memory = ${xrdb:color2}
 eth = ${xrdb:color3}
@@ -128,7 +127,7 @@ font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-4 = Wuncon Siji:pixelsize=10;2
 font-5 = emojione:scale=10;1
 
-modules-left = mus
+modules-left = mus 
 modules-center = mpd
 modules-right = 
 
@@ -389,27 +388,6 @@ screenchange-reload = true
 [global/wm]
 margin-top = 0
 margin-bottom = 0
-
-########################################
-#   _____             _   _  __        #
-#  / ____|           | | (_)/ _|       #
-# | (___  _ __   ___ | |_ _| |_ _   _  #
-#  \___ \| '_ \ / _ \| __| |  _| | | | #
-#  ____) | |_) | (_) | |_| | | | |_| | #
-# |_____/| .__/ \___/ \__|_|_|  \__, | #
-#        | |                     __/ | #
-#        |_|                    |___/  #
-#                                      #
-########################################
-
-[module/spotify]
-type = custom/script
-interval = 1
-exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song} '
-format-prefix = "  "
-format = <label>
-label-foreground = ${colors.foreground}
-format-foreground = ${colors.spotify}
 
 ##########################
 #  __  __ _____  _____   #
