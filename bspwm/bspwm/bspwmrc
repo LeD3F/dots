@@ -68,12 +68,4 @@ bspc rule -a File-roller state=floating
 
 # External Rules
 
-bspc config external_rules_command $HOME/.scripts/spotify.sh
-bspc config external_rules_command $HOME/.scripts/windows/lutris.sh
-bspc config external_rules_command $HOME/.scripts/windows/pamac.sh
-bspc config external_rules_command $HOME/.scripts/windows/galculator.sh
-bspc config external_rules_command $HOME/.scripts/windows/gnac.sh
-bspc config external_rules_command $HOME/.scripts/windows/etcher.sh
-bspc config external_rules_command $HOME/.scripts/windows/woeusb.sh
-bspc config external_rules_command $HOME/.scripts/windows/pavucontrol.sh
-bspc config external_rules_command $HOME/.scripts/windows/fileroller.sh
+bspc config external_rules_command $HOME/.scripts/windows.sh
