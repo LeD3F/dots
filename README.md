@@ -50,7 +50,7 @@ Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/
 
 # bspwm
 
-<img src='screenshots/2bwm.jpg'>
+<img src='screenshots/bspwm.jpg'>
 
 # bspwm info
 
