@@ -35,7 +35,7 @@ fi
 # Start Apps
 nitrogen --restore &
 compton &
-dunst -config ~/.cache/wal/dunstrc2b &
+dunst -config ~/.cache/wal/dunstrc &
 xautolock -detectsleep -time 15 -locker "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"  -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
 urxvtd -q -f -o
 mpd &
@@ -53,7 +53,7 @@ xset dpms 910 920 930 &
 pulseuadio &
 
 # Pywal
-sleep 0.1 ; wal -n -R
+wal -n -R
 
 # Xrandr
 xrandr --output DVI-I-1 --mode 1440x900 -r 75 --pos 0x180 --rotate normal --output DP-2 --primary --mode 1920x1080 -r 144 --pos 1440x0 --rotate normal &
@@ -65,15 +65,11 @@ xsetroot -cursor_name left_ptr
 numlockx &
 
 # Window Managers
-session=${1:-i3}
-
-# Polybar
-polybar -c /home/led3f/.config/polybar/config2b 2b &
-polybar -c /home/led3f/.config/polybar/config2b 2bws &
-polybar -c /home/led3f/.config/polybar/config2b 2bmus &
-polybar -c /home/led3f/.config/polybar/config2b 2b1 &
+session=${1:-bspwm}
 
 case $session in
-	i3|i3wm ) exec i3;;
-	2bwm ) exec 2bwm;;
+    i3|i3wm ) exec i3;;
+    2bwm ) exec 2bwm;;
+    bspwm ) exec bspwm;;
+    spectr|spectrwm ) exec spectrwm;;
 esac	
