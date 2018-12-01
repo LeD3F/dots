@@ -48,6 +48,24 @@ Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/
 
 2bws script - https://github.com/drumsetmonkey/.dotfiles/blob/master/scripts/.scripts/2bws
 
+# bspwm
+
+<img src='screenshots/2bwm.jpg'>
+
+# bspwm info
+
+Menu is Rofi - https://github.com/DaveDavenport/rofi
+
+Rofi Power Menu - https://github.com/okraits/rofi-tools
+
+Bar is Polybar - https://github.com/jaagr/polybar
+
+Notification Daemon is Dunst - https://github.com/dunst-project/dunst
+
+Polybar Icon Fonts - Wuncon Siji
+
+Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/.config/wal/templates 
+
 # Vivaldi
 
 <img src='https://raw.githubusercontent.com/LeD3F/dots/master/screenshots/Galaxy.png'>
