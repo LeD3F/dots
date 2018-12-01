@@ -12,4 +12,4 @@ polybar -c /home/led3f/.config/polybar/configbspwmdp2 nimmus &
 # DVI-I-1 Bars
 polybar -c /home/led3f/.config/polybar/configbspwmdvi nim &
 polybar -c /home/led3f/.config/polybar/configbspwmdvi nimdes &
-polybar -c /home/led3f/.config/polybar/configbspwmdvi nimmus &
+polybar -c /home/led3f/.config/polybar/configbspwmdvi nimtray &
