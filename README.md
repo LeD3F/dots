@@ -38,8 +38,6 @@ Polybar Icon Font - Nerd Fonts
 
 Colorschemes - https://github.com/dylanaraps/pywal
 
-Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/.config/wal/templates 
-
 # 2bwm
 
 <img src='screenshots/2bwm.jpg'>
@@ -63,8 +61,6 @@ Bar is Polybar - https://github.com/jaagr/polybar
 Notification Daemon is Dunst - https://github.com/dunst-project/dunst
 
 Polybar Icon Font - Wuncon Siji
-
-Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/.config/wal/templates 
 
 # Vivaldi
 
