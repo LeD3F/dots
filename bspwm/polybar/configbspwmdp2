@@ -184,7 +184,7 @@ label-padding = 2
 type = internal/bspwm
 
 label-focused = %icon%
-label-focused-foreground = ${colors.bspwmborder}
+label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
 label-focused-padding = 2
 
