@@ -173,6 +173,7 @@ tray-scale = 1.0
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
+blacklist-1 = caps lock
 
 format-prefix = "  "
 format-prefix-foreground = ${colors.xkb}
