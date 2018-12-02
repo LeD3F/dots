@@ -34,7 +34,7 @@ Pipes - https://github.com/pipeseroni/pipes.sh
 
 Mpd Notification - https://github.com/vehk/mpdnotify
 
-Polybar Icon Fonts - Nerd Fonts
+Polybar Icon Font - Nerd Fonts
 
 Colorschemes - https://github.com/dylanaraps/pywal
 
@@ -62,7 +62,7 @@ Bar is Polybar - https://github.com/jaagr/polybar
 
 Notification Daemon is Dunst - https://github.com/dunst-project/dunst
 
-Polybar Icon Fonts - Wuncon Siji
+Polybar Icon Font - Wuncon Siji
 
 Custom templates for rofi and dunst - https://github.com/LeD3F/dots/tree/master/.config/wal/templates 
 
