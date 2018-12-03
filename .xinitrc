@@ -41,6 +41,7 @@ urxvtd -q -f -o
 mpd &
 pamac-tray &
 caffeine &
+nm-applet &
 
 # Xset
 xset s 910 910 &
@@ -68,8 +69,7 @@ numlockx &
 session=${1:-bspwm}
 
 case $session in
-    i3|i3wm ) exec i3;;
-    2bwm ) exec 2bwm;;
-    bspwm ) exec bspwm;;
-    spectr|spectrwm ) exec spectrwm;;
+	i3|i3wm ) exec i3;;
+	2bwm ) exec 2bwm;;
+    bsp|bspwm ) exec bspwm;;
 esac	
