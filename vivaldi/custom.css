@@ -705,6 +705,10 @@ input,
 #browser.win #titlebar #pagetitle {
   top: 6px;
 }
+.address-off#browser.win #titlebar #pagetitle,
+.address-bottom#browser.win #titlebar #pagetitle {
+  top: 4px;
+}
 #browser.win .window-buttongroup {
   position: absolute;
   right: 7px;
@@ -1007,35 +1011,6 @@ input,
 #browser.linux.alt .topmenu + #tabs-container.top {
   padding-left: var(--padding);
   padding-right: 0;
-}
-#footer .sync-status {
-  display: flex;
-  justify-content: center;
-  width: 30px;
-  margin: auto;
-  opacity: 0.5;
-  transition: opacity 100ms linear;
-}
-#footer .sync-status.user-set {
-  opacity: 1;
-}
-#footer .sync-status .error {
-  transform: translate(8px, 3px) rotate(45deg);
-  fill: var(--colorBg);
-}
-#footer .sync-status .progress {
-  transform: translate(3px, 8px);
-  fill: var(--colorBg);
-  stroke-width: 0.8px;
-  stroke: var(--colorBg);
-}
-#footer .sync-status .error,
-#footer .sync-status .progress {
-  animation: fade 200ms linear;
-}
-#footer .sync-status .button-toolbar-small {
-  display: flex;
-  justify-content: center;
 }
 button,
 input,
@@ -1443,7 +1418,7 @@ select {
   height: 28px;
   line-height: 1.4;
   color: var(--colorFg);
-  padding: 0 30px 0 6px;
+  padding: 0 24px 0 6px;
   position: relative;
   max-width: 100%;
   box-shadow: 0 0 0 3px rgba(0, 110, 215, 0);
@@ -1469,7 +1444,10 @@ select[size]:focus option:checked {
 }
 select:not([multiple]):not([size]),
 input[type=date] {
-  -webkit-appearance: menulist;
+  background-image: linear-gradient(55deg, var(--colorBgIntense) 43%, transparent 45%), linear-gradient(125deg, transparent 53%, var(--colorBgIntense) 55%), linear-gradient(180deg, var(--colorBgIntense) 30%, var(--colorFg) 30%);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right 2px center;
   background-color: var(--colorBgIntense);
 }
 select:not([multiple]):not([size])::-webkit-calendar-picker-indicator,
@@ -1706,7 +1684,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-left: 0;
   margin-bottom: var(--padding);
   width: 100%;
-  background-image: linear-gradient(45deg, var(--colorBg) 45%, transparent 45%), linear-gradient(-225deg, transparent 53%, var(--colorBg) 53%), linear-gradient(-180deg, var(--colorBg) 31%, var(--colorFg) 31%);
+  background-color: var(--colorBgLight);
+  background-image: linear-gradient(55deg, var(--colorBgLight) 43%, transparent 45%), linear-gradient(125deg, transparent 53%, var(--colorBgLight) 55%), linear-gradient(180deg, var(--colorBgLight) 30%, var(--colorFg) 30%);
 }
 .fieldset.cardview,
 fieldset.cardview {
@@ -2721,13 +2700,8 @@ header + .toolbar.text *:not(.button-dropdown) > button:last-of-type {
 }
 .toolbar .button-group:not(.button-dropdown) > button:first-of-type,
 .toolbar .button-dropdown:not(.button-dropdown) > button:first-of-type {
-  margin-left: 3px;
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
-}
-.toolbar-mailbar.toolbar .button-group:not(.button-dropdown) > button:first-of-type,
-.toolbar-mailbar.toolbar .button-dropdown:not(.button-dropdown) > button:first-of-type {
-  margin-left: 0;
 }
 .toolbar .button-group:not(.button-dropdown) > button:last-of-type,
 .toolbar .button-dropdown:not(.button-dropdown) > button:last-of-type {
@@ -3328,18 +3302,10 @@ svg.folder-icon .folder-evaluating circle {
   margin: 0 auto auto auto;
   transform-origin: 50% 0;
   clip: rect(0px, 10000px, 10000px, -10px);
+  color: var(--colorFg);
   background-color: var(--colorBgLight);
   box-shadow: var(--shadowOverlay);
   border-radius: var(--radiusHalf);
-}
-#modal-bg.invert > div {
-  border-radius: var(--padding);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  box-shadow: var(--shadowOverlay);
-}
-#modal-bg.invert > div input {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 #modal-bg.slide {
   perspective: 500px;
@@ -3770,6 +3736,40 @@ p.in-progress:before {
 }
 .keyboardShortcutsWrapper > div .keycombo input[type=button] {
   margin: 0 3px 3px 0;
+}
+#modal-bg.page-access-keys {
+  animation: dropfade 100ms cubic-bezier(0.2, 0.9, 0.6, 1);
+}
+#modal-bg.page-access-keys > div {
+  max-width: 400px;
+  margin-top: 20vh;
+}
+#modal-bg.page-access-keys .dialog-access-keys {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  max-height: 70vh;
+}
+#modal-bg.page-access-keys .dialog-access-keys h1 span {
+  display: block;
+  font-size: var(--fontSizeSmall);
+  white-space: pre-line;
+}
+#modal-bg.page-access-keys .dialog-access-keys .keycombo {
+  display: flex;
+  align-items: baseline;
+  word-break: break-word;
+}
+#modal-bg.page-access-keys .dialog-access-keys .keycombo .item {
+  flex: 0 0 20px;
+  height: 20px;
+  pointer-events: none;
+  padding: 0;
+  margin: 0 6px 6px 0;
+}
+#modal-bg.page-access-keys .dialog-access-keys .keycombo span {
+  max-width: 40em;
+  margin: 0;
 }
 .category {
   background-repeat: no-repeat;
@@ -4865,7 +4865,6 @@ a:-webkit-any-link {
 }
 #footer {
   display: flex;
-  justify-content: flex-end;
   height: 20px;
   line-height: 20px;
   box-shadow: inset 0 1px var(--colorBorder);
@@ -4878,16 +4877,49 @@ a:-webkit-any-link {
 }
 #footer button {
   max-height: 100%;
-  overflow: hidden;
   display: flex;
   justify-content: center;
 }
 #footer button svg {
   height: 16px;
   width: 16px;
+  pointer-events: none;
 }
-#footer .callout {
-  z-index: 5;
+#footer .statusbar-left {
+  flex: 0 0 auto;
+}
+#footer .statusbar-center {
+  flex: 1;
+  overflow: hidden;
+}
+#footer .statusbar-right {
+  flex: 0 0 auto;
+}
+#footer .sync-status {
+  width: 30px;
+  margin: auto;
+  opacity: 0.5;
+  transition: opacity 100ms linear;
+}
+#footer .sync-status.user-set {
+  opacity: 1;
+}
+#footer .sync-status .error {
+  transform: translate(8px, 3px) rotate(45deg);
+  fill: var(--colorBg);
+}
+#footer .sync-status .progress {
+  transform: translate(3px, 8px);
+  fill: var(--colorBg);
+  stroke-width: 0.8px;
+  stroke: var(--colorBg);
+}
+#footer .sync-status .error,
+#footer .sync-status .progress {
+  animation: fade 200ms linear;
+}
+#footer .sync-status .button-toolbar-small {
+  display: flex;
 }
 #footer .zoom-control {
   border-left: 1px solid var(--colorBorder);
@@ -4921,6 +4953,7 @@ a:-webkit-any-link {
   margin: auto auto auto var(--padding);
   overflow: hidden;
   flex: 1;
+  flex-shrink: 0;
 }
 #footer #status_info > span {
   font-size: var(--fontSizeSmall);
@@ -4932,6 +4965,7 @@ a:-webkit-any-link {
 #footer .status-toolbar {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 #webview-container {
   display: flex;
@@ -5037,23 +5071,23 @@ webview,
   fill: var(--colorFg);
   padding: 1px;
 }
-.private .addressfield,
-.private .searchfield {
+.private .toolbar-addressbar .addressfield,
+.private .toolbar-addressbar .searchfield {
   background-color: var(--colorFgIntense);
   border-color: var(--colorFgIntense);
   color: var(--colorBgIntense);
 }
-.private .addressfield svg,
-.private .searchfield svg {
+.private .toolbar-addressbar .addressfield svg,
+.private .toolbar-addressbar .searchfield svg {
   fill: var(--colorBgFaded);
 }
-.private .addressfield button:not(.fullheight):hover,
-.private .searchfield button:not(.fullheight):hover {
+.private .toolbar-addressbar .addressfield button:not(.fullheight):hover,
+.private .toolbar-addressbar .searchfield button:not(.fullheight):hover {
   border-color: var(--colorFg);
   background-color: var(--colorFgFaded);
 }
-.private .addressfield button:not(.fullheight):hover svg,
-.private .searchfield button:not(.fullheight):hover svg {
+.private .toolbar-addressbar .addressfield button:not(.fullheight):hover svg,
+.private .toolbar-addressbar .searchfield button:not(.fullheight):hover svg {
   fill: var(--colorBgIntense);
 }
 .color-behind-tabs-on .addressfield,
@@ -5414,11 +5448,16 @@ webview,
 .address-bottom .urlSearch section {
   flex-direction: column;
 }
-.urlSearch .favicon {
+.urlSearch .favicon-wrapper {
   width: 16px;
   height: 16px;
   margin: 3px 0.5em 3px 1em;
   flex: 0 0 auto;
+}
+.urlSearch .favicon {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
 }
 .paneltogglefooter {
   order: -1;
@@ -6576,15 +6615,17 @@ webview,
   flex-direction: column;
   position: relative;
   background-color: var(--colorBgDark);
+  contain: strict;
+}
+#panels.leak #switch {
+  z-index: 2;
+  contain: layout;
 }
 #panels-container.left #switch {
   box-shadow: inset -1px 0 var(--colorBorder);
 }
 #panels-container.right #switch {
   box-shadow: inset 1px 0 var(--colorBorder);
-}
-.mac #switch {
-  -webkit-app-region: drag;
 }
 #switch button.webviewbtn img {
   background-color: transparent;
@@ -6918,11 +6959,6 @@ div#main.right #panels-container .pullie {
   color: var(--colorAccentFg);
   fill: var(--colorAccentFg);
 }
-.toolbar-addressbar .extensions-wrapper button.button-hidden-popup,
-.toolbar-mailbar .extensions-wrapper button.button-hidden-popup {
-  background-size: 16px;
-  background-position: 50%;
-}
 .toolbar-addressbar .extensions-wrapper button.button-addressfield,
 .toolbar-mailbar .extensions-wrapper button.button-addressfield {
   background-size: 16px;
@@ -6937,11 +6973,11 @@ div#main.right #panels-container .pullie {
 }
 .toolbar-addressbar .extensions-wrapper .droptarget-left,
 .toolbar-mailbar .extensions-wrapper .droptarget-left {
-  box-shadow: inset 2px 0 0 0 var(--colorAccentFg);
+  box-shadow: inset 1px 0 0 0 var(--colorHighlightBg), -1px 0 0 0 var(--colorHighlightBg);
 }
 .toolbar-addressbar .extensions-wrapper .droptarget-right,
 .toolbar-mailbar .extensions-wrapper .droptarget-right {
-  box-shadow: inset -2px 0 0 0 var(--colorAccentFg);
+  box-shadow: inset -1px 0 0 0 var(--colorHighlightBg), 1px 0 0 0 var(--colorHighlightBg);
 }
 .toolbar-addressbar .button-toolbar,
 .toolbar-mailbar .button-toolbar {
@@ -6999,6 +7035,10 @@ div#main.right #panels-container .pullie {
 .toolbar-mailbar .button-toolbar.browserAction-button {
   position: relative;
   background-size: 100%;
+  animation: rightfade 100ms linear;
+  flex: 0 1 34px;
+  min-width: 18px;
+  width: 34px;
 }
 .toolbar-addressbar .button-toolbar.browserAction-button img,
 .toolbar-mailbar .button-toolbar.browserAction-button img {
@@ -7377,15 +7417,23 @@ button.button-addressfield.is-dialog-open {
 }
 .extensions-wrapper {
   display: flex;
+  flex: 0 1 auto;
+  overflow: hidden;
 }
 .extensions-wrapper .actionVisibility-hidden {
+  position: relative;
+  background-color: var(--colorAccentBgDark);
   display: none;
-  opacity: 0.01;
-  width: 0;
+}
+.color-behind-tabs-on .extensions-wrapper .actionVisibility-hidden {
+  background-color: var(--colorBgDark);
+}
+.expanded.extensions-wrapper .actionVisibility-hidden {
+  display: flex;
 }
 .extensions-wrapper .dragging-current {
   transition: transform 0.1s;
-  transform: scale(0.1);
+  transform: scale(0);
 }
 .extensions-wrapper .dragging-cancelled {
   transition: transform 0.1s;
@@ -7845,9 +7893,6 @@ p.warning {
   transform: scale(1);
   transition: transform 150ms linear, box-shadow 150ms linear;
 }
-.dials .dial .thumbnail-image:focus {
-  border: 1px var(--colorHighlightBg) solid;
-}
 .dials .dial .thumbnail-image.drop-hover {
   transform: scale(1.02);
   filter: contrast(0.9);
@@ -7872,9 +7917,6 @@ p.warning {
   box-shadow: 0 0 0 1px var(--colorBorder);
   background-color: transparent;
 }
-.dials .dial .preview .thumbnail-image:focus {
-  border: 0;
-}
 .dials .dial .preview .thumbnail-image svg {
   width: 100%;
   height: 100%;
@@ -7886,9 +7928,6 @@ p.warning {
   box-shadow: none;
   background-color: transparent;
   background-size: cover;
-}
-.dials .dial .preview .thumbnail-folder-image:focus {
-  border: 0;
 }
 .dials .dial .button-title {
   display: inline-block;
@@ -7995,9 +8034,6 @@ p.warning {
   background-color: #111;
   opacity: 0.3;
 }
-.dials .dial.dragging:not(.clicked) {
-  transition: transform 100ms linear;
-}
 .dials .dial:not(.dragging):hover .thumbnail-image {
   transition: none;
   transform: scaleX(1.027) scaleY(1.023);
@@ -8024,11 +8060,19 @@ p.warning {
   transition: none;
   opacity: 1;
 }
-.dials .dial:focus:not([tabindex='-1']) .thumbnail > .thumbnail-image {
-  border: 1px var(--colorHighlightBg) solid;
-  background-origin: border-box;
+.dials .dial:focus-within:not([tabindex='-1']) > .thumbnail-image:after,
+.dials .dial:focus-within:not([tabindex='-1']) .thumbnail > .thumbnail-image:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 0 2px var(--colorHighlightBg);
+  pointer-events: none;
+  z-index: 1;
 }
-.dials .dial:focus:not([tabindex='-1']) .editable-title-container .button-title {
+.dials .dial:focus-within:not([tabindex='-1']) .editable-title-container .button-title {
   background-color: var(--colorHighlightBg);
   color: var(--colorHighlightFg);
 }
@@ -8055,7 +8099,7 @@ p.warning {
   display: none;
 }
 .speeddial {
-  margin: 70px auto 0;
+  margin: 60px auto 0;
   transition: opacity 150ms cubic-bezier(0, 0, 0.25, 1), width 150ms cubic-bezier(0, 0, 0.25, 1);
   transform-origin: 50% 400px;
 }
@@ -8492,18 +8536,22 @@ button.button-startpage.up svg {
 .startpage .startpage-folder-navigation {
   width: 100%;
   height: 30px;
-  margin: -50px 0 20px;
+  margin: 0 0 20px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 .startpage .startpage-folder-navigation button {
-  box-shadow: none;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12), 0 3px 3px rgba(0, 0, 0, 0.12);
   background-color: var(--colorBgDark);
+  border-width: 1px;
 }
 .startpage .startpage-folder-navigation button:hover {
   background-color: var(--colorBg);
+}
+.startpage .startpage-folder-navigation button:after {
+  content: unset;
 }
 .startpage #background-image {
   height: 100%;
@@ -10373,6 +10421,10 @@ input.circular.openkey {
 .history .title:not(:last-of-type),
 #history-panel .title:not(:last-of-type) {
   margin-right: 3px;
+}
+.history .title.link,
+#history-panel .title.link {
+  cursor: pointer;
 }
 .history .time,
 #history-panel .time {
@@ -12958,15 +13010,15 @@ input.circular.openkey {
   line-height: normal;
 }
 .webpageview #mail_view #mail_detail {
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: var(--padding);
   background-color: var(--colorBgDark);
+  min-width: 140px;
 }
 .webpageview #mail_view #mail_detail .mail-detail-header {
-  user-select: text;
-  cursor: text;
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
@@ -12974,114 +13026,234 @@ input.circular.openkey {
   border-bottom: 1px solid var(--colorBorder);
   background-color: var(--colorBgIntense);
 }
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container {
+  display: inline-block;
+  max-width: 100%;
+  border: transparent solid 1px;
+  border-radius: var(--radiusRounded);
+  position: relative;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:hover button:last-of-type,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus button:last-of-type,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus-within button:last-of-type {
+  background-color: var(--colorBg);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:hover button:last-of-type:after,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus button:last-of-type:after,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus-within button:last-of-type:after,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:hover button:last-of-type:before,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus button:last-of-type:before,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus-within button:last-of-type:before {
+  width: 20px;
+  height: 100%;
+  background: var(--colorHighlightBgAlpha);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:hover button:last-of-type:before,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus button:last-of-type:before,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus-within button:last-of-type:before {
+  content: "";
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:hover button:last-of-type:hover:after,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus button:last-of-type:hover:after,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus-within button:last-of-type:hover:after {
+  content: "";
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:hover * > svg,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus * > svg,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus-within * > svg {
+  fill: inherit;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container img {
+  vertical-align: bottom;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radiusRound);
+  margin-right: 6px;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:last-child button:first-of-type:after {
+  content: "";
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:hover,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus-within {
+  border-radius: var(--radiusRounded);
+  background-color: var(--colorHighlightBgAlpha);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:hover {
+  border-color: var(--colorHighlightBgAlpha);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container:focus-within {
+  border-color: var(--colorHighlightBg);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button {
+  text-decoration: none;
+  color: inherit;
+  border-color: var(--colorBg);
+  border-width: 0;
+  padding: 2px;
+  height: 100%;
+  display: inline-flex;
+  background-color: transparent;
+  border-radius: var(--radiusRounded);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button > svg {
+  fill: none;
+  padding: 0;
+  margin-right: 0;
+  z-index: 1;
+  min-width: 20px;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button:focus {
+  border: none;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button:hover,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button:focus {
+  background-color: var(--colorHighlightBgAlpha);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button:first-of-type {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button:first-of-type:after {
+  content: " ,";
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button:first-of-type:active {
+  color: var(--colorHighlightFg);
+  background-color: var(--colorHighlightBg);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button:last-of-type {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0;
+  margin-right: 0;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: inherit;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container button:last-of-type:active {
+  fill: var(--colorHighlightFg);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .status,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .dropdown-menu {
+  min-width: 100px;
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
+  position: absolute;
+  z-index: 2;
+  background-color: inherit;
+  border: solid 1px var(--colorHighlightBgAlpha);
+  width: 100%;
+  right: 0;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .status > li,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .dropdown-menu > li {
+  background-color: var(--colorBg);
+  border-top: solid 1px var(--colorHighlightBgAlpha);
+  padding: 4px 6px;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .status > li:first-of-type,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .dropdown-menu > li:first-of-type {
+  border-top: none;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .status > li:hover,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .dropdown-menu > li:hover,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .status > li.active,
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .dropdown-menu > li.active {
+  color: var(--colorHighlightFg);
+  background-color: var(--colorHighlightBg);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header .button-with-dropdown-container .status {
+  transition: backgroud-color 700ms;
+  text-align: center;
+  padding: 2px 6px;
+  border-radius: var(--radiusRounded);
+  color: var(--colorHighlightFg);
+  background-color: var(--colorHighlightBg);
+}
+.webpageview #mail_view #mail_detail .mail-detail-header a {
+  padding-top: 2px;
+  line-height: 20px;
+  color: var(--colorHighlightBg);
+  cursor: pointer;
+}
+.webpageview #mail_view #mail_detail .mail-detail-header a:active,
+.webpageview #mail_view #mail_detail .mail-detail-header a:hover {
+  outline: 2px solid var(--colorHighlightBgAlpha);
+}
 .webpageview #mail_view #mail_detail .mail-detail-header .subject {
+  display: flex;
+  margin-left: -6px;
   color: var(--colorFgIntense);
   font-size: var(--fontSizeLargest);
   margin-bottom: calc(var(--padding) * 1.5);
 }
-.webpageview #mail_view #mail_detail .mail-detail-header .subject .mail-message-subject-link {
-  border-radius: var(--radius);
-  cursor: pointer;
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .subject .mail-message-subject-link:hover {
-  background-color: var(--colorBgDark);
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .subject .mail-message-subject-link.active {
-  background-color: var(--colorBgDarker);
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .subject .mail-message-subject-link:active {
-  line-height: var(--lineHeight);
-  box-shadow: var(--shadowOverlay);
+.webpageview #mail_view #mail_detail .mail-detail-header .subject .dropdown-menu {
+  left: 0;
 }
 .webpageview #mail_view #mail_detail .mail-detail-header.is-unread .subject {
   font-weight: var(--fontWeight);
 }
 .webpageview #mail_view #mail_detail .mail-detail-header .mail-details {
   display: flex;
+  flex-wrap: wrap;
   font-variant-numeric: tabular-nums;
 }
 .webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main {
-  flex: 1 1 100%;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: auto minmax(40px, 1fr);
 }
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label-container {
-  display: table-row;
+.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
 }
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label-container .label {
-  display: table-cell;
+.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label {
   white-space: nowrap;
   color: var(--colorFgFadedMore);
   padding-top: 4px;
   padding-right: var(--padding);
 }
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label-container .label:after {
+.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label:after {
   content: ":";
 }
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label-container .detail {
-  display: table-cell;
+.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label .detail {
+  display: flex;
   color: var(--colorFgIntense);
-  user-select: text;
-  cursor: text;
+  flex-wrap: wrap;
 }
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label-container .detail.from {
+.webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-main .label .detail.from {
   font-weight: calc(var(--fontWeight) + 300);
 }
 .webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-side {
-  flex: 0 1 auto;
-  margin-left: auto;
+  flex: 1 1 auto;
   text-align: right;
   color: var(--colorFgFadedMore);
-  white-space: nowrap;
 }
 .webpageview #mail_view #mail_detail .mail-detail-header .mail-details .mail-detail-side .mail-detail-item {
-  display: block;
+  display: inline-flex;
+  padding-left: 6px;
   padding-top: 4px;
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-attachment {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--padding);
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-attachment svg {
-  width: 16px;
-  height: 16px;
-  margin-right: calc(var(--padding) * 3.8);
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-attachment .label {
-  display: none;
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-attachment a {
-  white-space: nowrap;
-  text-decoration: none;
-  font-size: var(--fontSizeSmall);
-  font-weight: calc(var(--fontWeight) + 200);
-  color: inherit;
-  margin-right: var(--padding);
-  padding: 1px 6px;
-  background-color: var(--colorBgFaded);
-  border-radius: var(--radiusRounded);
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-attachment a:hover,
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-attachment a:focus {
-  background-color: var(--colorHighlightBgAlpha);
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-attachment a:active {
-  color: var(--colorHighlightFg);
-  background-color: var(--colorHighlightBg);
-}
-.webpageview #mail_view #mail_detail .mail-detail-header .mail-avatar {
-  flex: 0 0 42px;
-  margin-left: 12px;
-  margin-top: 3px;
-  width: 42px;
-  height: 42px;
-  background-size: cover;
-  background-position: 50% 50%;
-  border-radius: var(--radiusRound);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset;
-  background-color: var(--colorBg);
 }
 .webpageview #mail_view #mail_detail .mail-content-blocked {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
   flex: 0 0 auto;
   padding: 6px 18px;
   border: 1px solid var(--colorBorder);
@@ -13089,20 +13261,31 @@ input.circular.openkey {
   background-color: var(--colorBg);
 }
 .webpageview #mail_view #mail_detail .mail-content-blocked .content-blocked-text {
+  flex: 2;
+  min-width: 104px;
   margin-top: auto;
-  padding-right: 12px;
+  padding-right: 6px;
+  padding-bottom: 6px;
   margin-bottom: auto;
-  margin-left: var(--padding);
   margin-right: auto;
 }
 .webpageview #mail_view #mail_detail .mail-content-blocked .content-blocked-toggle-container {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 12px;
+  flex: 1;
+  min-width: 104px;
+  padding-right: 6px;
+  padding-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .webpageview #mail_view #mail_detail .mail-content-blocked .content-blocked-toggle-container .content-blocked-toggle {
   margin-right: var(--padding);
   vertical-align: bottom;
+}
+.webpageview #mail_view #mail_detail .mail-content-blocked .content-blocked-action {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .webpageview #mail_view .email-delete {
   background-repeat: no-repeat;
@@ -13151,6 +13334,7 @@ input.circular.openkey {
   background-color: var(--colorBgIntense);
   color: var(--colorFgIntense);
   height: 100%;
+  min-height: 250px;
 }
 .webpageview #mail_view .mail_body section {
   width: 100%;
@@ -13926,7 +14110,13 @@ input.circular.openkey {
 }
 .native.tabs-left.color-behind-tabs-off .vivaldi span.application-icon,
 .native.tabs-right.color-behind-tabs-off .vivaldi span.application-icon,
-.native.tabs-bottom.color-behind-tabs-off .vivaldi span.application-icon {
+.native.tabs-bottom.color-behind-tabs-off .vivaldi span.application-icon,
+.address-off.tabs-left.color-behind-tabs-off .vivaldi span.application-icon,
+.address-off.tabs-right.color-behind-tabs-off .vivaldi span.application-icon,
+.address-off.tabs-bottom.color-behind-tabs-off .vivaldi span.application-icon,
+.address-bottom.tabs-left.color-behind-tabs-off .vivaldi span.application-icon,
+.address-bottom.tabs-right.color-behind-tabs-off .vivaldi span.application-icon,
+.address-bottom.tabs-bottom.color-behind-tabs-off .vivaldi span.application-icon {
   padding-top: 2px;
 }
 .color-behind-tabs-off .vivaldi span.vivaldi-v {
@@ -13957,7 +14147,19 @@ input.circular.openkey {
 .native.tabs-right.color-behind-tabs-on .vivaldi span.vivaldi-v,
 .native.tabs-right.color-behind-tabs-on .vivaldi span.burger-icon,
 .native.tabs-bottom.color-behind-tabs-on .vivaldi span.vivaldi-v,
-.native.tabs-bottom.color-behind-tabs-on .vivaldi span.burger-icon {
+.native.tabs-bottom.color-behind-tabs-on .vivaldi span.burger-icon,
+.address-off.tabs-left.color-behind-tabs-on .vivaldi span.vivaldi-v,
+.address-off.tabs-left.color-behind-tabs-on .vivaldi span.burger-icon,
+.address-off.tabs-right.color-behind-tabs-on .vivaldi span.vivaldi-v,
+.address-off.tabs-right.color-behind-tabs-on .vivaldi span.burger-icon,
+.address-off.tabs-bottom.color-behind-tabs-on .vivaldi span.vivaldi-v,
+.address-off.tabs-bottom.color-behind-tabs-on .vivaldi span.burger-icon,
+.address-bottom.tabs-left.color-behind-tabs-on .vivaldi span.vivaldi-v,
+.address-bottom.tabs-left.color-behind-tabs-on .vivaldi span.burger-icon,
+.address-bottom.tabs-right.color-behind-tabs-on .vivaldi span.vivaldi-v,
+.address-bottom.tabs-right.color-behind-tabs-on .vivaldi span.burger-icon,
+.address-bottom.tabs-bottom.color-behind-tabs-on .vivaldi span.vivaldi-v,
+.address-bottom.tabs-bottom.color-behind-tabs-on .vivaldi span.burger-icon {
   padding-top: 2px;
 }
 .tabs-top.fullscreen .vivaldi,
@@ -14069,6 +14271,38 @@ input.circular.openkey {
   box-shadow: none;
   outline: 0;
 }
+.sdwrapper {
+  position: relative;
+}
+.sdwrapper .dials-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.sdwrapper .dials-wrapper.dragging {
+  z-index: 2;
+}
+.sdwrapper .iconmenu-container.searchfield {
+  position: relative;
+  z-index: 2;
+  margin: 36px auto -24px;
+  max-width: 300px;
+  padding: 3px;
+  height: auto;
+  background-color: var(--colorBgIntense);
+}
+.sdwrapper .iconmenu-container.searchfield:focus-within {
+  border-color: var(--colorBorderHighlight);
+  box-shadow: 0 0 0 1px var(--colorBorderHighlight);
+}
+.sdwrapper .iconmenu-container.searchfield button.fullheight.alternate {
+  display: none;
+}
+.sdwrapper .iconmenu-container.searchfield .urlSearch,
+#main .sdwrapper .iconmenu-container.searchfield .menu.opensubmenu.open {
+  top: 32px;
+  left: -1px;
+  right: -1px;
+}
 .iconmenu-container {
   position: relative;
 }
@@ -14120,25 +14354,27 @@ input.circular.openkey {
   width: 216px;
   max-height: 80vh;
   margin-left: -108px;
-  left: 50%;
+  left: 15px;
   background-color: var(--colorBgLight);
   box-shadow: 0 0 0 1px var(--colorBorder), 0 2px 6px rgba(0, 0, 0, 0.25);
   border-radius: var(--radiusHalf);
   animation: dropfade 100ms cubic-bezier(0.2, 0.9, 0.6, 1);
 }
-.callout:before,
-.callout:after {
+.button-toolbar-small.popup-active:before,
+.button-toolbar-small.popup-active:after {
   content: "";
   position: absolute;
-  bottom: -20px;
-  left: 50%;
+  bottom: 10px;
+  left: 15px;
   margin-left: -10px;
   border: 10px solid transparent;
   border-top-color: var(--colorBgLight);
   pointer-events: none;
+  z-index: 1;
+  animation: dropfade 100ms cubic-bezier(0.2, 0.9, 0.6, 1);
 }
-.callout:before {
-  bottom: -21px;
+.button-toolbar-small.popup-active:before {
+  bottom: 9px;
   border-top-color: var(--colorBorder);
 }
 .pageactions,
