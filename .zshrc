@@ -69,6 +69,7 @@ git
 colored-man-pages
 bgnotify
 sublime
+archlinux
 zsh-autosuggestions
 history-substring-search
 zsh-syntax-highlighting
@@ -96,22 +97,11 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # My Aliases
 alias update="sudo pacman -Syu && yay -Syu"
 alias w="wal -n -i"
 alias wtr="curl http://wttr.in/Nizhniy_Novgorod\?1\?q"
-
-# env
-export EDITOR="/usr/bin/vim"
+alias sx="startx"
 
 # Transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
