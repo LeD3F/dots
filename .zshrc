@@ -1,6 +1,5 @@
 #My Settings
 neofetch
-source /home/led3f/.oh-my-zsh/plugins/fzf/zsh-interactive-cd.plugin.zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -65,7 +64,7 @@ ZSH_THEME="punctual"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-git 
+git
 colored-man-pages
 bgnotify
 sublime
@@ -96,6 +95,10 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# FZF
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # My Aliases
 alias update="sudo pacman -Syu && yay -Syu"
