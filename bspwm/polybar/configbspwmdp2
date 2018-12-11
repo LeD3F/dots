@@ -146,6 +146,8 @@ modules-left = mus
 modules-center = mpd
 modules-right = 
 
+wm-restack = bspwm
+
 override-redirect = false
 
 cursor-click = pointer
