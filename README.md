@@ -127,3 +127,4 @@ Nemo Seahorse - https://github.com/linuxmint/nemo-extensions
 | SMPlayer              |                     |                   | Vmware Workstation             |
 | MPV                   |                     |                   | WoeUSB                         |
 | Cava                  |                     |                   | URXvt                          |
+|                       |                     |                   | Green-clip                     |
