@@ -34,7 +34,11 @@ super + tab
 
 # Rofi Power Menu
 alt + e
-    rofi-power
+    rofi-power   
+
+# Rofi Clipboard
+super + x
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme ~/.cache/wal/flat-red.rasi    
 
 # make sxhkd reload its configuration files:
 super + Escape
