@@ -3752,24 +3752,34 @@ p.in-progress:before {
 }
 #modal-bg.page-access-keys .dialog-access-keys h1 span {
   display: block;
-  font-size: var(--fontSizeSmall);
   white-space: pre-line;
 }
 #modal-bg.page-access-keys .dialog-access-keys .keycombo {
   display: flex;
   align-items: baseline;
   word-break: break-word;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+#modal-bg.page-access-keys .dialog-access-keys .keycombo.clickable:hover {
+  background-color: var(--colorBgDark);
 }
 #modal-bg.page-access-keys .dialog-access-keys .keycombo .item {
   flex: 0 0 20px;
   height: 20px;
-  pointer-events: none;
   padding: 0;
-  margin: 0 6px 6px 0;
+  margin: 0 6px 0 0;
+  text-transform: uppercase;
 }
 #modal-bg.page-access-keys .dialog-access-keys .keycombo span {
   max-width: 40em;
-  margin: 0;
+}
+#modal-bg.page-access-keys .dialog-access-keys .dialog-footer {
+  align-items: flex-end;
+}
+#modal-bg.page-access-keys .dialog-access-keys .dialog-footer p.info {
+  flex: 1;
+  margin: 0 12px 0 0;
 }
 .category {
   background-repeat: no-repeat;
