@@ -29,7 +29,7 @@ super + shift + d
     rofi -show run -theme ~/.cache/wal/flat-red.rasi
 
 # Rofi window switcher
-super + tab 
+alt + Tab 
     rofi -show window -theme ~/.cache/wal/flat-red.rasi
 
 # Rofi Power Menu
