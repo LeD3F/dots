@@ -73,6 +73,10 @@ super + y
 super + g
 	bspc node -s biggest
 
+# restart bspwm
+super + shift + r
+    ~/.config/bspwm/bspwmrc	
+
 ###################################################################
 #          __          __            __ ____ __                   #
 #   _____ / /_ ____ _ / /_ ___     _/_// __// /____ _ ____ _ _____#
