@@ -204,7 +204,7 @@ super + a
     $HOME/.scripts/maim/screenshotarea.sh
 
 # Screenshot Window
-super + ctrl + w
+alt + s
     $HOME/.scripts/maim/screenshotwindow.sh
 
 ##########################
