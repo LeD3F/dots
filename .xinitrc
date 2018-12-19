@@ -35,7 +35,7 @@ fi
 # Start Apps
 nitrogen --restore &
 compton &
-dunst -config ~/.cache/wal/dunstrc &
+dunst -config ~/.cache/wal/dunstrcbspwm &
 xautolock -detectsleep -time 15 -locker "i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z"  -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
 urxvtd -q -f -o
 mpd &
@@ -72,4 +72,4 @@ case $session in
 	i3|i3wm ) exec i3;;
 	2bwm ) exec 2bwm;;
     bsp|bspwm ) exec bspwm;;
-esac	
+esac
