@@ -57,6 +57,7 @@ bspc rule -a Vmware desktop=multimedia
 bspc rule -a Deluge desktop=multimedia
 bspc rule -a Steam desktop=games
 bspc rule -a discord desktop=chat
+bspc rule -a VK desktop=chat
 
 # Floating Apps
 
@@ -69,6 +70,7 @@ bspc rule -a Etcher state=floating
 bspc rule -a Woeusbgui state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a File-roller state=floating
+bspc rule -a XTerm state=floating
 
 # External Rules
 
