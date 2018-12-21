@@ -13,6 +13,8 @@
 
 sxhkd &
 
+dunst -config ~/.cache/wal/dunstrcbspwm &
+
 # Polybar
 
 $HOME/.config/polybar/bspwm.sh
