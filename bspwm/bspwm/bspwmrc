@@ -13,7 +13,7 @@
 
 sxhkd &
 
-dunst -config ~/.cache/wal/dunstrcbspwm &
+killall dunst && dunst -config ~/.cache/wal/dunstrcbspwm &
 
 # Polybar
 
@@ -60,6 +60,7 @@ bspc rule -a Deluge desktop=multimedia
 bspc rule -a Steam desktop=games
 bspc rule -a discord desktop=chat
 bspc rule -a VK desktop=chat
+bspc rule -a REAPER desktop=multimedia
 
 # Floating Apps
 
