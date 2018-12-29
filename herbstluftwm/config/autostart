@@ -223,7 +223,7 @@ hc detect_monitors
 hc set swap_monitors_to_get_tag 0
 
 # find the panel
-panel=/home/led3f/.config/polybar/herb/herb.sh
+panel=~/.config/polybar/herb/herb.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     #start it on each monitor
     "$panel"  &
