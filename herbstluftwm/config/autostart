@@ -32,13 +32,13 @@ hc keybind $Mod-Shift-Down  shift down
 hc keybind $Mod-Shift-Up    shift up
 hc keybind $Mod-Shift-Right shift right
 ## move windows through monitors
-hc keybind $Mod-Shift-h
+hc keybind $Mod-Shift-h or / shift left / \
     chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
-hc keybind $Mod-Shift-j
+hc keybind $Mod-Shift-j or / shift down / \
     chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
-hc keybind $Mod-Shift-k
+hc keybind $Mod-Shift-k or / shift up / \
     chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
-hc keybind $Mod-Shift-l
+hc keybind $Mod-Shift-l or / shift right / \
     chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
 
 # splitting frames
@@ -229,6 +229,8 @@ hc rule class=Steam tag=6
 hc rule class=Lutris tag=6 
 hc rule class=File-roller pseudotile=on
 hc rule class=Nitrogen pseudotile=on
+hc rule class=Galculator pseudotile=on
+hc rule class=Woeusbgui pseudotile=on
 
 # unlock, just to be sure
 hc unlock
