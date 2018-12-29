@@ -152,11 +152,11 @@ hc keybind XF86Explorer spawn nemo
 
 # mpd controls
 ## Next Track
-hc keybind XF86AudioNext spawn mpc next
+hc keybind XF86AudioNext spawn ~/.scripts/next.sh
 ## Previous Track
-hc keybind XF86AudioPrev spawn mpc prev
+hc keybind XF86AudioPrev spawn ~/.scripts/prev.sh
 ## Toggle Track
-hc keybind XF86AudioPlay spawn mpc toggle
+hc keybind XF86AudioPlay spawn ~/.scripts/play.sh
 
 # volume control
 ## Volume Raise
