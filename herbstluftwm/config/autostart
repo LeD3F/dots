@@ -31,6 +31,15 @@ hc keybind $Mod-Shift-Left  shift left
 hc keybind $Mod-Shift-Down  shift down
 hc keybind $Mod-Shift-Up    shift up
 hc keybind $Mod-Shift-Right shift right
+## move windows through monitors
+hc keybind $Mod-Shift-h
+    chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+hc keybind $Mod-Shift-j
+    chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
+hc keybind $Mod-Shift-k
+    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
+hc keybind $Mod-Shift-l
+    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
 
 # splitting frames
 # create an empty frame at the specified direction
