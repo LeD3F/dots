@@ -237,7 +237,7 @@ hc rule class=Woeusbgui pseudotile=on
 hc unlock
 
 # Monitor Setup
-hc add_monitor 1920x1080+1440+0 1
+#hc add_monitor 1920x1080+1440+0 1
 hc add_monitor 1440x900+0+180 7
 hc detect_monitors
 hc set swap_monitors_to_get_tag 0
