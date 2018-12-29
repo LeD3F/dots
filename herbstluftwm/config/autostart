@@ -224,7 +224,7 @@ hc rule class=Vmware tag=3
 hc rule class=Gimp-2.10 tag=3
 hc rule class=VK tag=5 index=1
 hc rule class=TelegramDesktop tag=5 index=0
-hc rule class=discorf tag=5
+hc rule class=discord tag=5
 hc rule class=Steam tag=6
 hc rule class=Lutris tag=6 
 hc rule class=File-roller pseudotile=on
