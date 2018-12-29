@@ -50,7 +50,7 @@ listview {{
    dynamic: true;
    scrollbar: false;
    spacing: 1px;
-   padding: 0px 0px 9px 0px;
+   padding: 0px 0px 0px 0px;
    margin: 0px 0px 0px 0px;
    background: @blackdarkest;
 }}
