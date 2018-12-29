@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rofi -show window -theme ~/.cache/wal/flat-red.rasi
+xkb-switch -s us && rofi -show window -lines 3 -theme ~/.cache/wal/flat-red.rasi
