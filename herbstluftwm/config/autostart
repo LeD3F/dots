@@ -241,6 +241,9 @@ hc add_monitor 1440x900+0+180 7
 hc detect_monitors
 hc set swap_monitors_to_get_tag 0
 
+# Floating tag
+hc floating 6 on
+
 # find the panel
 panel=~/.config/polybar/herb/herb.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
