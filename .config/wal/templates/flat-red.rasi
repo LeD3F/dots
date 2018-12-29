@@ -17,7 +17,7 @@
    blackselect:      {color1};
    darkgray:         {color2};
    scrollbarcolor:   #505050;
-   font: "kakwafont 10";
+   font: "Scientifica 9";
    background-color: @blackdarkest;
 }}
 
@@ -48,10 +48,10 @@ textbox {{
 listview {{
    fixed-height: false;
    dynamic: true;
-   scrollbar: true;
-   spacing: 0px;
-   padding: 0px 0px 0px 0px;
-   margin: 0px 0px 1px 0px;
+   scrollbar: false;
+   spacing: 1px;
+   padding: 0px 0px 9px 0px;
+   margin: 0px 0px 0px 0px;
    background: @blackdarkest;
 }}
 
