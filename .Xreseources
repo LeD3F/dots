@@ -10,14 +10,16 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 Xcursor.theme: Bibata_Oil
 
+!URxvt ---------------------------------------------------------------------- !
+
 !Fonts --
 
-URxvt.font: xft:Curie:size=10:antialias=true,xft:xos4 Terminus:size=8:antialias=true
+URxvt.font: xft:Curie:size=10,xft:Tewi:size=9
 URxvt.boldFont:
 URxvt.letterSpace: 1
 URxvt.antialias: true
 
-!URxvt --
+!Main Settings --
 
 URxvt.termname: xterm-256color
 URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
@@ -92,4 +94,3 @@ URxvt.internalBorder: 20
 *color13:  #fa96a3
 *color14:  #84c4ee
 *color15:  #ffffff
-
