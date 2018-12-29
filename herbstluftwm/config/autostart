@@ -97,7 +97,7 @@ hc keybind $Mod-space                                                           
 hc load 5 '
     (split horizontal:0.750000:0    
         (clients grid:0 0x3800006)
-             (clients grid:0 0x3e00001))
+             (clients max:0 0x3e00001))
 '
 
 # mouse
