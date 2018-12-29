@@ -2,7 +2,6 @@
 #   Colors
 ##############
 
-
 [colors]
 background = ${xrdb:color0}
 background-alt = #E6202020
