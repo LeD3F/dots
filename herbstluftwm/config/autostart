@@ -16,7 +16,7 @@ Mod2=Mod1 # Alt Key
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-Shift-c close # Closes frame and window
+hc keybind $Mod-Shift-c close
 hc keybind $Mod-Return spawn ${TERMINAL:-urxvtc}
 
 # basic movement
@@ -114,7 +114,8 @@ hc keybind $Mod-Shift-d spawn rofi -show run -lines 3 -columns 3 -theme ~/.cache
 ## rofi window switcher
 hc keybind $Mod2-Tab spawn rofi -show window -lines 3 -theme ~/.cache/wal/flat-red.rasi
 ## rofi clipboard
-hc keybind $Mod-x spawn rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'  -lines 3 -theme ~/.cache/wal/flat-red.rasi
+hc keybind $Mod-x spawn rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' \
+-lines 3 -theme ~/.cache/wal/flat-red.rasi
 ## rofi power
 hc keybind $Mod2-e spawn rofi-power "herbstclient quit"
 
