@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z
+xkb-switch -s us && i3lock-fancy-dualmonitor -f Roboto-Regular -- scrot -z
