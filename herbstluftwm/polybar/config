@@ -1,0 +1,374 @@
+##############
+#   Colors
+##############
+
+
+[colors]
+background = ${xrdb:color0}
+background-alt = #E6202020
+foreground = ${xrdb:color7}
+foreground-alt = ${xrdb:color6}
+primary = ${xrdb:color12}
+secondary = ${xrdb:color2}
+alert = ${xrdb:color3}
+
+pulse = ${xrdb:color4}
+date = ${xrdb:color5}
+xkb = ${xrdb:color1}
+memory = ${xrdb:color2}
+fs = ${xrdb:color6}
+mpd = ${xrdb:color4}
+ws = ${xrdb:color3}
+
+##############
+#   Bar / Nim
+##############
+
+[bar/nim]
+monitor = DP-2
+width = 100%
+height = 20
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+monitor-strict = true
+
+border-top-size = 7
+border-bottom-size = 7
+
+border-top-color = ${colors.background}
+border-bottom-color = ${colors.background}
+border-left-color = ${colors.background}
+border-right-color = ${colors.background}
+
+font-0 = scientifica:style=Regular:pixelsize=8;2
+font-1 = Tewi:style=Regular:pixelsize=8;2
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = mplus Nerd Font:style=Medium:size=13;2
+font-4 = emojione:scale=10;1
+font-5 = Wuncon Siji:pixelsize=10;2
+
+modules-left = workspaces right-ws left-mpd mpdbar right-mpd left-mpd mpdcon right-mpd left-mpd mpdtrack right-mpd
+modules-center = xwindow
+modules-right = left-xkb xkeyboard right-xkb left-ram memory right-ram left-fs filesystem right-fs left-pulse pulseaudio right-pulse left-date date
+
+override-redirect = true
+cursor-click = pointer
+
+##############
+#   Bar / Nim2
+##############
+
+[bar/nim2]
+monitor = DVI-I-1
+width = 100%
+height = 20
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+monitor-strict = true
+
+border-top-size = 7
+border-bottom-size = 7
+
+border-top-color = ${colors.background}
+border-bottom-color = ${colors.background}
+border-left-color = ${colors.background}
+border-right-color = ${colors.background}
+
+font-0 = scientifica:style=Regular:pixelsize=8;2
+font-1 = Tewi:style=Regular:pixelsize=8;2
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = mplus Nerd Font:style=Medium:size=13;2
+font-4 = emojione:scale=10;1
+font-5 = Wuncon Siji:pixelsize=10;2
+
+modules-left = workspaces right-ws 
+modules-center = 
+modules-right =  left-xkb xkeyboard right-xkb left-ram memory right-ram left-fs filesystem right-fs left-pulse pulseaudio right-pulse left-date date
+
+tray-position = center
+tray-padding = 3
+tray-detached = true
+tray-maxsize = 14
+tray-background = ${colors.background}
+tray-scale = 1.0
+
+override-redirect = true
+cursor-click = pointer
+
+##############
+#   Xkeyboard
+##############
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.xkb}
+format-prefix-font = 6
+
+label-layout = " %layout% "
+label-layout-background  = ${colors.xkb}
+
+##############
+#   Xworkspaces
+##############
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 0
+format-font = 1
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-5 = 6;
+icon-6 = 7;
+icon-7 = 8;
+icon-default = ""
+
+format = <label-state>
+
+label-active = %icon%
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.ws}
+label-active-padding = 1
+label-active-font = 1
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-background = ${colors.ws}
+label-empty-padding = 1
+
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-inactive = %icon%
+label-inactive-padding = 1
+
+##############
+#   Xwindow
+##############
+
+[module/xwindow]
+type = internal/xwindow
+
+format = <label>
+format-foreground = ${colors.foreground}
+format-padding = 4
+
+label = %title%
+label-maxlen = 70
+
+##############
+#   Memory
+##############
+
+[module/memory]
+type = internal/memory
+interval = 2
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.memory}
+format-prefix-font = 6
+
+label = "%gb_used% "
+label-background = ${colors.memory}
+
+##############
+#   Filesystem
+##############
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+interval = 10
+fixed-values = true
+spacing = 0
+
+format-mounted = <label-mounted>
+format-mounted-background = ${colors.fs}
+format-foreground = ${colors.foreground}
+format-mounted-font = 6
+
+label-mounted = "  %used% "
+label-foreground = ${colors.foreground}
+
+##############
+#   Date
+##############
+
+[module/date]
+type = internal/date
+interval = 1
+
+format =  "  <label>"
+format-foreground = ${colors.foreground}
+format-background = ${colors.date}
+
+label = "%date%%time% "
+label-foreground = ${colors.foreground}
+
+time = %a %d, %H:%M
+
+##############
+#   Pulseaudio
+##############
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume><label-volume>
+
+label-volume = "%percentage% "
+label-volume-background = ${colors.pulse}
+label-muted = "  muted "
+label-muted-background = ${colors.pulse}
+label-muted-foreground = #666
+
+ramp-volume-0 = "  "
+ramp-volume-1 = "  "
+ramp-volume-2 = "  "
+ramp-volume-background = ${colors.pulse}
+
+##############
+#   MPD
+##############
+
+[module/mpdcon]
+type = internal/mpd
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> 
+format-online-background = ${colors.mpd}
+
+icon-prev = ""
+icon-stop =  " "
+icon-play=  " "
+icon-pause = " "
+icon-next =  "  "
+
+[module/mpdtrack]
+type = internal/mpd
+format-online =   <label-song>
+format-online-background = ${colors.mpd}
+
+label-song = " %title% "
+label-song-maxlen = 35
+label-song-ellipsis = true
+
+[module/mpdtime]
+type = internal/mpd
+format-online = <label-time>
+format-online-background = ${colors.mpd}
+
+label-time = "%elapsed% / %total%"
+
+[module/mpdbar]
+type = internal/mpd
+format-online = <bar-progress>
+format-online-background = ${colors.mpd}
+
+bar-progress-width = 10
+bar-progress-indicator = 
+bar-progress-fill = 
+bar-progress-empty = 
+bar-progress-empty-foreground = ${colors.fs}
+
+##############
+#   Glyphs
+##############
+
+[module/glyph]
+type = custom/text
+content-background = ${colors.background}
+
+[module/left-xkb]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.xkb}
+
+[module/right-xkb]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.xkb}
+
+[module/left-ram]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.memory}
+
+[module/right-ram]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.memory}
+
+[module/left-fs]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.fs}
+
+[module/right-fs]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.fs}
+
+[module/left-pulse]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.pulse}
+
+[module/right-pulse]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.pulse}
+
+[module/left-date]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.date}
+
+[module/right-date]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.date}
+
+[module/right-mpd]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.mpd}
+
+[module/left-mpd]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.mpd}
+
+[module/right-ws]
+inherit = module/glyph
+content = ""
+content-foreground = ${colors.ws}
+
+##############
+#   Settings
+##############
+
+[settings]
+screenchange-reload = true
+
+##############
+#   WM
+##############
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
