@@ -1,0 +1,116 @@
+/**
+ * ROFI Color theme
+ * User: mbfraga
+ * Copyright: Martin B. Fraga
+ */
+
+/* global settings and color variables */
+* {{
+   maincolor:        {color2};
+   highlight:        bold {color4};
+   urgentcolor:      #fe9b3d;
+
+   fgwhite:          {foreground};
+   blackdarkest:     {background};
+   blackwidget:      {background};
+   blackentry:       {background};
+   blackselect:      {color1};
+   darkgray:         {color2};
+   scrollbarcolor:   #505050;
+   font: "Scientifica 9";
+   background-color: @blackdarkest;
+}}
+
+
+window {{
+   background-color: @blackdarkest;
+   anchor: center;
+   location: center;
+   width: 400;
+}}
+
+mainbox {{
+   background-color: @blackdarkest;
+   spacing:0px;
+   children: [listview];
+}}
+
+textbox {{
+   text-color:@darkgray;
+   background-color:@blackwidget;
+}}
+
+listview {{
+   fixed-height: false;
+   dynamic: true;
+   scrollbar: false;
+   spacing: 5px;
+   padding: 20px 20px 20px 20px;
+   margin: 0px 0px 0px 0px;
+   background: @blackdarkest;
+}}
+
+element {{
+   padding: 2px 5px;
+}}
+
+element normal.normal {{
+   padding: 0px 15px;
+   background-color: @blackentry;
+   text-color: @fgwhite;
+}}
+
+element normal.urgent {{
+   background-color: @blackentry;
+   text-color: @urgentcolor;
+}}
+
+element normal.active {{
+   background-color: @blackentry;
+   text-color: @maincolor;
+}}
+
+element selected.normal {{
+    background-color: @blackselect;
+    text-color:       @fgwhite;
+}}
+
+element selected.urgent {{
+    background-color: @urgentcolor;
+    text-color:       @blackdarkest;
+}}
+
+element selected.active {{
+    background-color: @maincolor;
+    text-color:       @blackdarkest;
+}}
+
+element alternate.normal {{
+    background-color: @blackentry;
+    text-color:       @fgwhite;
+}}
+
+element alternate.urgent {{
+    background-color: @blackentry;
+    text-color:       @urgentcolor;
+}}
+
+element alternate.active {{
+    background-color: @blackentry;
+    text-color:       @maincolor;
+}}
+
+button {{
+   background-color: @blackwidget;
+   text-color:       @darkgray;
+}}
+
+button selected {{
+    text-color:       @maincolor;
+}}
+
+case-indicator {{
+   padding:6px 10px;
+   text-color:@maincolor;
+   background-color:@blackwidget;
+}}
