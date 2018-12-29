@@ -6,6 +6,8 @@ hc() {
 
 hc emit_hook reload
 
+xsetroot -solid '#5A8E3A'
+
 # remove all existing keybindings
 hc keyunbind --all
 
@@ -62,7 +64,6 @@ tag_keys=( {1..8} 0 )
 hc set focus_follows_mouse 1
 hc set default_frame_layout 3
 hc set_layout grid
-hc floating 6 on
 hc set tree_style '╾│ ├└╼─┐'
 
 hc rename default "${tag_names[0]}" || true
