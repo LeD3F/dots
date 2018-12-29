@@ -6,7 +6,7 @@ hc() {
 
 hc emit_hook reload
 
-xsetroot -solid '#5A8E3A'
+xsetroot -solid "$color0"
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -176,7 +176,7 @@ source ~/.cache/wal/colors.sh
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-#hc set frame_border_active_color "'$color15"
+#hc set frame_border_active_color "$color15"
 #hc set frame_border_normal_color "$color1"
 #hc set frame_bg_normal_color "$color3"
 #hc set frame_bg_active_color "$color3"
