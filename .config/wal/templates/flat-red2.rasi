@@ -14,7 +14,7 @@
    blackdarkest:     {background};
    blackwidget:      {background};
    blackentry:       {background};
-   blackselect:      {color3};
+   blackselect:      {color1};
    darkgray:         {color2};
    font: "Scientifica 9";
    background-color: @blackdarkest;
