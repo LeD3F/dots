@@ -5,7 +5,7 @@
 
 # 2016 Oliver Kraitschy - http://okraits.de
 
-OPTIONS="Reboot system\nPower-off system\nSuspend system\nHibernate system"
+OPTIONS="Reboot system\nPower-off system\nSuspend system"
 
 # source configuration or use default values
 if [ -f $HOME/.config/rofi-power/config ]; then
@@ -21,7 +21,7 @@ if [ ${#1} -gt 0 ]; then
   OPTIONS="Exit window manager\n$OPTIONS"
 fi
 
-option=`echo -e $OPTIONS | $LAUNCHER | awk '{print $1}' | tr -d '\r\n'`
+option=`echo -e $OPTIONS | $LAUNCHER  | awk '{print $1}' |  tr -d '\r\n'`
 if [ ${#option} -gt 0 ]
 then
     case $option in
@@ -36,9 +36,6 @@ then
         ;;
       Suspend)
         $($USE_LOCKER) && "$LOCKER"; systemctl suspend
-        ;;
-      Hibernate)
-        $($USE_LOCKER) && "$LOCKER"; systemctl hibernate
         ;;
       *)
         ;;
