@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rofi -show run -theme ~/.cache/wal/flat-red.rasi
+xkb-switch -s us && rofi -show run -lines 3 -columns 3 -theme ~/.cache/wal/flat-red.rasi
