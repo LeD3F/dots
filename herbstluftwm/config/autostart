@@ -83,6 +83,13 @@ hc keybind $Mod-space                                                           
                      . cycle_layout +1 vertical horizontal max vertical grid    \
                , cycle_layout +1
 
+# Layouts for tags
+hc load 5 '
+    (split horizontal:0.750000:0    
+        (clients grid:0 0x3800006)
+             (clients grid:0 0x3e00001))
+'
+
 # mouse
 hc mouseunbind --all
 hc mousebind $Mod-Button1 move
@@ -171,18 +178,18 @@ hc set frame_normal_opacity 1
 hc set frame_transparent_width 0
 hc set frame_gap 0
 
-hc attr theme.active.color "$color2"
-hc attr theme.normal.color "$color1"
+hc attr theme.active.color "$color1"
+hc attr theme.normal.color "$color0"
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 1
 hc attr theme.inner_color "$color2"
 hc attr theme.border_width 2
 hc attr theme.floating.border_width 2
 hc attr theme.floating.outer_width 1
-hc attr theme.floating.outer_color "$color1"
-hc attr theme.active.inner_color "$color1"
-hc attr theme.active.outer_color "$color2"
-hc attr theme.background_color  "$color1"
+hc attr theme.floating.outer_color "$color0"
+hc attr theme.active.inner_color "$color0"
+hc attr theme.active.outer_color "$color1"
+hc attr theme.background_color  "$color0"
 
 hc set window_gap 10
 hc set frame_padding 0
@@ -205,8 +212,9 @@ hc rule class=Vivaldi-snapshot tag=2
 hc rule class=smplayer tag=3
 hc rule class=mpv tag=3
 hc rule class=Vmware tag=3
-hc rule class=VK tag=5
-hc rule class=TelegramDesktop tag=5
+hc rule class=Gimp-2.10 tag=3
+hc rule class=VK tag=5 index=1
+hc rule class=TelegramDesktop tag=5 index=0
 hc rule class=discorf tag=5
 hc rule class=Steam tag=6
 hc rule class=Lutris tag=6 
