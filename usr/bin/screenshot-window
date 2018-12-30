@@ -1,2 +1,0 @@
-#!/bin/bash
-maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/$(date +%s).png
