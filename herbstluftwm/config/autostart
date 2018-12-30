@@ -137,7 +137,7 @@ hc keybind $Mod2-Ctrl-l spawn ~/.scripts/lock.sh
 
 # applications
 ## Vivaldi
-hc keybind $Mod-q spawn vivaldi-snapshot
+hc keybind $Mod-q spawn vivaldi-stable
 ## Pamac
 hc keybind XF86Tools spawn pamac-manager
 ## Telegram
@@ -214,7 +214,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class~'[Pp]olybar' manage=off
 
 ## apps
-hc rule class=Vivaldi-snapshot tag=2
+hc rule class=Vivaldi-stable tag=2
 hc rule class=smplayer tag=3
 hc rule class=mpv tag=3
 hc rule class=Vmware tag=3
