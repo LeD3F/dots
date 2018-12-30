@@ -1,5 +1,6 @@
 #My Settings
-neofetch
+ufetch
+source ~/.cache/wal/colors-tty.sh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -9,7 +10,7 @@ neofetch
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="punctual"
+ZSH_THEME="geometry/geometry"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -103,8 +104,10 @@ source /usr/share/fzf/completion.zsh
 # My Aliases
 alias update="sudo pacman -Syu && yay -Syu"
 alias w="wal -n -i"
-alias wtr="curl http://wttr.in/Nizhniy_Novgorod\?1\?q"
+alias wtr="curl http://wttr.in/Nizhniy_Novgorod\?q\?T"
 alias sx="startx"
+alias rick="curl -s -L http://bit.ly/10hA8iC | bash"
+alias hc="herbstclient"
 
 # Transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
