@@ -62,7 +62,6 @@ tag_keys=( {1..8} 0 )
 hc set focus_follows_mouse 1
 hc set default_frame_layout 3
 hc set_layout grid
-hc set tree_style '╾│ ├└╼─┐'
 
 hc rename default "${tag_names[0]}" || true
 for i in ${!tag_names[@]} ; do
@@ -142,7 +141,7 @@ hc keybind $Mod-q spawn vivaldi-snapshot
 ## Pamac
 hc keybind XF86Tools spawn pamac-manager
 ## Telegram
-hc keybind XF86Mail  spawn telegram-desktop
+hc keybind XF86Mail spawn telegram-desktop
 ## Galculator
 hc keybind XF86Calculator spawn galculator
 ## File Manager
@@ -158,11 +157,11 @@ hc keybind XF86AudioPlay spawn ~/.scripts/play.sh
 
 # volume control
 ## Volume Raise
-hc keybind XF86AudioRaiseVolume  spawn ~/.scripts/volumedunst.sh up
+hc keybind XF86AudioRaiseVolume spawn ~/.scripts/volumedunst.sh up
 ## Volume Down
-hc keybind XF86AudioLowerVolume  spawn ~/.scripts/volumedunst.sh down
+hc keybind XF86AudioLowerVolume spawn ~/.scripts/volumedunst.sh down
 ## Toggle Mute
-hc keybind XF86AudioMute spawn  ~/.scripts/volumedunst.sh mute
+hc keybind XF86AudioMute spawn ~/.scripts/volumedunst.sh mute
 
 ## audio sources list
 hc keybind XF86AudioStop spawn rofi-pulse
@@ -238,6 +237,7 @@ hc unlock
 hc add_monitor 1440x900+0+180 7
 hc detect_monitors
 hc set swap_monitors_to_get_tag 0
+hc set tree_style '╾│ ├└╼─┐'
 
 # Floating tag
 hc floating 6 on
