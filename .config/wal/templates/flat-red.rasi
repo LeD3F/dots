@@ -6,8 +6,8 @@
 
 /* global settings and color variables */
 * {{
-   maincolor:        {color2};
-   highlight:        bold {color4};
+   maincolor:        {color1};
+   highlight:        bold {color1};
    urgentcolor:      #fe9b3d;
 
    fgwhite:          {foreground};
@@ -16,7 +16,6 @@
    blackentry:       {background};
    blackselect:      {color1};
    darkgray:         {color2};
-   scrollbarcolor:   #505050;
    font: "Scientifica 9";
    background-color: @blackdarkest;
 }}
@@ -27,6 +26,7 @@ window {{
    anchor: center;
    location: center;
    width: 500;
+   padding: 20px 20px 20px 20px;
 }}
 
 mainbox {{
@@ -56,7 +56,7 @@ listview {{
 }}
 
 element {{
-   padding: 2px 15px;
+   padding: 2px 5px;
 }}
 
 element normal.normal {{
@@ -130,13 +130,12 @@ inputbar {{
 }}
 
 prompt {{
-   padding:6px 9px;
-   background-color: @maincolor;
-   text-color:@blackwidget;
+   padding:0px 5px;
+   text-color:@fgwhite;
 }}
 
 entry {{
-   padding:6px 10px;
+   padding:0px 10px;
    background-color:@blackwidget;
    text-color:@fgwhite;
 }}
