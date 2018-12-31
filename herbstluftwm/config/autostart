@@ -17,7 +17,7 @@ Mod2=Mod1 # Alt Key
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn ${TERMINAL:-urxvtc}
+hc keybind $Mod-Return spawn ${TERMINAL:-alacritty}
 
 # basic movement
 # focusing clients
@@ -131,6 +131,8 @@ hc keybind $Mod2-Tab spawn ~/.scripts/rofiwin.sh
 hc keybind $Mod-x spawn ~/.scripts/roficlip.sh
 ## rofi power
 hc keybind $Mod2-e spawn rofi-power "herbstclient quit"
+## rofi search
+hc keybind $Mod-z spawn ~/.scripts/rofi-search.sh
 
 # lock screen
 hc keybind $Mod2-Ctrl-l spawn ~/.scripts/lock.sh
@@ -186,7 +188,7 @@ hc set frame_gap 0
 
 hc attr theme.active.color "$color1"
 hc attr theme.normal.color "$color0"
-hc attr theme.urgent.color orange
+hc attr theme.urgent.color "$color15"
 hc attr theme.inner_width 1
 hc attr theme.inner_color "$color2"
 hc attr theme.border_width 2
