@@ -73,7 +73,7 @@ numlockx &
 session=${1:-herbstluftwm}
 
 case $session in
-	2bwm ) exec 2bwm;;
+    2bwm ) exec 2bwm;;
     bsp|bspwm ) exec bspwm;;
     herb|herbstluftwm ) exec herbstluftwm;;
 esac
