@@ -17,7 +17,7 @@ Mod2=Mod1 # Alt Key
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn ${TERMINAL:-alacritty}
+hc keybind $Mod-Return spawn ${TERMINAL:-urxvtc}
 
 # basic movement
 # focusing clients
