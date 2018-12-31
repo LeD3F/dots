@@ -38,7 +38,6 @@ compton &
 xautolock -detectsleep -time 15 -locker \
 "i3lock-fancy-dualmonitor -f Roboto-Regular -- scrot -z" \
 -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
-urxvtd -q -f -o
 mpd &
 dunst &
 #nm-applet &
