@@ -14,6 +14,28 @@ LightDM WebKit2 Theme - https://github.com/Litarvan/lightdm-webkit-theme-litarva
 
 Files with pywal at the end are for usage with Pywal
 
+# herbstluftwm
+
+<img src='screenshots/herb.png'>
+
+# herbstluftwm
+
+Menu is Rofi - https://github.com/DaveDavenport/rofi
+
+Rofi Power Menu - https://github.com/okraits/rofi-tools
+
+Greenclip - https://github.com/erebe/greenclip
+
+Polybar - https://github.com/jaagr/polybar
+
+Dunst - https://github.com/dunst-project/dunst
+
+Mpd Notification - https://github.com/vehk/mpdnotify
+
+Polybar Font - scientifica + Wuncon Siji
+
+Colorschemes - https://github.com/dylanaraps/pywal
+
 # i3
 
 <img src='screenshots/i3_wm.jpg'>
