@@ -18,6 +18,7 @@ memory = ${xrdb:color2}
 fs = ${xrdb:color6}
 mpd = ${xrdb:color4}
 ws = ${xrdb:color3}
+spotify = ${xrdb:color2}
 
 ##############
 #   Bar / Nim
@@ -87,9 +88,9 @@ modules-center =
 modules-right =  left-xkb xkeyboard right-xkb left-ram memory right-ram left-fs filesystem right-fs left-pulse pulseaudio right-pulse left-date date
 
 tray-position = center
-tray-padding = 3
+tray-padding = 0
 tray-detached = true
-tray-maxsize = 14
+tray-maxsize = 16
 tray-background = ${colors.background}
 tray-scale = 1.0
 
@@ -219,6 +220,7 @@ label = "%date%%time% "
 label-foreground = ${colors.foreground}
 
 time = %a %d, %H:%M
+time-alt = %a %d, %H:%M:%S
 
 ##############
 #   Pulseaudio
