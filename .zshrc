@@ -1,6 +1,7 @@
-#My Settings
-ufetch
+#My Setting
 source ~/.cache/wal/colors-tty.sh
+(cat ~/.cache/wal/sequences &)
+ufetch
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
