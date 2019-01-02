@@ -18,7 +18,7 @@ Files with pywal at the end are for usage with Pywal
 
 <img src='screenshots/herb.png'>
 
-# herbstluftwm
+# herbstluftwm info
 
 Menu is Rofi - https://github.com/DaveDavenport/rofi
 
