@@ -17,7 +17,9 @@ killall dunst && dunst -config ~/.cache/wal/dunstrcbspwm &
 
 # Polybar
 
-$HOME/.config/polybar/bspwm.sh
+$HOME/.config/polybar/bspwm/bspwm.sh
+#$HOME/.config/polybar/bspwm2/bspwm.sh
+#$HOME/.config/polybar/bspwm3/bspwm.sh
 
 # Monitor setup
 
@@ -50,17 +52,15 @@ bspc config presel_feedback_color "$color1"
 # Apps to workspace
 
 bspc rule -a "Gimp-2.10" desktop=multimedia
-bspc rule -a "Vivaldi-snapshot" desktop=web
+bspc rule -a "Vivaldi-stable" desktop=web
 bspc rule -a TelegramDesktop desktop=chat
 bspc rule -a Smplayer desktop=multimedia
 bspc rule -a mpv desktop=multimedia
 bspc rule -a obs desktop=obs
 bspc rule -a Vmware desktop=multimedia
-bspc rule -a Deluge desktop=multimedia
 bspc rule -a Steam desktop=games
 bspc rule -a discord desktop=chat
 bspc rule -a VK desktop=chat
-bspc rule -a REAPER desktop=multimedia
 
 # Floating Apps
 
@@ -74,6 +74,7 @@ bspc rule -a Woeusbgui state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a File-roller state=floating
 bspc rule -a XTerm state=floating
+bspc rule -a Yad state=floating
 
 # External Rules
 
