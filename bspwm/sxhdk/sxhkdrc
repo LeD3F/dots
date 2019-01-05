@@ -22,15 +22,15 @@ super + Return
 
 # Rofi laucnher Drun
 super + d
-	rofi -show drun -modi drun -theme ~/.cache/wal/flat-red.rasi
+	$HOME/.scripts/rofi.sh
 
-# Rofi laucnher Drun
+# Rofi laucnher Run
 super + shift + d
-    rofi -show run -theme ~/.cache/wal/flat-red.rasi
+    $HOME/.scripts/rofirun.sh
 
 # Rofi window switcher
 alt + Tab 
-    rofi -show window -theme ~/.cache/wal/flat-red.rasi
+    $HOME/.scripts/rofiwin.sh
 
 # Rofi Power Menu
 alt + e
@@ -38,7 +38,11 @@ alt + e
 
 # Rofi Clipboard
 super + x
-    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme ~/.cache/wal/flat-red.rasi    
+    $HOME/.scripts/roficlip.sh
+
+# Rofi Search
+super + z
+	$HOME/.scripts/rofi-search.sh	
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -217,7 +221,7 @@ alt + s
 
 # lock screen
 alt + ctrl + l
-    i3lock-fancy-dualmonitor -pf Roboto-Regular -- scrot -z
+    $HOME/.scripts/lock.sh
 
 ############################################################################
 #                        __   _  ____           __                       __#
@@ -230,15 +234,15 @@ alt + ctrl + l
 
 # Spotify / MPD Next Track
 XF86AudioNext 
-    sp next || mpc next
+    $HOME/.scripts/next.sh
 
 # Spotify / MPD Previous Track
 XF86AudioPrev
-    sp prev || mpc prev
+    $HOME/.scripts/prev.sh
 
 # Spotify / MPD Play
 XF86AudioPlay
-    sp play || mpc toggle 
+    $HOME/.scripts/play.sh
 
 ######################################################################
 #    __                            __                                #
@@ -251,7 +255,7 @@ XF86AudioPlay
 
 # Launch Vivaldi
 super+q 
-    vivaldi-snapshot
+    vivaldi-stable
 
 # Launch Pamac
 XF86Tools
