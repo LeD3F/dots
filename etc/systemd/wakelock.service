@@ -1,0 +1,12 @@
+[Unit]
+Description=Lock the screen on resume from suspend
+Before=suspend.target
+
+[Service]
+User=led3f
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=i3lock-fancy-dualmonitor
+
+[Install]
+WantedBy=suspend.target
