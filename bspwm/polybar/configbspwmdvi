@@ -62,7 +62,7 @@ border-bottom-color = ${colors.pc}
 font-0 = scientifica:style=Regular:pixelsize=10;2
 font-1 = erus erusfont:style=Regular:pixelsize=10;3
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = Wuncon Siji:pixelsize=10;2
+font-3 = siji:pixelsize=10;2
 
 modules-left = 
 modules-center = xkeyboard memory filesystem eth pulseaudio date
