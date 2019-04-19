@@ -115,7 +115,7 @@ border-bottom-color = ${colors.xwindow}
 font-0 = scientifica:style=Regular:pixelsize=10;2
 font-1 = xos4 Terminus:style=Regular:pixelsize=5;2
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = Wuncon Siji:pixelsize=10;2
+font-3 = siji:pixelsize=10;2
 
 
 modules-left = 2bws 
