@@ -70,7 +70,7 @@ font-0 = kakwafont:style=Regular:pixelsize=10;2
 font-1 = erus erusfont:style=Regular:pixelsize=10;3
 font-2 = FuraCode Nerd Font:style=Regular:size=10;2
 font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-4 = Wuncon Siji:pixelsize=10;2
+font-4 = siji:pixelsize=10;2
 font-5 = emojione:scale=10;1
 
 modules-left = i3 mpd
@@ -128,7 +128,7 @@ font-0 = kakwafont:style=Regular:pixelsize=10;2
 font-1 = erus erusfont:style=Regular:pixelsize=10;3
 font-2 = FuraCode Nerd Font:style=Regular:size=10;2
 font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-4 = Wuncon Siji:pixelsize=10;2
+font-4 = siji:pixelsize=10;2
 font-5 = emojione:scale=10;1
 
 modules-left = i3
