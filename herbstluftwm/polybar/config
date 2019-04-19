@@ -46,7 +46,7 @@ font-1 = Tewi:style=Regular:pixelsize=8;2
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-3 = mplus Nerd Font:style=Medium:size=13;2
 font-4 = emojione:scale=10;1
-font-5 = Wuncon Siji:pixelsize=10;2
+font-5 = siji:pixelsize=10;2
 
 modules-left = workspaces right-ws left-mpd mpdbar right-mpd left-mpd mpdcon right-mpd left-mpd mpdtrack right-mpd
 modules-center = xwindow
@@ -81,7 +81,7 @@ font-1 = Tewi:style=Regular:pixelsize=8;2
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-3 = mplus Nerd Font:style=Medium:size=13;2
 font-4 = emojione:scale=10;1
-font-5 = Wuncon Siji:pixelsize=10;2
+font-5 = siji:pixelsize=10;2
 
 modules-left = workspaces right-ws 
 modules-center = 
