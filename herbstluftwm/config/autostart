@@ -56,8 +56,8 @@ hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # tags
-tag_names=( {1..8} )
-tag_keys=( {1..8} 0 )
+tag_names=("null" "www" "cfg" "mul" "mus" "chat" "game")
+tag_keys=( {1..7} 0)
 
 hc set focus_follows_mouse 1
 hc set default_frame_layout 3
@@ -76,6 +76,7 @@ done
 # cycle through tags
 hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma  use_index -1 --skip-visible
+
 
 # layouting
 hc keybind $Mod-r remove
@@ -138,35 +139,8 @@ hc keybind $Mod-z spawn ~/.scripts/rofi-search.sh
 hc keybind $Mod2-Ctrl-l spawn ~/.scripts/lock.sh
 
 # applications
-## Vivaldi
-hc keybind $Mod-q spawn vivaldi-stable
-## Pamac
-hc keybind XF86Tools spawn pamac-manager
-## Telegram
-hc keybind XF86Mail spawn telegram-desktop
-## Galculator
-hc keybind XF86Calculator spawn galculator
-## File Manager
-hc keybind XF86Explorer spawn nemo
-
-# mpd controls
-## Next Track
-hc keybind XF86AudioNext spawn ~/.scripts/next.sh
-## Previous Track
-hc keybind XF86AudioPrev spawn ~/.scripts/prev.sh
-## Toggle Track
-hc keybind XF86AudioPlay spawn ~/.scripts/play.sh
-
-# volume control
-## Volume Raise
-hc keybind XF86AudioRaiseVolume spawn ~/.scripts/volumedunst.sh up
-## Volume Down
-hc keybind XF86AudioLowerVolume spawn ~/.scripts/volumedunst.sh down
-## Toggle Mute
-hc keybind XF86AudioMute spawn ~/.scripts/volumedunst.sh mute
-
-## audio sources list
-hc keybind XF86AudioStop spawn rofi-pulse
+## Firefox
+hc keybind $Mod-q spawn firefox
 
 #pywal colors
 source ~/.cache/wal/colors.sh
@@ -199,7 +173,7 @@ hc attr theme.active.inner_color "$color0"
 hc attr theme.active.outer_color "$color1"
 hc attr theme.background_color  "$color0"
 
-hc set window_gap 10
+hc set window_gap 19
 hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 0
@@ -210,35 +184,32 @@ hc unrule -F
 hc rule focus=on
 # give focus to most common terminals
 #hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class~'[Pp]olybar' manage=off
 
 ## apps
-hc rule class=Vivaldi-stable tag=2
-hc rule class=smplayer tag=3
+hc rule class=firefox tag=www
+hc rule class=smplayer tag=mul
 hc rule class=mpv tag=3
-hc rule class=Vmware tag=3
-hc rule class=Gimp-2.10 tag=3
-hc rule class=VK tag=5 index=1
-hc rule class=TelegramDesktop tag=5 index=0
-hc rule class=discord tag=7
-hc rule class=obs tag=7
-hc rule class=Steam tag=6
-hc rule class=Lutris tag=6 
-hc rule class=File-roller pseudotile=on
-hc rule class=Nitrogen pseudotile=on
-hc rule class=Galculator pseudotile=on
-hc rule class=Woeusbgui pseudotile=on
+hc rule class=Gimp-2.10 tag=mul
+hc rule class=KotatogramDesktop tag=chat
+hc rule class=Spotify tag=mus
+hc rule class=discord floating=on
+hc rule class=Steam tag=game
+hc rule class=Lutris tag=game
+hc rule class=File-roller floating=on
+hc rule class=Nitrogen floating=on
+hc rule class=Galculator floating=on
+hc rule class=Wpg floating=on
+hc rule class=Pamac-manager floating=on
 
 # unlock, just to be sure
 hc unlock
 
 # Monitor Setup
-#hc add_monitor 1920x1080+1440+0 1
-hc add_monitor 1440x900+0+180 7
-hc detect_monitors
+hc set_monitors 1440x900+0+180 1920x1080+1440+0
 hc set swap_monitors_to_get_tag 0
 hc set tree_style '╾│ ├└╼─┐'
 
@@ -246,12 +217,9 @@ hc set tree_style '╾│ ├└╼─┐'
 hc floating 6 on
 
 # find the panel
-panel=~/.config/polybar/herb/herb.sh
+panel=~/.config/polybar/bspwm.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     #start it on each monitor
     "$panel"  &
-hc pad 0 34
+hc pad 0 0
 done
-
-# autostart apps
-killall dunst && dunst -config ~/.cache/wal/dunstrcherb &
