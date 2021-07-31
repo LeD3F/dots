@@ -214,7 +214,7 @@ hc set swap_monitors_to_get_tag 0
 hc set tree_style '╾│ ├└╼─┐'
 
 # Floating tag
-hc floating 6 on
+hc floating 7 on
 
 # find the panel
 panel=~/.config/polybar/bspwm.sh
