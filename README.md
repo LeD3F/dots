@@ -2,21 +2,15 @@
 
 For Desktop Background image i'm using Nitrogen - https://github.com/l3ib/nitrogen
 
-Sublime theme is ayu dark - https://github.com/dempfi/ayu
-
-Compositor is Compton - https://github.com/chjj/compton
-
-GTK3-Nocsd - https://github.com/PCMan/gtk3-nocsd
+Compositor is Picom - https://github.com/jonaburg/picom
 
 Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f3ff7b17747ee3
-
-LightDM WebKit2 Theme - https://github.com/Litarvan/lightdm-webkit-theme-litarvan
 
 Files with pywal at the end are for usage with Pywal
 
 # herbstluftwm
 
-<img src='screenshots/herb.png'>
+<img src='screenshots/herbstluftwm.png'>
 
 # herbstluftwm info
 
