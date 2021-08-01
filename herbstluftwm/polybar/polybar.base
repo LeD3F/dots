@@ -45,8 +45,9 @@ foreground = ${{colors.foreground}}
 
 line-size = 1
 
-;border-size = 20
-border-color = #00000000
+border-top-size = 1
+border-bottom-size = 1
+border-color = ${{colors.background}}
 
 padding-left = 0
 padding-right = 2
