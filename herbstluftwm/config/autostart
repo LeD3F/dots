@@ -46,7 +46,7 @@ hc keybind $Mod-Shift-l or / shift right / \
 hc keybind $Mod-u       split   bottom  0.5
 hc keybind $Mod-o       split   right   0.5
 # let the current frame explode into subframes
-hc keybind $Mod-Control-space split explode
+hc keybind $Mod-e split explode
 
 # resizing frames
 resizestep=0.05
@@ -230,5 +230,11 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 hc pad 0 0
 done
 
-#Wpgtk
+#Autostart
+picom -c &
+urxvtd -q -f -o &
+nitrogen --restore &
+dunst &
+pamac-tray &
+greenclip daemon &
 bash $HOME/.config/wpg/wp_init.sh &
