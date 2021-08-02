@@ -45,9 +45,9 @@ foreground = ${{colors.foreground}}
 
 line-size = 1
 
-border-top-size = 1
-border-bottom-size = 1
-border-color = ${{colors.background}}
+;border-top-size = 2
+;border-bottom-size = 2
+;border-color = ${{colors.background}}
 
 padding-left = 0
 padding-right = 2
@@ -55,9 +55,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = scientifica:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Siji:pixelsize=10;1
+font-0 = scientifica:pixelsize=9;1
+font-1 = Cozette:pixelsize=9;1
+font-2 = Siji:pixelsize=9;1
 
 modules-left = workspaces xwindow
 modules-center = date
@@ -198,7 +198,7 @@ click-middle = playerctl --player=spotify previous
 
 [module/cava]
 type = custom/script
-exec = ~/.config/polybar/custom/info-cava.py -f 60 -b 10 -c stereo
+exec = ~/.config/polybar/custom/info-cava.py -f 60 -b 10 -e "{color1}","{color3}","{color2}","{color4}" -c stereo
 tail = true 
 
 
