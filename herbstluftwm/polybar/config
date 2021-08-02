@@ -1,372 +1,214 @@
-##############
-#   Colors
-##############
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
 
 [colors]
-background = ${xrdb:color0}
-background-alt = #E6202020
-foreground = ${xrdb:color7}
-foreground-alt = ${xrdb:color6}
-primary = ${xrdb:color12}
-secondary = ${xrdb:color2}
-alert = ${xrdb:color3}
+background = {color0}
+background-alt = #444
+foreground = {color7}
+foreground-alt = {color6}
+primary = {color1}
+secondary = {color2}
+alert = {color3}
 
-pulse = ${xrdb:color4}
-date = ${xrdb:color5}
-xkb = ${xrdb:color1}
-memory = ${xrdb:color2}
-fs = ${xrdb:color6}
-mpd = ${xrdb:color4}
-ws = ${xrdb:color3}
-spotify = ${xrdb:color2}
+eth = {color5}
+mem = {color3}
+xkb = {color2}
+cpu = {color4}
+pulse = {color2}
+spotify = {color1}
 
-##############
-#   Bar / Nim
-##############
-
-[bar/nim]
-monitor = DP-2
-width = 100%
-height = 20
-fixed-center = true
-background = ${colors.background}
-foreground = ${colors.foreground}
-monitor-strict = true
-
-border-top-size = 7
-border-bottom-size = 7
-
-border-top-color = ${colors.background}
-border-bottom-color = ${colors.background}
-border-left-color = ${colors.background}
-border-right-color = ${colors.background}
-
-font-0 = scientifica:style=Regular:pixelsize=8;2
-font-1 = Tewi:style=Regular:pixelsize=8;2
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = mplus Nerd Font:style=Medium:size=13;2
-font-4 = emojione:scale=10;1
-font-5 = siji:pixelsize=10;2
-
-modules-left = workspaces right-ws left-mpd mpdbar right-mpd left-mpd mpdcon right-mpd left-mpd mpdtrack right-mpd
-modules-center = xwindow
-modules-right = left-xkb xkeyboard right-xkb left-ram memory right-ram left-fs filesystem right-fs left-pulse pulseaudio right-pulse left-date date
-
-override-redirect = true
-cursor-click = pointer
-
-##############
-#   Bar / Nim2
-##############
-
-[bar/nim2]
+[bar/nopa]
 monitor = DVI-I-1
-width = 100%
-height = 20
+width = 98%
+height = 28
+offset-x = 1%
+offset-y = 20
 fixed-center = true
-background = ${colors.background}
-foreground = ${colors.foreground}
-monitor-strict = true
 
-border-top-size = 7
-border-bottom-size = 7
+background = ${{colors.background}}
+foreground = ${{colors.foreground}}
 
-border-top-color = ${colors.background}
-border-bottom-color = ${colors.background}
-border-left-color = ${colors.background}
-border-right-color = ${colors.background}
+line-size = 1
 
-font-0 = scientifica:style=Regular:pixelsize=8;2
-font-1 = Tewi:style=Regular:pixelsize=8;2
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = mplus Nerd Font:style=Medium:size=13;2
-font-4 = emojione:scale=10;1
-font-5 = siji:pixelsize=10;2
+;border-top-size = 2
+;border-bottom-size = 2
+;border-color = ${{colors.background}}
 
-modules-left = workspaces right-ws 
-modules-center = 
-modules-right =  left-xkb xkeyboard right-xkb left-ram memory right-ram left-fs filesystem right-fs left-pulse pulseaudio right-pulse left-date date
+padding-left = 0
+padding-right = 2
 
-tray-position = center
-tray-padding = 0
-tray-detached = true
-tray-maxsize = 16
-tray-background = ${colors.background}
-tray-scale = 1.0
+module-margin-left = 1
+module-margin-right = 2
 
-override-redirect = true
+font-0 = scientifica:pixelsize=9;1
+font-1 = Cozette:pixelsize=9;1
+font-2 = Siji:pixelsize=9;1
+
+modules-left = workspaces xwindow
+modules-center = date
+modules-right =  cava spotify pulseaudio xkeyboard memory cpu eth
+
+tray-position = right
+tray-padding = 2
+
+override-redirect = false
+
 cursor-click = pointer
-
-##############
-#   Xkeyboard
-##############
+;cursor-scroll = ns-resize
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
+blacklist-1 = caps lock
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.xkb}
-format-prefix-font = 6
+format-prefix = " "
+format-font = 3
+format-prefix-foreground = ${{colors.xkb}}
+format-underline = ${{colors.xkb}}
 
-label-layout = " %layout% "
-label-layout-background  = ${colors.xkb}
+label-layout = %layout%
 
-##############
-#   Xworkspaces
-##############
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${{colors.secondary}}
+label-indicator-underline = ${{colors.secondary}}
 
 [module/workspaces]
 type = internal/xworkspaces
 pin-workspaces = false
 enable-click = true
 enable-scroll = true
-format-padding = 0
-format-font = 1
-icon-0 = 1;
-icon-1 = 2;
-icon-2 = 3;
-icon-3 = 4;
-icon-4 = 5;
-icon-5 = 6;
-icon-6 = 7;
-icon-7 = 8;
-icon-default = ""
+format-padding = 2
 
 format = <label-state>
 
-label-active = %icon%
-label-active-foreground = ${colors.foreground}
-label-active-background = ${colors.ws}
-label-active-padding = 1
-label-active-font = 1
+label-active = %name%
+label-active-foreground = ${{colors.foreground}}
+label-active-underline = ${{colors.foreground}}
+label-active-padding = 2
 
-label-empty = %icon%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-background = ${colors.ws}
-label-empty-padding = 1
+label-empty = %name%
+label-empty-foreground = ${{colors.foreground-alt}}
+label-empty-underline = ${{colors.foreground-alt}}
+label-empty-padding = 2
 
-label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
+label-urgent = %name%
+label-urgent-background = ${{colors.alert}}
+label-urgent-padding = 2
 
-label-inactive = %icon%
-label-inactive-padding = 1
+label-inactive = %name%
+label-inactive-underline = ${{colors.foreground-alt}}
+label-inactive-padding = 2
 
-##############
-#   Xwindow
-##############
+label-occupied = %name%
+label-occupied-underline = ${{colors.foreground-alt}}
+label-occupied-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
+label = %title:0:50:...%
 
-format = <label>
-format-foreground = ${colors.foreground}
-format-padding = 4
-
-label = %title%
-label-maxlen = 70
-
-##############
-#   Memory
-##############
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${{colors.cpu}}
+format-underline = ${{colors.cpu}}
+label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
+format-prefix = " "
+format-prefix-foreground = ${{colors.mem}}
+format-underline = ${{colors.mem}}
+label = %percentage_used%%
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.memory}
-format-prefix-font = 6
+[module/eth]
+type = internal/network
+interface = enp4s0
+interval = 3.0
 
-label = "%gb_used% "
-label-background = ${colors.memory}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${{colors.eth}}
+format-connected-underline = ${{colors.eth}}
+label-connected = %upspeed% %downspeed%
 
-##############
-#   Filesystem
-##############
-
-[module/filesystem]
-type = internal/fs
-
-mount-0 = /
-interval = 10
-fixed-values = true
-spacing = 0
-
-format-mounted = <label-mounted>
-format-mounted-background = ${colors.fs}
-format-foreground = ${colors.foreground}
-format-mounted-font = 6
-
-label-mounted = "  %used% "
-label-foreground = ${colors.foreground}
-
-##############
-#   Date
-##############
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${{self.format-connected-underline}}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${{colors.foreground-alt}}
 
 [module/date]
 type = internal/date
-interval = 1
 
-format =  "  <label>"
-format-foreground = ${colors.foreground}
-format-background = ${colors.date}
+interval = 1.0
 
-label = "%date%%time% "
-label-foreground = ${colors.foreground}
+time = %d %b %H:%M
+format = <label>
 
-time = %a %d, %H:%M
-time-alt = %a %d, %H:%M:%S
-
-##############
-#   Pulseaudio
-##############
+label = %time%
+label-underline = ${{colors.time}}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <ramp-volume><label-volume>
+format-volume-underline = ${{colors.pulse}}
+label-volume = " %percentage%  "
+label-volume-foreground = ${{colors.foreground}}
 
-label-volume = "%percentage% "
-label-volume-background = ${colors.pulse}
 label-muted = "  muted "
-label-muted-background = ${colors.pulse}
-label-muted-foreground = #666
+label-muted-foreground = ${{colors.background-alt}}
 
 ramp-volume-0 = "  "
 ramp-volume-1 = "  "
 ramp-volume-2 = "  "
-ramp-volume-background = ${colors.pulse}
+ramp-volume-foreground = ${{colors.pulse}}
 
-##############
-#   MPD
-##############
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+format-underline = ${{colors.spotify}}
+exec = python ~/.config/polybar/custom/spotify_status.py -f '{{artist}}: {{song}}'
+format-prefix-foreground = ${{colors.spotify}}
+format-prefix-underline = ${{colors.spotify}}
+;control players (optional)
+click-left = playerctl --player=spotify play-pause 
+click-right = playerctl --player=spotify next 
+click-middle = playerctl --player=spotify previous 
 
-[module/mpdcon]
-type = internal/mpd
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next> 
-format-online-background = ${colors.mpd}
+[module/cava]
+type = custom/script
+exec = ~/.config/polybar/custom/info-cava.py -f 60 -b 10 -e "{color1}","{color3}","{color2}","{color4}" -c stereo
+tail = true 
 
-icon-prev = ""
-icon-stop =  " "
-icon-play=  " "
-icon-pause = " "
-icon-next =  "  "
-
-[module/mpdtrack]
-type = internal/mpd
-format-online =   <label-song>
-format-online-background = ${colors.mpd}
-
-label-song = " %title% "
-label-song-maxlen = 35
-label-song-ellipsis = true
-
-[module/mpdtime]
-type = internal/mpd
-format-online = <label-time>
-format-online-background = ${colors.mpd}
-
-label-time = "%elapsed% / %total%"
-
-[module/mpdbar]
-type = internal/mpd
-format-online = <bar-progress>
-format-online-background = ${colors.mpd}
-
-bar-progress-width = 10
-bar-progress-indicator = 
-bar-progress-fill = 
-bar-progress-empty = 
-bar-progress-empty-foreground = ${colors.fs}
-
-##############
-#   Glyphs
-##############
-
-[module/glyph]
-type = custom/text
-content-background = ${colors.background}
-
-[module/left-xkb]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.xkb}
-
-[module/right-xkb]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.xkb}
-
-[module/left-ram]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.memory}
-
-[module/right-ram]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.memory}
-
-[module/left-fs]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.fs}
-
-[module/right-fs]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.fs}
-
-[module/left-pulse]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.pulse}
-
-[module/right-pulse]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.pulse}
-
-[module/left-date]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.date}
-
-[module/right-date]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.date}
-
-[module/right-mpd]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.mpd}
-
-[module/left-mpd]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.mpd}
-
-[module/right-ws]
-inherit = module/glyph
-content = ""
-content-foreground = ${colors.ws}
-
-##############
-#   Settings
-##############
 
 [settings]
 screenchange-reload = true
-
-##############
-#   WM
-##############
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
 
 [global/wm]
 margin-top = 0
