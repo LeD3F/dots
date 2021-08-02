@@ -77,7 +77,6 @@ done
 hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma  use_index -1 --skip-visible
 
-
 # layouting
 hc keybind $Mod-r remove
 hc keybind $Mod-s floating toggle
@@ -103,6 +102,7 @@ hc mouseunbind --all
 hc mousebind $Mod-Button1 move
 hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
+bind $Mod-Button3 resize
 
 # focus
 hc keybind $Mod-BackSpace   cycle_monitor
@@ -131,9 +131,7 @@ hc keybind $Mod2-Tab spawn ~/.scripts/rofiwin.sh
 ## rofi clipboard
 hc keybind $Mod-x spawn ~/.scripts/roficlip.sh
 ## rofi power
-hc keybind $Mod2-e spawn rofi-power "herbstclient quit"
-## rofi search
-hc keybind $Mod-z spawn ~/.scripts/rofi-search.sh
+hc keybind $Mod2-e spawn ~/.scripts/powermenu.sh
 
 # lock screen
 hc keybind $Mod2-Ctrl-l spawn ~/.scripts/lock.sh
@@ -158,7 +156,7 @@ hc set always_show_frame 0
 hc set frame_active_opacity 1
 hc set frame_normal_opacity 1
 hc set frame_transparent_width 0
-hc set frame_gap 0
+hc set frame_gap 19
 
 hc attr theme.active.color "$color1"
 hc attr theme.normal.color "$color0"
@@ -173,7 +171,7 @@ hc attr theme.active.inner_color "$color0"
 hc attr theme.active.outer_color "$color1"
 hc attr theme.background_color  "$color0"
 
-hc set window_gap 19
+hc set window_gap 0
 hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 0
@@ -182,6 +180,7 @@ hc set mouse_recenter_gap 1
 # rules
 hc unrule -F
 hc rule focus=on
+hc rule floatplacement=center
 # give focus to most common terminals
 #hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
@@ -190,20 +189,27 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class~'[Pp]olybar' manage=off
 
 ## apps
+hc rule class=Code tag=cfg
 hc rule class=firefox tag=www
 hc rule class=smplayer tag=mul
-hc rule class=mpv tag=3
 hc rule class=Gimp-2.10 tag=mul
 hc rule class=KotatogramDesktop tag=chat
 hc rule class=Spotify tag=mus
-hc rule class=discord floating=on
+hc rule class=discord tag=null
 hc rule class=Steam tag=game
-hc rule class=Lutris tag=game
+hc rule class=Lutris tag=game floating=on
+hc rule class=Deluge-gtk tag=mul
+#floating rules
+hc rule class=Pavucontrol floating=on
+hc rule class=Baobab floating=on
 hc rule class=File-roller floating=on
 hc rule class=Nitrogen floating=on
 hc rule class=Galculator floating=on
 hc rule class=Wpg floating=on
 hc rule class=Pamac-manager floating=on
+hc rule class=Yad floating=on
+hc rule class=steam_proton floating=on
+hc rule class=qt5ct floating=on
 
 # unlock, just to be sure
 hc unlock
@@ -214,12 +220,15 @@ hc set swap_monitors_to_get_tag 0
 hc set tree_style '╾│ ├└╼─┐'
 
 # Floating tag
-hc floating 7 on
+hc floating game on
 
 # find the panel
-panel=~/.config/polybar/bspwm.sh
+panel=~/.config/polybar/herb.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     #start it on each monitor
     "$panel"  &
 hc pad 0 0
 done
+
+#Wpgtk
+bash $HOME/.config/wpg/wp_init.sh &
