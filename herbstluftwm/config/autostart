@@ -59,7 +59,6 @@ hc keybind $Mod-Control-Right   resize right +$resizestep
 tag_names=("null" "www" "cfg" "mul" "mus" "chat" "game")
 tag_keys=( {1..7} 0)
 
-hc set focus_follows_mouse 1
 hc set default_frame_layout 3
 hc set_layout grid
 
@@ -156,7 +155,7 @@ hc set always_show_frame 0
 hc set frame_active_opacity 1
 hc set frame_normal_opacity 1
 hc set frame_transparent_width 0
-hc set frame_gap 19
+hc set frame_gap 9
 
 hc attr theme.active.color "$color1"
 hc attr theme.normal.color "$color0"
@@ -171,14 +170,14 @@ hc attr theme.active.inner_color "$color0"
 hc attr theme.active.outer_color "$color1"
 hc attr theme.background_color  "$color0"
 
-hc set window_gap 0
+hc set window_gap 10
 hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 0
 hc set mouse_recenter_gap 1
 
 # rules
-hc unrule -F
+hc unrule --all      # clear rules
 hc rule focus=on
 hc rule floatplacement=center
 # give focus to most common terminals
@@ -187,6 +186,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class~'[Pp]olybar' manage=off
+hc set focus_follows_mouse 1
 
 ## apps
 hc rule class=Code tag=cfg
@@ -231,7 +231,7 @@ hc pad 0 0
 done
 
 #Autostart
-picom -c &
+picom --experimental-backends &
 urxvtd -q -f -o &
 nitrogen --restore &
 dunst &
