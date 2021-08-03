@@ -99,7 +99,8 @@ format = <label-state>
 
 label-active = %name%
 label-active-foreground = ${{colors.foreground}}
-label-active-underline = ${{colors.foreground}}
+label-active-overline = ${{colors.foreground}}
+label-active-underline = ${{colors.foreground-alt}}
 label-active-padding = 2
 
 label-empty = %name%
@@ -129,7 +130,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${{colors.cpu}}
 format-underline = ${{colors.cpu}}
-label = %percentage:2%%
+label = %percentage:%%
 
 [module/memory]
 type = internal/memory
@@ -200,7 +201,6 @@ click-middle = playerctl --player=spotify previous
 type = custom/script
 exec = ~/.config/polybar/custom/info-cava.py -f 60 -b 10 -e "{color1}","{color3}","{color2}","{color4}" -c stereo
 tail = true 
-
 
 [settings]
 screenchange-reload = true
