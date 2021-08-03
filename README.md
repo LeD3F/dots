@@ -10,7 +10,7 @@ Files with pywal at the end are for usage with Pywal
 
 # herbstluftwm
 
-<img src='screenshots/herbstluftwm.png'>
+<img src='screenshots/herb.png'>
 
 # herbstluftwm info
 
