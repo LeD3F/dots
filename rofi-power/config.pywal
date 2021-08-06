@@ -1,4 +1,0 @@
-# configuration for rofi-power tool
-LAUNCHER="rofi -theme ~/.cache/wal/flat-red.rasi -dmenu -i -p power:"
-USE_LOCKER="false"
-LOCKER="i3lock"
