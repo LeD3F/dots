@@ -42,9 +42,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = scientifica:pixelsize=9;1
-font-1 = Cozette:pixelsize=9;1
-font-2 = Siji:pixelsize=9;1
+font-0 = lemon:pixelsize=8;1
+font-1 = siji:pixelsize=8;1
 
 modules-left = workspaces xwindow
 modules-center = date
