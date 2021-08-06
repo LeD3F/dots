@@ -32,3 +32,8 @@ cpu = {color4}
 pulse = {color2}
 spotify = {color1}
 upd = {color3}
+
+[module/cava]
+type = custom/script
+exec = ~/.config/polybar/custom/info-cava.py -f 60 -b 15 -e "{color1}","{color3}","{color2}","{color4}" -c stereo
+tail = true 
