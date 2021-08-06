@@ -138,6 +138,10 @@ hc keybind $Mod2-Ctrl-l spawn ~/.scripts/lock.sh
 # applications
 ## Firefox
 hc keybind $Mod-q spawn firefox
+## KotatoGram
+hc keybind $Mod-t spawn kotatogram-desktop
+## Nemo
+hc keybind $Mod-n spawn nemo
 
 #pywal colors
 source ~/.cache/wal/colors.sh
@@ -223,7 +227,7 @@ hc set tree_style '╾│ ├└╼─┐'
 hc floating game on
 
 # find the panel
-panel=~/.config/polybar/herb.sh
+panel=/home/led3f/.config/polybar/herb.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     #start it on each monitor
     "$panel"  &
@@ -231,10 +235,9 @@ hc pad 0 0
 done
 
 #Autostart
-picom --experimental-backends &
 urxvtd -q -f -o &
 nitrogen --restore &
 dunst &
-pamac-tray &
 greenclip daemon &
 bash $HOME/.config/wpg/wp_init.sh &
+picom --experimental-backend &
