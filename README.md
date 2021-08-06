@@ -26,30 +26,6 @@ Polybar Font - scientifica + Wuncon Siji
 
 Colorschemes - https://github.com/deviantfero/wpgtk
 
-# i3
-
-<img src='screenshots/i3_wm.jpg'>
-
-# i3 info
-
-Menu is Rofi - https://github.com/DaveDavenport/rofi
-
-Rofi Power Menu - https://github.com/okraits/rofi-tools
-
-Bar is Polybar - https://github.com/jaagr/polybar
-
-Notification Daemon is Dunst - https://github.com/dunst-project/dunst
-
-Spotify Track Module for Polybar - https://github.com/Jvanrhijn/polybar-spotify
-
-Pipes - https://github.com/pipeseroni/pipes.sh
-
-Mpd Notification - https://github.com/vehk/mpdnotify
-
-Polybar Icon Font - Nerd Fonts
-
-Colorschemes - https://github.com/dylanaraps/pywal
-
 # 2bwm
 
 <img src='screenshots/2bwm.jpg'>
