@@ -18,7 +18,7 @@
 
     ### Text ###
 
-    font = scientifica 9
+    font = lemon 8
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
