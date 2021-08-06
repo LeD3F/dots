@@ -4,27 +4,28 @@ Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintfull
+Xft.autohint: true
+Xft.hintstyle: hintslight
 !hintmedium hintslight hintfull
 Xft.lcdfilter: lcddefault
-Xcursor.theme: Bibata_Oil
 
 !URxvt ---------------------------------------------------------------------- !
 
 !Fonts --
 
-URxvt.font: xft:Curie:size=10,xft:Tewi:size=9
+URxvt.font:xft:lemon:medium:pixelsize=8
 URxvt.boldFont:
-URxvt.letterSpace: 1
-URxvt.antialias: true
+URxvt.italicfont:
+URxvt.bolditalicFont:
+URxvt.letterSpace: -1
+URxvt.antialias: false
 
 !Main Settings --
 
 URxvt.termname: xterm-256color
 URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
 
-URxvt.cursorUnderline: false
+URxvt.cursorUnderline: true
 URxvt.pointerBlank: true
 URxvt.saveLines:    5000
 URxvt.scrollBar:    false
@@ -51,6 +52,7 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
 URxvt.colorUL: #D9A9A2
+URxvt.matcher.button: 1
 
 !Disable iso14755 --
 
@@ -71,26 +73,5 @@ URxvt.keysym.Control-Right:\033[1;5C
 
 !URxvt window --
 
-URxvt*geometry: 80x20
-URxvt.internalBorder: 20
-
-!Colors --
-
-*background:  #121212
-*foreground:  #FFFFFF
-*color0:  #3e3e3e
-*color1:  #dd5a3a
-*color2:  #48a37f
-*color3:  #fe9b3d
-*color4:  #1858a5
-*color5:  #e58da3
-*color6:  #3697b9
-*color7:  #f8e9f2
-*color8:  #4e4e4e
-*color9:  #f0544c
-*color10:  #0bbaa7
-*color11:  #f5b427
-*color12:  #3caed9
-*color13:  #fa96a3
-*color14:  #84c4ee
-*color15:  #ffffff
+URxvt*geometry: 70x23
+URxvt.internalBorder: 30
