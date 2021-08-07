@@ -32,6 +32,7 @@ cpu = {color4}
 pulse = {color2}
 spotify = {color1}
 upd = {color3}
+wth = {color3}
 
 [module/cava]
 type = custom/script
