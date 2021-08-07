@@ -32,9 +32,9 @@ foreground = ${colors.foreground}
 
 line-size = 1
 
-;border-top-size = 2
-;border-bottom-size = 2
-;border-color = ${colors.background}
+border-top-size = 2
+border-bottom-size = 2
+border-color = ${colors.background}
 
 padding-left = 0
 padding-right = 2
@@ -47,7 +47,7 @@ font-1 = siji:pixelsize=8;1
 
 modules-left = workspaces xwindow
 modules-center = date
-modules-right =  cava spotify pulseaudio xkeyboard memory cpu eth updates
+modules-right =  cava spotify weather pulseaudio xkeyboard memory cpu eth updates
 
 tray-position = right
 tray-padding = 2
