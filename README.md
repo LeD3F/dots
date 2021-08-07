@@ -6,8 +6,6 @@ Compositor is Picom - https://github.com/jonaburg/picom
 
 Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f3ff7b17747ee3
 
-Files with pywal at the end are for usage with Pywal
-
 # herbstluftwm
 
 <img src='screenshots/hern.png'>
