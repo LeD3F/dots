@@ -22,6 +22,6 @@ Polybar - https://github.com/jaagr/polybar
 
 Dunst - https://github.com/dunst-project/dunst
 
-Polybar Font - scientifica + Wuncon Siji
+Polybar Font - lemon + Wuncon Siji
 
 Colorschemes - https://github.com/deviantfero/wpgtk
