@@ -142,6 +142,8 @@ hc keybind $Mod-q spawn firefox
 hc keybind $Mod-t spawn kotatogram-desktop
 ## Nemo
 hc keybind $Mod-n spawn nemo
+## Spotify
+hc keybind $Mod-m spawn spotify
 
 #pywal colors
 source ~/.cache/wal/colors.sh
@@ -164,11 +166,11 @@ hc set frame_gap 9
 hc attr theme.active.color "$color1"
 hc attr theme.normal.color "$color0"
 hc attr theme.urgent.color "$color15"
-hc attr theme.inner_width 1
+hc attr theme.inner_width 2
 hc attr theme.inner_color "$color2"
-hc attr theme.border_width 2
-hc attr theme.floating.border_width 2
-hc attr theme.floating.outer_width 1
+hc attr theme.border_width 4
+hc attr theme.floating.border_width 4
+hc attr theme.floating.outer_width 2
 hc attr theme.floating.outer_color "$color0"
 hc attr theme.active.inner_color "$color0"
 hc attr theme.active.outer_color "$color1"
@@ -202,7 +204,7 @@ hc rule class=Spotify tag=mus
 hc rule class=discord tag=null
 hc rule class=Steam tag=game
 hc rule class=Lutris tag=game floating=on
-hc rule class=Deluge-gtk tag=mul
+hc rule class=qBittorrent tag=mul
 #floating rules
 hc rule class=Pavucontrol floating=on
 hc rule class=Baobab floating=on
