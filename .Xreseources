@@ -1,24 +1,25 @@
 !Xdefaults --
-
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
-Xft.autohint: true
+Xft.autohint: false
 Xft.hintstyle: hintslight
 !hintmedium hintslight hintfull
 Xft.lcdfilter: lcddefault
+Xcursor.theme: Bibata-Modern-Ice
+Xcursor.size: 24
 
 !URxvt ---------------------------------------------------------------------- !
 
 !Fonts --
 
-URxvt.font:xft:lemon:medium:pixelsize=8
-URxvt.boldFont:
-URxvt.italicfont:
-URxvt.bolditalicFont:
+URxvt.font: xft:Iosevka Nerd Font Mono:style=Regular:pixelsize=14
+URxvt.boldFont: xft:Iosevka Nerd Font Mono:style=Bold:pixelsize=14
+URxvt.italicFont: xft:Iosevka Nerd Font Mono:style=Regular Italic:pixelsize=14
+URxvt.bolditalicFont: xft:Iosevka Nerd Font Mono:style=Bold Italic:pixelsize=14
 URxvt.letterSpace: -1
-URxvt.antialias: false
+URxvt.antialias: true
 
 !Main Settings --
 
@@ -73,5 +74,5 @@ URxvt.keysym.Control-Right:\033[1;5C
 
 !URxvt window --
 
-URxvt*geometry: 70x23
-URxvt.internalBorder: 30
+URxvt*geometry: 76x16
+URxvt.internalBorder: 20
