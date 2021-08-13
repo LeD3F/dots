@@ -26,19 +26,19 @@ URxvt.antialias: true
 URxvt.termname: xterm-256color
 URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
 
-URxvt.cursorUnderline: true
+URxvt.perl-ext-common: ibeamcursor
 URxvt.pointerBlank: true
 URxvt.saveLines:    5000
 URxvt.scrollBar:    false
 URxvt.cursorBlink:  true
-URxvt.urgentOnBell: true
-URxvt*scrollTtyOutput: true
-URxvt*scrollWithBuffer: true
-URxvt*scrollTtyKeypress: true
+URxvt.urgentOnBell: false
+URxvt.scrollTtyOutput: true
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
 
 !Extensions --
 
-URxvt.perl-ext: default,clipboard,url-select,keyboard-select
+URxvt.perl-ext: default,clipboard,url-select,keyboard-select,vtwheel
 
 !Tabs --
 
@@ -64,7 +64,6 @@ URxvt.iso14755_52: false
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-
 !Control + arrow navigation --
 
 URxvt.keysym.Control-Up:\033[1;5A
