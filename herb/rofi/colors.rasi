@@ -1,10 +1,10 @@
 /* colors */
 
-* {
+* {{
   al:   #00000000;
-  bg:   #090E12;
-  bga:  #c9bdbc;
-  fga:  #c9bdbc;
-  fg:   #090E12;
-  ac:   #6E7174;
-}
+  bg:   {background};
+  bga:  {color7};
+  fga:  {color7};
+  fg:   {background};
+  ac:   {color1};
+}}
