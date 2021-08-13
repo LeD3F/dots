@@ -1,0 +1,246 @@
+#!/usr/bin/env bash
+
+hc() {
+    herbstclient "$@"
+}
+
+hc emit_hook reload
+
+# remove all existing keybindings
+hc keyunbind --all
+
+# keybindings
+# if you have a super key you will be much happier with Mod set to Mod4
+Mod=Mod4 # Super Key
+Mod2=Mod1 # Alt Key
+
+hc keybind $Mod-Shift-q quit
+hc keybind $Mod-Shift-r reload
+hc keybind $Mod-Shift-c close
+hc keybind $Mod-Return spawn ${TERMINAL:-urxvtc}
+
+# basic movement
+# focusing clients
+hc keybind $Mod-Left  focus left
+hc keybind $Mod-Down  focus down
+hc keybind $Mod-Up    focus up
+hc keybind $Mod-Right focus right
+
+# moving clients
+hc keybind $Mod-Shift-Left  shift left
+hc keybind $Mod-Shift-Down  shift down
+hc keybind $Mod-Shift-Up    shift up
+hc keybind $Mod-Shift-Right shift right
+## move windows through monitors
+hc keybind $Mod-Shift-h or / shift left / \
+    chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+hc keybind $Mod-Shift-j or / shift down / \
+    chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
+hc keybind $Mod-Shift-k or / shift up / \
+    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
+hc keybind $Mod-Shift-l or / shift right / \
+    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+
+# splitting frames
+# create an empty frame at the specified direction
+hc keybind $Mod-u       split   bottom  0.5
+hc keybind $Mod-o       split   right   0.5
+# let the current frame explode into subframes
+hc keybind $Mod-e split explode
+
+# resizing frames
+resizestep=0.05
+hc keybind $Mod-Control-Left    resize left +$resizestep
+hc keybind $Mod-Control-Down    resize down +$resizestep
+hc keybind $Mod-Control-Up      resize up +$resizestep
+hc keybind $Mod-Control-Right   resize right +$resizestep
+
+# tags
+tag_names=("null" "www" "cfg" "mul" "mus" "chat" "game")
+tag_keys=( {1..7} 0)
+
+hc set default_frame_layout 3
+hc set_layout grid
+
+hc rename default "${tag_names[0]}" || true
+for i in ${!tag_names[@]} ; do
+    hc add "${tag_names[$i]}"
+    key="${tag_keys[$i]}"
+    if ! [ -z "$key" ] ; then
+        hc keybind "$Mod-$key" use_index "$i"
+        hc keybind "$Mod-Shift-$key" move_index "$i"
+    fi
+done
+
+# cycle through tags
+hc keybind $Mod-period use_index +1 --skip-visible
+hc keybind $Mod-comma  use_index -1 --skip-visible
+
+# layouting
+hc keybind $Mod-r remove
+hc keybind $Mod-s floating toggle
+hc keybind $Mod-f fullscreen toggle
+hc keybind $Mod-p pseudotile toggle
+# The following cycles through the available layouts within a frame, but skips
+# layouts, if the layout change wouldn't affect the actual window positions.
+# I.e. if there are two windows within a frame, the grid layout is skipped.
+hc keybind $Mod-space                                                           \
+            or , and . compare tags.focus.curframe_wcount = 2                   \
+                     . cycle_layout +1 vertical horizontal max vertical grid    \
+               , cycle_layout +1
+
+# Layouts for tags
+hc load 5 '
+    (split horizontal:0.750000:0    
+        (clients grid:0 0x3800006)
+             (clients max:0 0x3e00001))
+'
+
+# mouse
+hc mouseunbind --all
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
+bind $Mod-Button3 resize
+
+# focus
+hc keybind $Mod-BackSpace   cycle_monitor
+hc keybind $Mod-Tab         cycle_all +1
+hc keybind $Mod-Shift-Tab   cycle_all -1
+hc keybind $Mod-c cycle
+hc keybind $Mod-i jumpto urgent
+
+# Custom Hotkeys
+
+# screenshots
+## fullscreen
+hc keybind Print spawn ~/.scripts/maim/screenshotfull.sh
+## area
+hc keybind $Mod-a spawn ~/.scripts/maim/screenshotarea.sh
+## window
+hc keybind $Mod2-s spawn ~/.scripts/maim/screenshotwindow.sh
+
+# rofi
+## rofi desktop launcher
+hc keybind $Mod-d spawn ~/.scripts/rofi.sh
+## rofi launcher
+hc keybind $Mod-Shift-d spawn ~/.scripts/rofirun.sh
+## rofi window switcher
+hc keybind $Mod2-Tab spawn ~/.scripts/rofiwin.sh
+## rofi clipboard
+hc keybind $Mod-x spawn ~/.scripts/roficlip.sh
+## rofi power
+hc keybind $Mod2-e spawn ~/.scripts/powermenu.sh
+
+# lock screen
+hc keybind $Mod2-Ctrl-l spawn ~/.scripts/lock.sh
+
+# applications
+## Firefox
+hc keybind $Mod-q spawn firefox
+## KotatoGram
+hc keybind $Mod-t spawn kotatogram-desktop
+## Nemo
+hc keybind $Mod-n spawn nemo
+## Spotify
+hc keybind $Mod-m spawn spotify
+
+#pywal colors
+source ~/.cache/wal/colors.sh
+
+# theme
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+#hc set frame_border_active_color "$color15"
+#hc set frame_border_normal_color "$color1"
+#hc set frame_bg_normal_color "$color3"
+#hc set frame_bg_active_color "$color3"
+hc set frame_border_width 0
+hc set always_show_frame 0
+#hc set frame_bg_transparent 0
+hc set frame_active_opacity 1
+hc set frame_normal_opacity 1
+hc set frame_transparent_width 0
+hc set frame_gap 5
+
+hc attr theme.active.color "$color1"
+hc attr theme.normal.color "$color0"
+hc attr theme.urgent.color "$color15"
+hc attr theme.inner_width 2
+hc attr theme.inner_color "$color2"
+hc attr theme.border_width 4
+hc attr theme.floating.border_width 4
+hc attr theme.floating.outer_width 2
+hc attr theme.floating.outer_color "$color0"
+hc attr theme.active.inner_color "$color0"
+hc attr theme.active.outer_color "$color1"
+hc attr theme.background_color  "$color0"
+
+hc set window_gap 5
+hc set frame_padding 0
+hc set smart_window_surroundings 0
+hc set smart_frame_surroundings 0
+hc set mouse_recenter_gap 1
+
+# rules
+hc unrule --all      # clear rules
+hc rule focus=on
+hc rule floatplacement=center
+# give focus to most common terminals
+#hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule class~'[Pp]olybar' manage=off
+hc set focus_follows_mouse 1
+
+## apps
+hc rule class=Code tag=cfg
+hc rule class=firefox tag=www
+hc rule class=smplayer tag=mul
+hc rule class=Gimp-2.10 tag=mul
+hc rule class=KotatogramDesktop tag=chat
+hc rule class=Spotify tag=mus
+hc rule class=discord tag=null
+hc rule class=Steam tag=game
+hc rule class=Lutris tag=game floating=on
+hc rule class=qBittorrent tag=mul
+#floating rules
+hc rule class=Pavucontrol floating=on
+hc rule class=Baobab floating=on
+hc rule class=File-roller floating=on
+hc rule class=Nitrogen floating=on
+hc rule class=Galculator floating=on
+hc rule class=Wpg floating=on
+hc rule class=Pamac-manager floating=on
+hc rule class=Yad floating=on
+hc rule class=steam_proton floating=on
+hc rule class=qt5ct floating=on
+hc rule class=file_progress floating=on
+
+# unlock, just to be sure
+hc unlock
+
+# Monitor Setup
+hc set_monitors 1440x900+0+180 1920x1080+1440+0
+hc set swap_monitors_to_get_tag 0
+hc set tree_style '╾│ ├└╼─┐'
+
+# Floating tag
+hc floating game on
+
+# find the panel
+panel=~/.config/polybar/launch.sh
+for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+    #start it on each monitor
+    "$panel"  &
+hc pad 0 0
+done
+
+#Autostart
+urxvtd -q -f -o &
+nitrogen --restore &
+dunst &
+greenclip daemon &
+bash $HOME/.config/wpg/wp_init.sh &
+picom --experimental-backend &
