@@ -10,13 +10,13 @@
 [color]
 
 ;; main colors
-background = #090E12
-background-alt = #c9bdbc
-foreground = #090E12
-foreground-alt = #c9bdbc
-primary = #6E7174
-red = #966C6D
-yellow = #8D3A3C
+background = {background}
+background-alt = {color7}
+foreground = {background}
+foreground-alt = {color7}
+primary = {color1}
+red = {color3}
+yellow = {color2}
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
