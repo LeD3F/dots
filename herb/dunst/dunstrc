@@ -11,7 +11,7 @@
     padding = 20
     horizontal_padding = 20
     frame_width = 2
-    frame_color = "#6E7174"
+    frame_color = "{color1}"
     separator_color = auto
     sort = yes
     idle_threshold = 120
@@ -72,21 +72,21 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#090E12"
-    foreground = "#c9bdbc"
-    frame_color = "#6E7174"
+    background = "{color0}"
+    foreground = "{foreground}"
+    frame_color = "{color1}"
     timeout = 10
 
 [urgency_normal]
-    background = "#090E12"
-    foreground = "#c9bdbc"
-    frame_color = "#8D3A3C"
+    background = "{color0}"
+    foreground = "{foreground}"
+    frame_color = "{color2}"
     timeout = 10
 
 [urgency_critical]
-    background = "#090E12"
-    foreground = "#c9bdbc"
-    frame_color = "#966C6D"
+    background = "{color0}"
+    foreground = "{foreground}"
+    frame_color = "{color3}"
     timeout = 0
 
 # vim: ft=cfg
