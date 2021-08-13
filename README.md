@@ -8,7 +8,7 @@ Spotify Cli for keyboard shorcuts - https://gist.github.com/streetturtle/fa6258f
 
 # herbstluftwm
 
-<img src='screenshots/hern.png'>
+<img src='screenshots/herbs.png'>
 
 # herbstluftwm info
 
@@ -20,6 +20,6 @@ Polybar - https://github.com/jaagr/polybar
 
 Dunst - https://github.com/dunst-project/dunst
 
-Polybar Font - lemon + Wuncon Siji
+Polybar Font - Iosevka Nerd Font
 
 Colorschemes - https://github.com/deviantfero/wpgtk
