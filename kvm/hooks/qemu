@@ -9,6 +9,18 @@
 # For a list of available hooks, please refer to https://www.libvirt.org/hooks.html
 #
 
+command=$2
+
+if [[ $command == "started" ]]; then
+    systemctl set-property --runtime -- system.slice AllowedCPUs=0,8,4,12
+    systemctl set-property --runtime -- user.slice AllowedCPUs=0,8,4,12
+    systemctl set-property --runtime -- init.slice AllowedCPUs=0,8,4,12
+elif [[ $command == "release" ]]; then
+    systemctl set-property --runtime -- system.slice AllowedCPUs=0-15
+    systemctl set-property --runtime -- user.slice AllowedCPUs=0-15
+    systemctl set-property --runtime -- init.slice AllowedCPUs=0-15
+fi
+
 GUEST_NAME="$1"
 HOOK_NAME="$2"
 STATE_NAME="$3"
@@ -31,4 +43,5 @@ elif [ -d "$HOOKPATH" ]; then
         fi
     done <<< "$(find -L "$HOOKPATH" -maxdepth 1 -type f -executable -print;)"
 fi
+
 
