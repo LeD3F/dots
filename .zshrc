@@ -27,17 +27,10 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 
 alias rick='curl -s -L http://bit.ly/10hA8iC | bash'
-alias up='yay -Syu'
+alias up='rpm-ostree upgrade'
 alias rice='curl -L rum.sh/ricebowl'
-alias sf='yay -Ql'
-alias orph='yay -Yc'
-alias searchp='yay -Ss'
+alias gogh='bash -c  "$(wget -qO- https://git.io/vQgMr)"'
 
-
-#Auto Login 
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-	exec startx
-fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
