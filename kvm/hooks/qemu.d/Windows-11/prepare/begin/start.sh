@@ -39,3 +39,4 @@ virsh nodedev-detach $VIRSH_GPU_AUDIO
 modprobe vfio
 modprobe vfio_pci
 modprobe vfio_iommu_type1
+modprobe vfio_virqfd
