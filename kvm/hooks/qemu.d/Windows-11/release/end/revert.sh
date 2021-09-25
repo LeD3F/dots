@@ -8,6 +8,7 @@ source "/etc/libvirt/hooks/kvm.conf"
 modprobe -r vfio_pci
 modprobe -r vfio_iommu_type1
 modprobe -r vfio
+modprobe -r vfio_virqfd
 
 # Re-Bind GPU to our display drivers
 virsh nodedev-reattach $VIRSH_GPU_VIDEO
