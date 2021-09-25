@@ -7,10 +7,6 @@ source "/etc/libvirt/hooks/kvm.conf"
 
 # Stop your display manager. If you're on kde it'll be sddm.service. Gnome users should use 'killall gdm-x-session' instead
 systemctl stop display-manager.service
-pipewire_pid=$(pgrep -u led3f pipewire)
-gdm_pid=$(pgrep -u led3f gdm)
-kill $pipewire_pid
-kill $gdm_pid
 
 # Unbind VTconsoles
 echo 0 > /sys/class/vtconsole/vtcon0/bind
