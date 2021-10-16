@@ -9,6 +9,10 @@ source "/etc/libvirt/hooks/kvm.conf"
 systemctl stop display-manager.service
 #killall gdm-x-session
 
+# Drop Cache for HugePages
+echo 3 > /proc/sys/vm/drop_caches
+echo 1 > /proc/sys/vm/compact_memory
+
 # Unbind VTconsoles
 echo 0 > /sys/class/vtconsole/vtcon0/bind
 # Some machines might have more than 1 virtual console. Add a line for each corresponding VTConsole
