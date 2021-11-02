@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# add your autostart stuffs here
+
+picom &
+nitrogen --restore &
+xsetroot -cursor_name left_ptr &
+numlockx on &
+flatpak run --command=easyeffects com.github.wwmm.easyeffects --gapplication-service &
+killall dwmblocks
+dwmblocks &
+
+
+# run bar script and dwm ( do not remove this ) 
+# ~/.dwm/bar/bar.sh &
+dwm
