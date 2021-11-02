@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+echo "^c#7797b7^^b#2E3440^  ^c#7797b7^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
