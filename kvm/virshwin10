@@ -1,15 +1,17 @@
 <domain type="kvm">
-  <name>win10</name>
-  <uuid>bdf5f0d1-cad5-44f8-9cf5-3ff719566669</uuid>
+  <name>win11</name>
+  <uuid>a4ee858b-8c87-44c9-9116-9b073f9e9f40</uuid>
   <metadata>
     <libosinfo:libosinfo xmlns:libosinfo="http://libosinfo.org/xmlns/libvirt/domain/1.0">
       <libosinfo:os id="http://microsoft.com/win/10"/>
     </libosinfo:libosinfo>
   </metadata>
-  <memory unit="KiB">12582912</memory>
-  <currentMemory unit="KiB">12582912</currentMemory>
+  <memory unit="KiB">13631488</memory>
+  <currentMemory unit="KiB">13631488</currentMemory>
+  <memoryBacking>
+    <hugepages/>
+  </memoryBacking>
   <vcpu placement="static">12</vcpu>
-  <iothreads>1</iothreads>
   <cputune>
     <vcpupin vcpu="0" cpuset="1"/>
     <vcpupin vcpu="1" cpuset="9"/>
@@ -21,16 +23,14 @@
     <vcpupin vcpu="7" cpuset="13"/>
     <vcpupin vcpu="8" cpuset="6"/>
     <vcpupin vcpu="9" cpuset="14"/>
-    <vcpupin vcpu="10" cpuset="17"/>
+    <vcpupin vcpu="10" cpuset="7"/>
     <vcpupin vcpu="11" cpuset="15"/>
     <emulatorpin cpuset="0-1"/>
-    <iothreadpin iothread="1" cpuset="0-1"/>
   </cputune>
   <os>
     <type arch="x86_64" machine="pc-q35-5.2">hvm</type>
-    <loader readonly="yes" type="pflash">/usr/share/OVMF/OVMF_CODE_4M.fd</loader>
-    <nvram>/var/lib/libvirt/qemu/nvram/win10_VARS.fd</nvram>
-    <boot dev="hd"/>
+    <loader readonly="yes" secure="yes" type="pflash">/usr/share/edk2/ovmf/OVMF_CODE.secboot.fd</loader>
+    <nvram>/var/lib/libvirt/qemu/nvram/win11_VARS.fd</nvram>
   </os>
   <features>
     <acpi/>
@@ -51,6 +51,7 @@
       <hidden state="on"/>
     </kvm>
     <vmport state="off"/>
+    <smm state="on"/>
     <ioapic driver="kvm"/>
   </features>
   <cpu mode="host-passthrough" check="none" migratable="on">
@@ -74,10 +75,17 @@
   <devices>
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type="file" device="disk">
-      <driver name="qemu" type="qcow2" cache="writeback"/>
-      <source file="/var/lib/libvirt/images/win10.qcow2"/>
+      <driver name="qemu" type="qcow2"/>
+      <source file="/var/lib/libvirt/images/win11.qcow2"/>
       <target dev="vda" bus="virtio"/>
+      <boot order="1"/>
       <address type="pci" domain="0x0000" bus="0x04" slot="0x00" function="0x0"/>
+    </disk>
+    <disk type="block" device="disk">
+      <driver name="qemu" type="raw" cache="none" io="native"/>
+      <source dev="/dev/disk/by-id/ata-WDC_WD10EZEX-00BN5A0_WD-WCC3F1KSFCUP"/>
+      <target dev="vdb" bus="virtio"/>
+      <address type="pci" domain="0x0000" bus="0x09" slot="0x00" function="0x0"/>
     </disk>
     <controller type="usb" index="0" model="qemu-xhci" ports="15">
       <address type="pci" domain="0x0000" bus="0x02" slot="0x00" function="0x0"/>
@@ -126,34 +134,47 @@
       <target chassis="8" port="0x9"/>
       <address type="pci" domain="0x0000" bus="0x00" slot="0x01" function="0x1"/>
     </controller>
-    <controller type="virtio-serial" index="0">
-      <address type="pci" domain="0x0000" bus="0x03" slot="0x00" function="0x0"/>
+    <controller type="pci" index="9" model="pcie-root-port">
+      <model name="pcie-root-port"/>
+      <target chassis="9" port="0xa"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x01" function="0x2"/>
+    </controller>
+    <controller type="pci" index="10" model="pcie-to-pci-bridge">
+      <model name="pcie-pci-bridge"/>
+      <address type="pci" domain="0x0000" bus="0x08" slot="0x00" function="0x0"/>
+    </controller>
+    <controller type="scsi" index="0" model="lsilogic">
+      <address type="pci" domain="0x0000" bus="0x0a" slot="0x01" function="0x0"/>
     </controller>
     <interface type="network">
-      <mac address="52:54:00:f2:c5:3e"/>
+      <mac address="52:54:00:0a:37:75"/>
       <source network="default"/>
       <model type="virtio"/>
       <address type="pci" domain="0x0000" bus="0x01" slot="0x00" function="0x0"/>
     </interface>
     <input type="mouse" bus="ps2"/>
     <input type="keyboard" bus="ps2"/>
+    <tpm model="tpm-tis">
+      <backend type="emulator" version="2.0"/>
+    </tpm>
+    <audio id="1" type="none"/>
     <hostdev mode="subsystem" type="pci" managed="yes">
       <source>
         <address domain="0x0000" bus="0x0a" slot="0x00" function="0x0"/>
       </source>
-      <address type="pci" domain="0x0000" bus="0x06" slot="0x00" function="0x0"/>
+      <address type="pci" domain="0x0000" bus="0x03" slot="0x00" function="0x0"/>
     </hostdev>
     <hostdev mode="subsystem" type="pci" managed="yes">
       <source>
         <address domain="0x0000" bus="0x0a" slot="0x00" function="0x1"/>
       </source>
-      <address type="pci" domain="0x0000" bus="0x07" slot="0x00" function="0x0"/>
+      <address type="pci" domain="0x0000" bus="0x06" slot="0x00" function="0x0"/>
     </hostdev>
     <hostdev mode="subsystem" type="pci" managed="yes">
       <source>
         <address domain="0x0000" bus="0x0b" slot="0x00" function="0x3"/>
       </source>
-      <address type="pci" domain="0x0000" bus="0x08" slot="0x00" function="0x0"/>
+      <address type="pci" domain="0x0000" bus="0x07" slot="0x00" function="0x0"/>
     </hostdev>
     <memballoon model="virtio">
       <address type="pci" domain="0x0000" bus="0x05" slot="0x00" function="0x0"/>
