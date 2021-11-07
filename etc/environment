@@ -3,6 +3,9 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
+#
 
+__GL_SYNC_DISPLAY_DEVICE=DP-4
 QT_QPA_PLATFORMTHEME=qt5ct
+
 EDITOR=vim
