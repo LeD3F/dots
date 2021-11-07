@@ -1,0 +1,27 @@
+[dark]
+text               = abb2bf
+subtext            = e6efff
+alt-text           = abb2bf
+main               = 1e2127
+sidebar            = 1e2127
+player             = 1e2127
+player-border      = 1e222a
+player-bar-shadow  = 2e323a
+player-bar-bg      = 545862
+card               = 2e323a
+shadow             = abb2bf
+selected-row       = 2e323a
+button             = abb2bf
+button-active      = abb2bf
+button-disabled    = 545862
+tab-active         = 1e2127
+notification       = 5c6370
+notification-error = e06c75
+misc               = 1e2127
+not-selected       = BBBBBB
+
+; Change accent color
+accent             = 61afef
+
+layer-shadow       = 1d1d1d
+contour            = 2e323a
