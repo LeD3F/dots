@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ -z "$(pgrep xautolock)" ]
 then
 	~/bin/lock.sh &
@@ -6,5 +6,3 @@ then
 else
 	notify-send "Inhibitor Was Not Active"
 fi
-
-
