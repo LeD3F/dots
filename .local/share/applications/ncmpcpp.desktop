@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=ncmpcpp
-Icon=multimedia-audio-player
-Exec=urxvt -e ncmpcpp
-NoDisplay=false
-Categories=Audiovideo;X-Gnome-Other;
-StartupNotify=false
-Terminal=false
