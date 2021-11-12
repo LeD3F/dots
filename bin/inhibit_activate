@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 running=$(ps h -C xautolock | grep -wv $$ | wc -l);
 [[ $running < 1 ]] && notify-send "Inhibitor Already Active"&& exit;
 
