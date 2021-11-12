@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 pkg_updates() {
-	updates=$(checkupdates | wc -l)
-  if [ $updates == 0 ]; then
+  updates=$(checkupdates | wc -l)
+  if [ "$updates" -eq 0 ]; then
     echo "Fully Updated"
   else
     echo "$updates"" updates"
   fi
 }
-echo "$(pkg_updates)"
+pkg_updates
