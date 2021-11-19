@@ -1,2 +1,2 @@
 #!/bin/sh
-sensors | awk '/Tdie/ {print $2}'
+sensors | awk '/Tctl/ {sub(/^\+/, "", $2);print $2}'
