@@ -1,2 +1,2 @@
 #!/bin/sh
-curl -sf "wttr.in/Nizhniy_Novgorod?format=1" | sed -r 's/^.{3}//' | tee "$HOME/.local/share/weatherreport" || exit 1 ; #this exit will only work if tee (or before my changes, sed with output redirection) returns anything other than zero, if curl ends with an error this exit will not be called
+curl -sf "wttr.in/Nizhniy_Novgorod?format=1" | sed -r 's/^.{4}//' | tee "$HOME/.local/share/weatherreport" || exit 1 ; #this exit will only work if tee (or before my changes, sed with output redirection) returns anything other than zero, if curl ends with an error this exit will not be called
